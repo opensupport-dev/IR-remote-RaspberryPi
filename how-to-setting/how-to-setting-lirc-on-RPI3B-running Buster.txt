@@ -1,232 +1,57 @@
 
 Step 1: Assemble Hardware
-1) Attach the left leg to BCM pin 17 on the RPi (yellow wire)
-
+1) Attach the left leg to BCM pin 18 on the RPi (yellow wire)
 2) Attach the center leg to ground (black wire)
-
 3) Attach the right leg to 3.3v (red wire)
 
 Step 2: Install Lirc
-    $ sudo apt-get update
+<Old method>
+$ sudo apt-get update
 $ sudo apt-get install lirc
 $ sudo mv /etc/lirc/lirc_options.conf.dist /etc/lirc/lirc_options.conf
 $ sudo apt-get install lirc
 
-Step 3: Edit Lirc_options.conf
-
-Edit /etc/lirc/lirc_options.conf 
-driver = default
-
-device = /dev/lirc0
-
-Step 4: Perform Move to Remove .dist Suffix From Lircd.conf.dist
-
-Remove suffix .dist from /etc/lirc/lircd.conf.dist
-$ sudo mv /etc/lirc/lircd.conf.dist /etc/lirc/lircd.conf
-
-
-
-Step 5: Edit Config.txt
-Edit /boot/config.txt by adding one line in the lirc-rpi module section as follows. This example assumes the RPi is 'listening' on BCM Pin 17 for the IR receiver but any RPi IO pin can be used. I have not tried it yet but if you want to send commands from the RPi then add and uncomment the 4th line shown below to send IR commands on BCM pin 18
-
-# Uncomment this to enable the lirc-rpi module
-
-#dtoverlay=lirc-rpi
-
-dtoverlay=gpio-ir,gpio_pin=17
-
-#dtoverlay=gpio-ir-tx, gpio_pin=18
-
-
-Step 6: Check Status and Reboot
-1) Stop, start and check status of lircd to ensure there are no errors!
-
-$ sudo systemctl stop lircd.service
-
-$ sudo systemctl start lircd.service
-
-$ sudo systemctl status lircd.service
-
-2) Reboot
-
-$ sudo reboot
-
-
-Step 7: Test Remote
-This step assumes you have have a IR receiver hooked up to your RPi on the pin specified in config.txt. 
-
-1) stop LIRCD service and test remote using mode2 command
-
-$ sudo systemctl stop lircd.service
-
-$ sudo mode2 -d /dev/lirc0
-
-3) Point the remote at the receiver and press some buttons. You should see something LIKE this:
-
-:
-
-:
-
-space
-
-pulse
-
-:
-
-4) Press Ctrl-C to exit
-
-5) Your IR receiver is setup and ready to proceed to Part 2 and be accessed in python.
-
-
-
-<<< Remote -->[IR Receiver + RPI] <--> LIRC <--> Python<-->display (or send).
-
-Step 1: Hide Devinput.lircd.conf
-Your remote configuration file(s) will be placed in the /etc/lirc/lircd.conf.d directory. LIRC will find any file in this directory as long as it has a .conf extension (ie: JVC.lircd.conf). We will not be using the devinput.lircd.conf file so we will hide it by changing the extension as follows by renaming devinput.lircd.conf to devinput.lircd.conf.copy 
-
-$ sudo mv /etc/lirc/lircd.conf.d/devinput.lircd.conf /etc/lirc/lircd.conf.d/devinput.lircd.conf.copy
-
-
-Step 2: Download .conf File for Your Remote
-By far the easiest way to obtain a remote .conf file is to download it from the huge library at lirc.sourceforge.net Even if your particular remote model is not listed it is VERY likely that another model from the same manufacturer will work fine. Just find the manufacturer of your remote and click on a model that is close. If you are unsure which model is close you can look at the contents of each model and find one that is close to yours.
-
-The hard way to get a .conf file is to create your own using the built in tool irrecord but I was VERY unsuccessful trying to create a file using this utility despite much effort. There are lots of other folks with similar difficulties using irrecord and I highly recommend the easy route of downloading a .conf file from lirc.sourceforge.net
-
-Your remote configuration file(s) will be placed in the /etc/lirc/lircd.conf.d directory. LIRC will find any file in this directory as long as it has a .conf extension (ie: JVC.lircd.conf).
-
-
-Step 3: Python Code
-"""""""""
-from lirc import RawConnection
-
-def ProcessIRRemote():
-       
-    #get IR command
-    #keypress format = (hexcode, repeat_num, command_key, remote_id)
-    try:
-        keypress = conn.readline(.0001)
-    except:
-        keypress=""
-              
-    if (keypress != "" and keypress != None):
-                
-        data = keypress.split()
-        sequence = data[1]
-        command = data[2]
-        
-        #ignore command repeats
-        if (sequence != "00"):
-           return
-        
-        print(command)        
-            
-
-#define Global
-conn = RawConnection()
-
-print("Starting Up...")
-
-while True:         
-
-      ProcessIRRemote()
-""""""""""""""""""
-
-
-
-
-
-
-
-
-
-
-
-
-/////////////////////////////////////////////
-https://stackoverflow.com/questions/57437261/setup-ir-remote-control-using-lirc-for-the-raspberry-pi-rpi
-/////////////////////////////////////////////
-The above solution doesn't work with Raspbian Buster Kernel 4.19. I've checked it with (Raspbian Buster version 2020-05-27)
-
-However, it works fine if you use only irsend that sends IR signals. If you want to receive & record IR signals using irrecord, mode2, irw or irexec commands some staff required.
-
-
-<Before installing:> 
-
-Step - 1: Install a patch to use irrecord with kernel 4.19.X and gpio-ir
+<New method in Buster>
+	Step - 1: Install a patch to use irrecord with kernel 4.19.X and gpio-ir
 sudo su -c "grep '^deb ' /etc/apt/sources.list | sed 's/^deb/deb-src/g' > /etc/apt/sources.list.d/deb-src.list"
 sudo apt update
 sudo apt install devscripts
 
-
-
-Step - 2: If you have already installed lirc with apt, please uninstall it as follows
+	Step - 2: If you have already installed lirc with apt, please uninstall it as follows
 sudo apt remove lirc liblirc0 liblirc-client0
 
-
-
-
-
-Step - 3: Installing with a patch for gpio-ir in Raspbian Buster
-
->>>anotherway: Rasbian Buster
+	Step - 3: Installing with a patch for gpio-ir in Raspbian Buster
 sudo apt install dh-exec doxygen expect libasound2-dev libftdi1-dev libsystemd-dev libudev-dev libusb-1.0-0-dev libusb-dev man2html-base portaudio19-dev socat xsltproc python3-yaml dh-python libx11-dev python3-dev python3-setuptools
 mkdir build
 cd build
 apt source lirc
 wget https://raw.githubusercontent.com/neuralassembly/raspi/master/lirc-gpio-ir-0.10.patch
-
 patch -p0 -i lirc-gpio-ir-0.10.patch
-
 cd lirc-0.10.1
 debuild -uc -us -b
 cd ..
 sudo apt install ./liblirc0_0.10.1-5.2_armhf.deb ./liblircclient0_0.10.1-5.2_armhf.deb ./lirc_0.10.1-5.2_armhf.deb
 
+The final install command will fail. Then please configure the files shown below first, 
+i.e., /boot/config.txt and /etc/lirc/lirc_options.conf. 
+After that, please try the final install command again. Then the install will success.
 
->>>anotherway: Rasbian Stretch (생략)
-sudo apt build-dep lirc
-mkdir build
-cd build
-apt source lirc
-wget https://raw.githubusercontent.com/neuralassembly/raspi/master/lirc-gpio-ir.patch
-patch -p0 -i lirc-gpio-ir.patch
-cd lirc-0.9.4c
-debuild -uc -us -b
-cd ..
-sudo apt install ./liblirc0_0.9.4c-9_armhf.deb ./liblirc-client0_0.9.4c-9_armhf.deb ./lirc_0.9.4c-9_armhf.deb 
-
-The final install command will fail. Then please configure the files shown below first, i.e., /boot/config.txt and /etc/lirc/lirc_options.conf. After that, please try the final install command again. Then the install will success.
-
-You should not remove three deb files because the installed lirc would be downgraded when you execute "sudo apt dist-upgrade". In such a case, please install the three deb files again.
+You should not remove three deb files because the installed lirc would be downgraded 
+when you execute "sudo apt dist-upgrade". In such a case, please install the three deb files again.
 
 
+Step 3: Edit Config.txt
+Edit /boot/config.txt by adding one line in the lirc-rpi module section as follows. 
+This example assumes the RPi is 'listening' on BCM Pin 17 for the IR receiver but any RPi IO pin can be used. 
+I have not tried it yet but if you want to send commands from the RPi then add and uncomment the 4th line shown below 
+to send IR commands on BCM pin 18
 
-
-
-
-
-Please add the following lines to /boot/config.txt. You can change pin numbers. 
-
-
-
-<After installing:>
-
-Note: The final install command will fail. You have to configure /boot/config.txt and /etc/lirc/lirc_options.conf files.
-
-Step - 4: Edit /boot/config.txt
-:
-:
 # Uncomment this to enable the lirc-rpi module
 #dtoverlay=lirc-rpi
-dtoverlay=gpio-ir,gpio_pin=18
-#dtoverlay=gpio-ir-tx,gpio_pin=17
-:
-:
-You don't have to add anything to /etc/modules.
+dtoverlay=gpio-ir,gpio_pin=17
+#dtoverlay=gpio-ir-tx, gpio_pin=18
 
-
-
-Step - 5: Perform copy to remove .dist suffix from lirc_options.conf.dist and lircd.conf.dist
+Step 4: Perform copy to remove .dist suffix from lirc_options.conf.dist and lircd.conf.dist
 sudo cp /etc/lirc/lirc_options.conf.dist /etc/lirc/lirc_options.conf
 sudo cp /etc/lirc/lircd.conf.dist /etc/lirc/lircd.conf
 
@@ -235,41 +60,22 @@ If you do not use devinput, please execute the following command.
 sudo mv /etc/lirc/lircd.conf.d/devinput.lircd.conf /etc/lirc/lircd.conf.d/devinput.lircd.conf.dist
 
 
-
 After that, if you are using Raspbian Buster, please execute the final install command again here. Then the install will success.
-
-Step - 6: Reinstall
-sudo apt install ./liblirc0_0.10.1-5.2_armhf.deb ./liblircclient0_0.10.1-5.2_armhf.deb ./lirc_0.10.1-5.2_armhf.deb
-
-
->>> sudo apt install -y --allow-downgrades ./liblirc0_0.10.1-5.2_armhf.deb ./liblircclient0_0.10.1-5.2_armhf.deb ./lirc_0.10.1-5.2_armhf.deb
-
-
-
-Then, for all the Raspbian, please edit /etc/lirc/lirc_options.conf as follows. Restarting lirc is required. Examples of commands are: "irrecord -n", "mode2", "irw", and "irexec". Please note that there is no need to add "-d" option with the configuration below. 
-
-driver = default
-device = /dev/lirc1
-
-When using irsend, please edit /etc/lirc/lirc_options.conf as follows. Restarting lirc is required. A example of commands is: "irsend SEND_ONCE TV power". Please note that there is no need to add "-d" option with the configuration below. 
-
-driver = default
-device = /dev/lirc0
-
-
-Step - 7: Edit /etc/lirc/lirc_options.conf
-:
-:
-driver = default
-device = /dev/lirc1
-:
-:
-
-Step - 7 -1: Reinstall:
+Step 5: Reinstall
 sudo apt install -y --allow-downgrades ./liblirc0_0.10.1-5.2_armhf.deb ./liblircclient0_0.10.1-5.2_armhf.deb ./lirc_0.10.1-5.2_armhf.deb
 
 
-Step - 8: Check status and reboot
+Step 6: Edit Lirc_options.conf
+Edit /etc/lirc/lirc_options.conf 
+driver = default
+device = /dev/lirc1
+
+
+Step 7: Reinstall:
+sudo apt install -y --allow-downgrades ./liblirc0_0.10.1-5.2_armhf.deb ./liblircclient0_0.10.1-5.2_armhf.deb ./lirc_0.10.1-5.2_armhf.deb
+
+
+Step 8: Check status and reboot
 $ sudo systemctl stop lircd.service
 $ sudo systemctl start lircd.service
 $ sudo systemctl status lircd.service
@@ -277,75 +83,46 @@ $ sudo systemctl status lircd.service
 Reboot:
 $ sudo reboot
 
-Step - 9: Test remote
+
+Step 9: Test Remote
+This step assumes you have have a IR receiver hooked up to your RPi on the pin specified in config.txt. 
+
+1) stop LIRCD service and test remote using mode2 command
 $ sudo systemctl stop lircd.service
-$ sudo mode2 -d /dev/lirc1
+$ sudo mode2 -d /dev/lirc0
 
-///
-Refer: https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=235256&sid=1d9d8c5d1f566b4487bd3f1823b84223
-///////////////////////////////////////
-Notice on lirc with Python3:
-Lirc 0.10 installed in Raspbian Buster includes python3 module.
-However, the new module has different API from that of previous python3-lirc.
+3) Point the remote at the receiver and press some buttons. You should see something LIKE this:
 
-The new API is shown in the following URL.
-http://www.lirc.org/api-docs/html/group ... dings.html
+:
+:
+space
+pulse
+:
 
-So you have to modify your python3 script.
+4) Press Ctrl-C to exit
 
 
-Notices on kernel:
-When using irsend, you cannot send an IR sequcence that has more than 256 pulse/spaces because of the following limit defined in the kernel 4.19 (https://github.com/raspberrypi/linux/bl ... lirc_dev.c).
-
-Code: Select all
-
-#define LIRCBUF_SIZE	256
-
-
-This limit does not exist in the previous kernel 4.14. LIRCBUF_SIZE would be increased to 1024 later by the kernel maintainer.
-
-Moreover, you cannot send a sequence whose duration exceeds 500ms because of the following limit defined in the kernel (https://github.com/raspberrypi/linux/bl ... /rc-core.h).
-
-Code: Select all
-
-#define IR_MAX_DURATION         500000000	/* 500 ms */
-
-
-This limit exists also in the previous kernel 4.14.
-
-For example, the remote controller of my air conditioner has IR sequences with 439 pulse/spaces with a duration about 250[ms].
-This signal exceeds the above LIRCBUF_SIZE, so it cannot be sent with kernel 4.19. It is also found that the limit of IR_MAX_DURATION is somewhat moderate.
-////////////////////////////
+//////////////////////////////////////////////////////////////
 
 코드: https://www.lirc.org/api-docs/html/group__receiving.html
 
+//////////////////////////////////////////////////////////////
 
 
 
+//////////////////////////////////////////////////////////////
 
+In case of IR Receiver & Tranceiver
 
+//////////////////////////////////////////////////////////////
+>>>> In case, IR Reciver
 
-
-
-
-
-
-
-
-
-//////////// Using IR Receiver
-https://gist.github.com/billpatrianakos/cb72e984d4730043fe79cbe5fc8f7941
-//////////
-Using IR Receiver>>>
-
+mode2 >>>
     Stop LIRC systemd service:
-
 sudo systemctl stop lircd
 
     Start outputting raw data from the IR receiver
-
 mode2 -d /dev/lirc1
-
     Point a remote control at the IR receiver on ANAVI Infrared pHAT and press its buttons. If the IR receiver is configured successfully you will see similar output:
 
 space 3662230
@@ -360,7 +137,7 @@ space 590
 pulse 1204
 
 
-Using IR LED>>>>
+irrecord >>>
 sudo systemctl stop lircd
 
 List all available names for buttons supported by LIRC:
@@ -376,15 +153,15 @@ sudo mv /etc/lirc/lircd.conf /etc/lirc/lircd-backup.conf
 
 
 Load the new configuration file, for example:
-sudo mv hifi.lircd.conf /etc/lirc/lircd.conf
+sudo mv freenanum.lircd.conf /etc/lirc/lircd.conf
 
-
+/////////////////////////////////////////////////////////
 >>>> In case, IR Tranceiver
+
 Switch LIRC configurations to the device for transmitting. Edit again /etc/lirc/lirc_options.conf and make sure that driver and device are set as:
 
 driver          = default
 device          = /dev/lirc0
-
 
 Launch LIRC systemd service again:
 sudo systemctl start lircd
@@ -392,160 +169,34 @@ sudo systemctl start lircd
 List all saved keys, for example:
 NOTE: Please adapt the command below depending on your name of remote!
 
-irsend LIST hifi ""
+irsend LIST freenanum ""
 
-Test the configuration file by sending recorded IR command, for example POWER (please note the exact command may vary for different LIRC configuration files, IR devices and IR remote controls):
+Test the configuration file by sending recorded IR command, 
+for example POWER (please note the exact command may vary 
+for different LIRC configuration files, IR devices and IR remote controls):
 
 
 
 NOTE: Please adapt the command below depending on your name of remote!
-
-irsend SEND_ONCE hifi KEY_POWER
-
-
-NOTE: Please keep in mind that in rare cases some devices might require codes to be sent in short bursts, for example:
-irsend send_once hifi KEY_POWER KEY_POWER KEY_POWER
-
-/////////////////////////////////////////
+irsend SEND_ONCE freenanum KEY_POWER
 
 
+NOTE: Please keep in mind that in rare cases some devices might require codes 
+to be sent in short bursts, for example:
+irsend send_once freenanum KEY_POWER KEY_POWER KEY_POWER
 
-https://blog.naver.com/cosmosjs/220656054360
+///////////////////////////////////////////////////////
+
+Test with IR remote controller.
+
 /////////////////////////////////////////////
-이제 리모콘의 버튼들이 각각 작동이 되는지 한번 테스트 해보자. 데몬을 재시작 해줘야 한다. 
 
-$ sudo /etc/init.d/lirc start
-
-그리고 리모콘 버튼을 눌러 보자. 확인은 irw 를 이용하면 된다. 
-
+$ sudo systemctl start lircd.service
 $ irw 
 
-화면이 대기상태가 된다. 버튼을 눌러 본다. 
+/////////////////////////////////////////////
 
-
-///
-sudo apt install ncat
-ncat -U /usr/var/run/lirc/lircd
-
-
-/////////////////////////////////////////
-
-
-https://www.lirc.org/api-docs/html/irw_8py-example.html
-///////////
-<irw.py> 소스
-
-'''
-Reference python implementation of irw(1)
-Run using python3 irw.py [socket_path]
-'''
-
-import sys
-import lirc
-
-if len(sys.argv) >= 3:
-    sys.stderr.write("Usage: irw.py [socket path]")
-    sys.exit(1)
-
-path = sys.argv[1] if len(sys.argv) == 2 else None
-with lirc.RawConnection(path) as conn:
-    while True:
-     	print(conn.readline())
-
-/////////////////
-
-
-
-
-
-/////////////////////////////////////
-http://gernot-walzl.at/index.php?nav=.%2FDebian%2FRaspbian%2FLIRC
-//////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-.////////////////////////////<< 오래되서 안되는 버전임 <<<<
-파이썬 // `python-lirc` 
-
-
-https://pypi.org/project/python-lirc/
-/////////////////////////////
-~/.lircrc 파일생성
-egin
-        button = KEY_POWER
-        prog = rc
-        config = power
-end
-
-begin
-        button = KEY_MENU
-        prog = rc
-        config = menu
-end
-
-
-
-$ sudo apt-get install python3-lirc # or python-lirc
-
-Otherwise, download the latest relase from
-[here](https://github.com/tompreston/python-lirc/releases) and install with:
-
-$ sudo dpkg -i python3-lirc_1.2.1-1_armhf.deb
-
-
-<test.py> 소스
-import lirc
-import time
-#import RPI.GPIO as GPIO
-#print('Setting up GPIO')
-
-sockid = lirc.init("rc",blocking=False)
-print(sockid)
-
-while True:
-	try:
-		button = lirc.nextcode()
-		#print('press button')
-		if len(button) == 0: continue
-		print (button[0]) #first element 
-		#time.sleep(1)
-	except KeyboardInterrupt:
-		lirc.deinit()
-		break;
-
-///////////////////////////////////////
-
-
-
-
-
-
-
-
-
-///////////////////////////////////////
-http://gernot-walzl.at/index.php?nav=.%2FDebian%2FRaspbian%2FLIRC
-///////////////////////////////////////
-
-Disable Additional Features
-
+<Disable Additional Features>
 If you do not want to receive keystrokes when you press a button on the remote, disable this feature:
 sudo systemctl disable lircd-uinput.service 
-
-
-
-
-
-
-
-     
-
-
 
