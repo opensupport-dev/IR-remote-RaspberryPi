@@ -1,0 +1,1 @@
+# Raspberry pi 3B with IR sensor controlled via IR remote
