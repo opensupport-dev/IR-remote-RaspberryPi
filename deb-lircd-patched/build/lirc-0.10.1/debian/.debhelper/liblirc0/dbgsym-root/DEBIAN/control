@@ -1,0 +1,13 @@
+Package: liblirc0-dbgsym
+Source: lirc
+Version: 0.10.1-5.2
+Auto-Built-Package: debug-symbols
+Architecture: armhf
+Maintainer: Debian Lirc Team <team+debian-lirc@tracker.debian.org>
+Installed-Size: 326
+Depends: liblirc0 (= 0.10.1-5.2)
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for liblirc0
+Build-Ids: 1c348afb876f11369462cfe9e7df690b34548004 348f7df6bee42c721e54878b40fa799bd6312cfd 672699d2cac196b61e90419e1df807d22c09220f

@@ -1,0 +1,10 @@
+# Automatically added by dh_installinit/12.1.1
+if [ "$1" = "purge" ] ; then
+	update-rc.d lircmd remove >/dev/null
+fi
+# End automatically added section
+# Automatically added by dh_installinit/12.1.1
+if [ "$1" = "purge" ] ; then
+	update-rc.d lircd remove >/dev/null
+fi
+# End automatically added section

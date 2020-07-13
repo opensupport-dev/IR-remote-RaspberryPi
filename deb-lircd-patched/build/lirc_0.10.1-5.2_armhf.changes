@@ -1,0 +1,68 @@
+Format: 1.8
+Date: Sat, 06 Apr 2019 15:12:52 +0200
+Source: lirc
+Binary: liblirc-client0 liblirc-client0-dbgsym liblirc-dev liblirc0 liblirc0-dbgsym liblircclient-dev liblircclient0 lirc lirc-dbgsym lirc-doc lirc-x lirc-x-dbgsym
+Architecture: armhf all
+Version: 0.10.1-5.2
+Distribution: unstable
+Urgency: medium
+Maintainer: Debian Lirc Team <team+debian-lirc@tracker.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Description:
+ liblirc-client0 - infra-red remote control support - client library
+ liblirc-dev - Infra-red remote control support - development files
+ liblirc0   - Infra-red remote control support - Run-time libraries
+ liblircclient-dev - Transitional placeholder for obsoleted liblircclient-dev
+ liblircclient0 - Transitional placeholder for obsoleted liblircclient0
+ lirc       - Infra-red remote control support - daemons and utils
+ lirc-doc   - Infra-red remote control support - website and manual docs
+ lirc-x     - infra-red remote control support - X utilities
+Closes: 925066 925477
+Changes:
+ lirc (0.10.1-5.2) unstable; urgency=medium
+ .
+   * Non-maintainer upload.
+   * Revert removal of liblircclient{0,-dev} (Closes: #925477)
+   * Revert "Do not install conffiles in a dummy location" (Closes: #925066)
+Checksums-Sha1:
+ 9290b681960c5501b78fbaffaac55d62e62f790c 40976 liblirc-client0-dbgsym_0.10.1-5.2_armhf.deb
+ 4cf3ed3898e72b82bf5baa73fc79af62d149f850 42624 liblirc-client0_0.10.1-5.2_armhf.deb
+ dd0e6e8e6f6cb7777d33cc444b9c234669d79519 66772 liblirc-dev_0.10.1-5.2_armhf.deb
+ 2c1de8f6c43b635a6f2fd784994d7d92e3549778 285520 liblirc0-dbgsym_0.10.1-5.2_armhf.deb
+ 7486b2962afd824f61d7670ad798679543f0e779 95856 liblirc0_0.10.1-5.2_armhf.deb
+ 05ef05694447d7cd84d2589391563c3e2a1072d5 29148 liblircclient-dev_0.10.1-5.2_armhf.deb
+ 2c9056d42a3b72e6dc75cc52109e00c9c9f8ce9c 29132 liblircclient0_0.10.1-5.2_armhf.deb
+ dfe4ff49352dbd9c6b3e27e62024c4210705f9d4 961684 lirc-dbgsym_0.10.1-5.2_armhf.deb
+ 217a415c68e2e4f7f313469392805b37d0e297a1 1174404 lirc-doc_0.10.1-5.2_all.deb
+ bbe6b099566518921047fe189ec32b4dd3e8302e 46644 lirc-x-dbgsym_0.10.1-5.2_armhf.deb
+ d322077861727640d50130bd8df6c406a1cdefcd 45244 lirc-x_0.10.1-5.2_armhf.deb
+ 2ad97230e761ba847bc7aaa9d9fb14d0e4579695 10274 lirc_0.10.1-5.2_armhf.buildinfo
+ 4801ddf3326e6e5add5fb459074b09d0016f95ca 462988 lirc_0.10.1-5.2_armhf.deb
+Checksums-Sha256:
+ 7fb27d5f83c14d41a3085e44d80abc4ed039c823afe8e6c17a5d4b03f8e2b821 40976 liblirc-client0-dbgsym_0.10.1-5.2_armhf.deb
+ a34724f19d474a606d3f118d6e500eeb001d690b7e899ae7f4410f624c724cb9 42624 liblirc-client0_0.10.1-5.2_armhf.deb
+ 0e93e8777cd0c632bb4aa4e1d01edb8994243043a0ecc5c66a99cce1790eeaf9 66772 liblirc-dev_0.10.1-5.2_armhf.deb
+ 65e3b1567f1d81967492c14bdafd93db77e9c2b52a66f87a0a1ec229b92e2771 285520 liblirc0-dbgsym_0.10.1-5.2_armhf.deb
+ f8e8dd957b53e6b4174f5b2bca1c431d5f5dde1dc344029259b0abab5316cbd0 95856 liblirc0_0.10.1-5.2_armhf.deb
+ 22566326558b5c49b8df082a87973c4ba47b28ff295ca38fa50eb257b5b18589 29148 liblircclient-dev_0.10.1-5.2_armhf.deb
+ 535492c4591e7d2c731b6099466a560a07ceaac09f9fda6bd94e14013bb96d4b 29132 liblircclient0_0.10.1-5.2_armhf.deb
+ d8d2dc8edf95cb8f22f043404863d945f6619f52055462820770b1b7d845551c 961684 lirc-dbgsym_0.10.1-5.2_armhf.deb
+ 8594a391f0abbd850bb805f4f9b56594366e9deb5469a71a68303af40a7514f8 1174404 lirc-doc_0.10.1-5.2_all.deb
+ 2e0799ab54d331af89fb67540d5109d32e60d09ad6f8ce4ed81be9a6340b7f11 46644 lirc-x-dbgsym_0.10.1-5.2_armhf.deb
+ 3bf225a9e0f50c313fa2bcec607c79212becc8c84e026f59af8c3f648433c9b3 45244 lirc-x_0.10.1-5.2_armhf.deb
+ f6d0980de77facd505c66c41de601d3c42856ab4c043f150dce569485e402fcd 10274 lirc_0.10.1-5.2_armhf.buildinfo
+ 57535089f64f7f9d997d71d661ed75db7999ef36102ae5450956e0ce3a859ee0 462988 lirc_0.10.1-5.2_armhf.deb
+Files:
+ 44d77f22e28a98daded0aaa181cf4609 40976 debug optional liblirc-client0-dbgsym_0.10.1-5.2_armhf.deb
+ d10a92c67b32b82501cd2247e44a8684 42624 libs optional liblirc-client0_0.10.1-5.2_armhf.deb
+ 6c419ce5fbab93b5ec53d869a75d647c 66772 libdevel optional liblirc-dev_0.10.1-5.2_armhf.deb
+ fdc1b199ef58a2d1570e413be61812ec 285520 debug optional liblirc0-dbgsym_0.10.1-5.2_armhf.deb
+ dd093d26a90db404921df55e727208e0 95856 libs optional liblirc0_0.10.1-5.2_armhf.deb
+ c9d07706bf923d87f8b173990e366911 29148 libdevel optional liblircclient-dev_0.10.1-5.2_armhf.deb
+ 694655129ef797cff46193f7a5f02322 29132 libs optional liblircclient0_0.10.1-5.2_armhf.deb
+ d3b999094092a344800d25905fd6e57f 961684 debug optional lirc-dbgsym_0.10.1-5.2_armhf.deb
+ 7c876bc5f96452b2508f824b5a9a98ef 1174404 doc optional lirc-doc_0.10.1-5.2_all.deb
+ 5de9abb175596992c1b0e97ec0004747 46644 debug optional lirc-x-dbgsym_0.10.1-5.2_armhf.deb
+ 550c107d4200ef81cda8fa0fe71b61a0 45244 utils optional lirc-x_0.10.1-5.2_armhf.deb
+ e4bade4eefe6f39f952084529b914ff2 10274 utils optional lirc_0.10.1-5.2_armhf.buildinfo
+ 5c4545591970d9ac22f1701e23cf936b 462988 utils optional lirc_0.10.1-5.2_armhf.deb

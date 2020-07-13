@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>LIRC - Linux Infrared Remote Control</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="lirc.css">
+<LINK REL="shortcut icon" HREF="../images/favicon.ico">
+<META NAME="description" CONTENT="LIRC - Linux Infrared Remote Control">
+<META NAME="keywords" CONTENT="linux remote control, multimedia">
+<META charset="UTF-8">
+</HEAD>
+<body>
+<TABLE CLASS="menu"><TR>
+<TD CLASS="menu"><IMG class="menuimg" SRC="../images/diode.gif" ALT="LIRC icon" ALIGN="LEFT"></TD>
+<TD><IMG class="menuimg" SRC="../images/lirc.gif" ALT="LIRC logo" ALIGN="RIGHT"></TD>
+</TR></TABLE>
+<h1>LIRCRC</h1>
+Section: FILE FORMATS (5)<br>Updated: Last change: Oct 2015<br><a href="#index">Index</a>
+<a href="index.html">Return to Main Contents</a><hr>
+
+<a name="lbAB"> </a>
+<h2>NAME</h2>
+
+<p>
+
+<b>lircrc</b> - application-specific remotes signals configuration
+<a name="lbAC"> </a>
+</p>
+<h2>DESCRIPTION</h2>
+
+<p>
+
+<b>lircrc</b> is the last LIRC configuration point in the
+flow of events from the kernel to the application. It provides a way
+to translate the application-agnostic events which <i>lircd</i> makes
+available on <i>/var/run/lirc/lircd</i> to application-specific strings.
+The translation is invoked by LIRC-aware applications by using the
+the <i>lirc_code2char()</i> routine in the <i>lirc_client</i>
+library.
+</p>
+<p>
+
+The lircrc event mapping is not only mapping from a remote event
+to an application string. It also supports a variety of functionality
+such as repeat suppression, modes, long keypresses and button sequences.
+</p>
+<p>
+
+The default location for lircrc is <i>~/.config/lircrc</i> with a global
+fallback in <i>/etc/lirc/lircrc</i>. Many applications which
+uses the lircrc translations have private locations for the file.
+</p>
+<p>
+
+The programmatic interface to the <b>lircrc</b> functionality is described
+in the Client API manual, see below
+</p>
+<p>
+
+The file format is described in the configuration manual, see below.
+<a name="lbAD"> </a>
+</p>
+<h2>SEE ALSO</h2>
+
+<dl>
+<div><dt>
+<b><a href="http://lirc.org/html/configure.html#lircrc_format">http://lirc.org/html/configure.html#lircrc_format</a></b>
+
+</dt></div>
+<dd>
+Description of the lircrc file format.
+</dd>
+<div><dt>
+<b><a href="http://lirc.org/html/lirc_client.html">http://lirc.org/html/lirc_client.html</a></b>
+
+</dt></div>
+<dd>
+Client API, the programmatic interface to the lircrc files.
+<p>
+</p>
+</dd>
+</dl>
+
+<hr>
+<a name="index"> </a><h2>Index</h2>
+<dl>
+<div><dt><a href="#lbAB">NAME</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAC">DESCRIPTION</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAD">SEE ALSO</a></dt></div>
+<dd>
+</dd>
+</dl>
+<hr>
+                        <p>
+This document was created by
+<a href="index.html">man2html</a>,
+using the manual pages.<br>
+Time: 13:12:52 GMT, April 06, 2019
+                        </p>
+<p class="footer">
+        [<A HREF="http://www.lirc.org/">LIRC homepage</A>]
+      </p>
+</body>
+</html>

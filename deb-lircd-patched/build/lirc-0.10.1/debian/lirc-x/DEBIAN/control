@@ -1,0 +1,18 @@
+Package: lirc-x
+Source: lirc
+Version: 0.10.1-5.2
+Architecture: armhf
+Maintainer: Debian Lirc Team <team+debian-lirc@tracker.debian.org>
+Installed-Size: 85
+Depends: liblirc0 (= 0.10.1-5.2), lirc (= 0.10.1-5.2), libc6 (>= 2.15), libgcc1 (>= 1:3.5), liblirc-client0, libx11-6
+Recommends: xfonts-75dpi
+Section: utils
+Priority: optional
+Homepage: https://sf.net/p/lirc
+Description: infra-red remote control support - X utilities
+ LIRC stands for 'Linux Infra-red Remote Control'.
+ .
+ This package provides X utilities for LIRC:
+  - irxevent: Allows controlling X applications with a remote control.
+  - xmode2:   Shows the IR waveform of the remote controller without an
+              oscilloscope. Unneeded for TV cards or the Irman.

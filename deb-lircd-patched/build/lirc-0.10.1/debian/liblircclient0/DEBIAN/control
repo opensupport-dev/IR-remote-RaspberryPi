@@ -1,0 +1,13 @@
+Package: liblircclient0
+Source: lirc
+Version: 0.10.1-5.2
+Architecture: armhf
+Maintainer: Debian Lirc Team <team+debian-lirc@tracker.debian.org>
+Installed-Size: 41
+Depends: liblirc-client0
+Section: libs
+Priority: optional
+Homepage: https://sf.net/p/lirc
+Description: Transitional placeholder for obsoleted liblircclient0
+ Virtual, empty package used in the process of renaming liblircclient0
+ to liblirc-client0.

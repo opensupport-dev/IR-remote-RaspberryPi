@@ -1,0 +1,25 @@
+var lirc__log_8c =
+[
+    [ "HOSTNAME_LEN", "lirc__log_8c.html#acb4847a33bbb4f1de9fcc6cd7ea1c1cb", null ],
+    [ "min", "lirc__log_8c.html#ac6afabdc09a49a433ee19d8a9486056d", null ],
+    [ "hexdump", "lirc__log_8c.html#a30ad875dc57527c9a0037df67bab420f", null ],
+    [ "lirc_log_close", "lirc__log_8c.html#ac4cddc1f18ff055b1be8755c46d830bb", null ],
+    [ "lirc_log_defaultlevel", "lirc__log_8c.html#ad9ecabbf33ad978a5dc9a265c3b16365", null ],
+    [ "lirc_log_get_clientlog", "lirc__log_8c.html#a5af3dc8e52fabe122ac7ec52c6852885", null ],
+    [ "lirc_log_open", "lirc__log_8c.html#a3154a9cb342ea5f79edfe7ced8504ccd", null ],
+    [ "lirc_log_reopen", "lirc__log_8c.html#af96aebf4f1b1b729d1b32ff2f00903ee", null ],
+    [ "lirc_log_set_file", "lirc__log_8c.html#a2eaf417e2b2dd63861d17b2c836fe1b8", null ],
+    [ "lirc_log_setlevel", "lirc__log_8c.html#a43d290e2c8b30ac1f72accfc0a22b9ba", null ],
+    [ "lirc_log_use_syslog", "lirc__log_8c.html#a283ad387ae5bec5223df6d6a7589d2cb", null ],
+    [ "logperror", "lirc__log_8c.html#aecf5f8345788bbd42f490f228fee30e0", null ],
+    [ "logprintf", "lirc__log_8c.html#a29b67f5d1afc944a5c4487711d0f93b3", null ],
+    [ "perrorf", "lirc__log_8c.html#abf031435b06bf0e8a87af6b2ad58f499", null ],
+    [ "string2loglevel", "lirc__log_8c.html#a2a2913bd83563a14c1202e9aafd5900c", null ],
+    [ "hostname", "lirc__log_8c.html#a351ae709d9bb8aa371e1f7f176002c9c", null ],
+    [ "lf", "lirc__log_8c.html#aecc09945bbec7633acb6871d53fd2260", null ],
+    [ "logfile", "lirc__log_8c.html#abeb07ab8d2a220cc47b452df88e215c6", null ],
+    [ "logged_channels", "lirc__log_8c.html#a89cb5b9dc5bd51cced8ff8b53ba3b408", null ],
+    [ "loglevel", "lirc__log_8c.html#a1c0866a106e32b72cfa74e9d352b255d", null ],
+    [ "progname", "lirc__log_8c.html#a2b2397fb25253f9de2014ac16c7fcf15", null ],
+    [ "syslogident", "lirc__log_8c.html#a8d59f0b8b36622eacf0828098dc19ae4", null ]
+];

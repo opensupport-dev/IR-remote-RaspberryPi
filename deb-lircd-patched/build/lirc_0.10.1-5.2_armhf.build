@@ -1,0 +1,1370 @@
+ dpkg-buildpackage -us -uc -ui -b
+dpkg-buildpackage: info: source package lirc
+dpkg-buildpackage: info: source version 0.10.1-5.2
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Tobias Frost <tobi@debian.org>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture armhf
+ fakeroot debian/rules clean
+dh clean --with python3
+   dh_auto_clean
+	make -j4 distclean
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+Making distclean in lib
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1/lib' 들어감
+rm -f ./so_locations
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1/lib' 나감
+Making distclean in daemons
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1/daemons' 들어감
+ rm -f lircrcd
+ rm -f lircd lircmd lircd-uinput
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1/daemons' 나감
+Making distclean in tools
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1/tools' 들어감
+ rm -f ircat irexec irrecord irsend irsimreceive irsimsend irtestcase irw lirc-lsremotes mode2 xmode2 irxevent irpipe irpty
+ rm -f lirc-lsplugins
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1/tools' 나감
+Making distclean in plugins
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1/plugins' 들어감
+rm -f ./so_locations
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1/plugins' 나감
+Making distclean in configs
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1/configs' 들어감
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1/configs' 나감
+Making distclean in doc
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1/doc' 들어감
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1/doc' 나감
+Making distclean in systemd
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1/systemd' 들어감
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1/systemd' 나감
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+rm -f python-pkg/lib/so_locations
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+   dh_autoreconf_clean
+   debian/rules override_dh_clean
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+dh_clean
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+ debian/rules build
+dh build --with python3
+   dh_update_autotools_config
+   debian/rules override_dh_autoreconf
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+dh_autoreconf /home/pi/build/lirc-0.10.1/autogen.sh
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+configure.ac:19: installing './compile'
+configure.ac:44: installing './config.guess'
+configure.ac:44: installing './config.sub'
+configure.ac:11: installing './install-sh'
+configure.ac:11: installing './missing'
+Makefile.am: installing './INSTALL'
+Makefile.am: installing './depcomp'
+Makefile.am:79: installing './py-compile'
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+   debian/rules override_dh_auto_configure
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+dh_auto_configure -- \
+    --enable-uinput --enable-devinput \
+    --enable-silent-rules
+	./configure --build=arm-linux-gnueabihf --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/arm-linux-gnueabihf --libexecdir=\${prefix}/lib/arm-linux-gnueabihf --runstatedir=/run --disable-maintainer-mode --disable-dependency-tracking --enable-uinput --enable-devinput --enable-silent-rules
+configure: WARNING: unrecognized options: --disable-maintainer-mode
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... none
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... none
+checking for sh... /bin/sh
+checking for modinfo... modinfo
+checking for pkg-config... yes
+checking for xsltproc... yes
+checking for man2html... yes
+checking for doxygen... yes
+checking build system type... arm-unknown-linux-gnueabihf
+checking host system type... arm-unknown-linux-gnueabihf
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert arm-unknown-linux-gnueabihf file names to arm-unknown-linux-gnueabihf format... func_convert_file_noop
+checking how to convert arm-unknown-linux-gnueabihf file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for a Python interpreter with version >= 3.1... python3
+checking for python3... /usr/bin/python3
+checking for python3 version... 3.7
+checking for python3 platform... linux
+checking for python3 script directory... ${prefix}/lib/python3.7/site-packages
+checking for python3 extension module directory... ${exec_prefix}/lib/python3.7/site-packages
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for PYTHON... yes
+checking for PYTHON... yes
+checking for ANSI C header files... (cached) yes
+checking whether time.h and sys/time.h may both be included... yes
+checking whether termios.h defines TIOCGWINSZ... no
+checking whether sys/ioctl.h defines TIOCGWINSZ... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking libutil.h usability... no
+checking libutil.h presence... no
+checking for libutil.h... no
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking linux/ioctl.h usability... yes
+checking linux/ioctl.h presence... yes
+checking for linux/ioctl.h... yes
+checking linux/sched.h usability... yes
+checking linux/sched.h presence... yes
+checking for linux/sched.h... yes
+checking poll.h usability... yes
+checking poll.h presence... yes
+checking for poll.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/poll.h usability... yes
+checking sys/poll.h presence... yes
+checking for sys/poll.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking for unistd.h... (cached) yes
+checking util.h usability... no
+checking util.h presence... no
+checking for util.h... no
+checking pty.h usability... yes
+checking pty.h presence... yes
+checking for pty.h... yes
+checking for inline... inline
+checking for pid_t... yes
+checking for size_t... yes
+checking for int8_t... yes
+checking for int16_t... yes
+checking for int32_t... yes
+checking for int64_t... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking Figure out if getgrouplist() needs gid_t or int... gid_t
+checking for gethostname... yes
+checking for gettimeofday... yes
+checking for mkfifo... yes
+checking for select... yes
+checking for socket... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strtoul... yes
+checking for snprintf... yes
+checking for strsep... yes
+checking for vsyslog... yes
+checking for library containing dlopen... -ldl
+checking for daemon... yes
+checking for clock_gettime... yes
+checking python3 module: yaml... yes
+checking for forkpty... no
+checking for forkpty in -lutil... yes
+checking for linux kernel... yes
+checking for X... libraries , headers 
+checking for gethostbyname... yes
+checking for connect... yes
+checking for remove... yes
+checking for shmat... yes
+checking for IceConnectionNumber in -lICE... no
+checking usb.h usability... yes
+checking usb.h presence... yes
+checking for usb.h... yes
+checking libusb-1.0/libusb.h usability... yes
+checking libusb-1.0/libusb.h presence... yes
+checking for libusb-1.0/libusb.h... yes
+checking libusb.h usability... no
+checking libusb.h presence... no
+checking for libusb.h... no
+checking for usb_get_string in -lusb... yes
+checking for libusb_get_port_number in -lusb-1.0... yes
+checking for FTDI... no
+checking for FTDI... yes
+checking for PORTAUDIO... yes
+checking alsa/asoundlib.h usability... yes
+checking alsa/asoundlib.h presence... yes
+checking for alsa/asoundlib.h... yes
+checking for snd_async_del_handler in -lasound... yes
+checking for ALSA SB RC hwdep support... yes
+checking for devinput... yes
+checking for working poll(2)... yes
+checking linux/input.h usability... yes
+checking linux/input.h presence... yes
+checking for linux/input.h... yes
+checking linux/lirc.h usability... yes
+checking linux/lirc.h presence... yes
+checking for linux/lirc.h... yes
+checking scsi/sg.h usability... yes
+checking scsi/sg.h presence... yes
+checking for scsi/sg.h... yes
+checking mach/mach_time.h usability... no
+checking mach/mach_time.h presence... no
+checking for mach/mach_time.h... no
+checking IOKit/IOCFPlugIn.h usability... no
+checking IOKit/IOCFPlugIn.h presence... no
+checking for IOKit/IOCFPlugIn.h... no
+checking for linux/input.h... (cached) yes
+checking linux/types.h usability... yes
+checking linux/types.h presence... yes
+checking for linux/types.h... yes
+checking for linux/hiddev.h... yes
+checking for HIDDEV_FLAG_UREF support... yes
+checking sys/soundcard.h usability... yes
+checking sys/soundcard.h presence... yes
+checking for sys/soundcard.h... yes
+checking linux/i2c-dev.h usability... yes
+checking linux/i2c-dev.h presence... yes
+checking for linux/i2c-dev.h... yes
+checking for SYSTEMD... no
+checking for SYSTEMD... yes
+checking for udev_device_new_from_device_id in -ludev... yes
+checking libudev.h usability... yes
+checking libudev.h presence... yes
+checking for libudev.h... yes
+checking for LIBUDEV... yes
+checking systemd system unit directory... /lib/systemd/system
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating VERSION
+config.status: creating Makefile
+config.status: creating lirc.pc
+config.status: creating lirc-driver.pc
+config.status: WARNING:  'lirc-driver.pc.in' seems to ignore the --datarootdir setting
+config.status: creating daemons/Makefile
+config.status: creating plugins/Makefile
+config.status: creating tools/Makefile
+config.status: creating lib/Makefile
+config.status: creating doc/Makefile
+config.status: creating configs/Makefile
+config.status: creating doc/docpage.xsl
+config.status: creating systemd/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --disable-maintainer-mode
+
+Summary of selected options:
+----------------------------------------
+prefix:                         /usr
+lockdir:                        /var/lock
+sysconfdir:                     /etc
+x_progs:                        irxevent xmode2
+host:                           arm-unknown-linux-gnueabihf
+host_os:                        linux-gnueabihf
+forkpty:                        -lutil
+LIBUSB_LIBS:                    -lusb -lusb-1.0
+PORTAUDIO_LIBS:                 -lportaudio -lasound -lm -lpthread
+
+Conditionals:
+
+BUILD_ALSA_SB_RC:          yes         BUILD_DSP:                 yes         
+BUILD_FTDI:                yes         BUILD_HIDDEV:              yes         
+BUILD_I2CUSER:             yes         BUILD_LIBALSA:             yes         
+BUILD_LIBPORTAUDIO:        yes         BUILD_USB:                 yes         
+BUILD_XTOOLS:              yes         HAVE_DOXYGEN:              yes         
+HAVE_MAN2HTML:             yes         HAVE_PYMOD_YAML:           yes         
+ENABLE_UINPUT:             yes         INSTALL_ETC:               yes         
+IS_CROSS_COMPILE:          no          DEVEL:                     no          
+LINUX_KERNEL:              yes         HAVE_DEVINPUT:             yes         
+WITH_SYSTEMDSYSTEMUNITDIR: yes         HAVE_PYTHON35:             yes         
+
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+   dh_auto_build
+	make -j4
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+Making all in lib
+make[3]: 디렉터리 '/home/pi/build/lirc-0.10.1/lib' 들어감
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/lib' 들어감
+  CC       config_file.lo
+  CC       ciniparser.lo
+  CC       dictionary.lo
+  CC       driver.lo
+ciniparser.c: In function ‘ciniparser_load’:
+ciniparser.c:436:39: warning: ‘%s’ directive output may be truncated writing up to 1024 bytes into a region of size between 0 and 1024 [-Wformat-truncation=]
+    snprintf(tmp, ASCIILINESZ + 1, "%s:%s", section, key);
+                                       ^~            ~~~
+In file included from /usr/include/stdio.h:873,
+                 from ./ciniparser.h:45,
+                 from ciniparser.c:36:
+/usr/include/arm-linux-gnueabihf/bits/stdio2.h:67:10: note: ‘__builtin___snprintf_chk’ output between 2 and 2050 bytes into a destination of size 1025
+   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        __bos (__s), __fmt, __va_arg_pack ());
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CC       drv_admin.lo
+  CC       dump_config.lo
+  CC       ir_remote.lo
+drv_admin.c: In function ‘for_each_plugin_in_dir’:
+drv_admin.c:178:9: warning: ‘%s’ directive output may be truncated writing up to 255 bytes into a region of size between 0 and 1023 [-Wformat-truncation=]
+     "%s/%s", buff, ent->d_name);
+         ^~
+In file included from /usr/include/stdio.h:873,
+                 from drv_admin.c:14:
+/usr/include/arm-linux-gnueabihf/bits/stdio2.h:67:10: note: ‘__builtin___snprintf_chk’ output between 2 and 1280 bytes into a destination of size 1024
+   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        __bos (__s), __fmt, __va_arg_pack ());
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CXX      line_buffer.lo
+  CC       lirc_log.lo
+  CC       lirc_options.lo
+  CC       lirc-utils.lo
+lirc_options.c: In function ‘options_load’:
+lirc_options.c:135:38: warning: ‘__builtin___snprintf_chk’ output may be truncated before the last format character [-Wformat-truncation=]
+   snprintf(buff, sizeof(buff), "%s/%s", buff2, path);
+                                      ^
+In file included from /usr/include/stdio.h:873,
+                 from lirc_options.c:19:
+/usr/include/arm-linux-gnueabihf/bits/stdio2.h:67:10: note: ‘__builtin___snprintf_chk’ output 2 or more bytes (assuming 129) into a destination of size 128
+   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        __bos (__s), __fmt, __va_arg_pack ());
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CC       curl_poll.lo
+  CC       receive.lo
+  CC       release.lo
+  CC       serial.lo
+  CC       transmit.lo
+  CC       lirc_client.lo
+  CC       drv_enum.lo
+  CC       irrecord.lo
+  CC       input_map.lo
+  CXXLD    liblirc.la
+drv_enum.c: In function ‘drv_enum_udev’:
+drv_enum.c:320:39: warning: ‘%s’ directive output may be truncated writing up to 127 bytes into a region of size 124 [-Wformat-truncation=]
+   snprintf(buff, sizeof(buff), "%s -> %s",
+                                       ^~
+     udev_list_entry_get_name(links), path);
+                                      ~~~~
+In file included from /usr/include/stdio.h:873,
+                 from lirc_log.h:20,
+                 from drv_enum.c:30:
+/usr/include/arm-linux-gnueabihf/bits/stdio2.h:67:10: note: ‘__builtin___snprintf_chk’ output 5 or more bytes (assuming 132) into a destination of size 128
+   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        __bos (__s), __fmt, __va_arg_pack ());
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CCLD     liblirc_driver.la
+  CCLD     liblirc_client.la
+  CCLD     libirrecord.la
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/lib' 나감
+make[3]: 디렉터리 '/home/pi/build/lirc-0.10.1/lib' 나감
+Making all in daemons
+make[3]: 디렉터리 '/home/pi/build/lirc-0.10.1/daemons' 들어감
+  CXX      lircrcd.o
+  CXX      lircmd-lircmd.o
+  CXX      lircd.o
+  CXX      lircd-uinput.o
+lircd.cpp: In function ‘void free_old_remotes()’:
+lircd.cpp:1824:44: warning: passing argument 3 to restrict-qualified parameter aliases with argument 2 [-Wrestrict]
+      setitimer(ITIMER_REAL, &repeat_timer, &repeat_timer);
+                             ~~~~~~~~~~~~~  ^~~~~~~~~~~~~
+  CXXLD    lircmd
+  CXXLD    lircd-uinput
+lircd.cpp: In function ‘int main(int, char**)’:
+lircd.cpp:2104:5: warning: ‘: bad address "’ directive writing 15 bytes into a region of size between 1 and 128 [-Wformat-overflow=]
+     "%s: bad address \"%s\"\n", progname, optarg);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/stdio.h:873,
+                 from lircd.cpp:34:
+/usr/include/arm-linux-gnueabihf/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output 18 or more bytes (assuming 145) into a destination of size 128
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+lircd.cpp:2096:4: warning: ‘: bad port number "’ directive writing 19 bytes into a region of size between 1 and 128 [-Wformat-overflow=]
+    "%s: bad port number \"%s\"\n", progname, port_str);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/stdio.h:873,
+                 from lircd.cpp:34:
+/usr/include/arm-linux-gnueabihf/bits/stdio2.h:36:34: note: ‘__builtin___sprintf_chk’ output 22 or more bytes (assuming 149) into a destination of size 128
+   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       __bos (__s), __fmt, __va_arg_pack ());
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CXXLD    lircd
+  CXXLD    lircrcd
+make[3]: 디렉터리 '/home/pi/build/lirc-0.10.1/daemons' 나감
+Making all in tools
+make[3]: 디렉터리 '/home/pi/build/lirc-0.10.1/tools' 들어감
+  CXX      ircat.o
+  CXX      irexec.o
+  CXX      irrecord-ui.o
+  CXX      irsend.o
+irrecord-ui.cpp: In function ‘void do_get_toggle_bit_mask(ir_remote*, main_state*, const opts*)’:
+irrecord-ui.cpp:613:11: warning: format ‘%lx’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘ir_code’ {aka ‘long long unsigned int’} [-Wformat=]
+    printf("\nToggle bit mask is 0x%lx.\n",
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           (uint64_t)remote->toggle_bit_mask);
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+irrecord-ui.cpp:616:12: warning: format ‘%lx’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘ir_code’ {aka ‘long long unsigned int’} [-Wformat=]
+     printf("RC6 mask is 0x%lx.\n",
+            ^~~~~~~~~~~~~~~~~~~~~~
+            (uint64_t)remote->rc6_mask);
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CXX      irsimreceive.o
+  CXX      irsimsend.o
+  CXX      irtestcase.o
+irrecord-ui.cpp: In function ‘void get_name(ir_remote*, opts*)’:
+irrecord-ui.cpp:1115:32: warning: ‘.lircd.conf.bak’ directive output may be truncated writing 15 bytes into a region of size between 1 and 256 [-Wformat-truncation=]
+   snprintf(path, sizeof(path), "%s.lircd.conf.bak", buff);
+                                ^~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/stdio.h:873,
+                 from ../lib/lirc_log.h:20,
+                 from ../lib/lirc_private.h:23,
+                 from irrecord-ui.cpp:23:
+/usr/include/arm-linux-gnueabihf/bits/stdio2.h:67:35: note: ‘__builtin___snprintf_chk’ output between 16 and 271 bytes into a destination of size 256
+   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+          ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        __bos (__s), __fmt, __va_arg_pack ());
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+irrecord-ui.cpp:1124:31: warning: ‘.lircd.conf’ directive output may be truncated writing 11 bytes into a region of size between 1 and 256 [-Wformat-truncation=]
+  snprintf(path, sizeof(path), "%s.lircd.conf", buff);
+                               ^~~~~~~~~~~~~~~
+In file included from /usr/include/stdio.h:873,
+                 from ../lib/lirc_log.h:20,
+                 from ../lib/lirc_private.h:23,
+                 from irrecord-ui.cpp:23:
+/usr/include/arm-linux-gnueabihf/bits/stdio2.h:67:35: note: ‘__builtin___snprintf_chk’ output between 12 and 267 bytes into a destination of size 256
+   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+          ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        __bos (__s), __fmt, __va_arg_pack ());
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+irrecord-ui.cpp:1129:5: warning: ‘%s’ directive output may be truncated writing up to 255 bytes into a region of size 250 [-Wformat-truncation=]
+     "cp -p %s %s", path, opts->backupfile);
+     ^~~~~~~~~~~~~  ~~~~
+In file included from /usr/include/stdio.h:873,
+                 from ../lib/lirc_log.h:20,
+                 from ../lib/lirc_private.h:23,
+                 from irrecord-ui.cpp:23:
+/usr/include/arm-linux-gnueabihf/bits/stdio2.h:67:35: note: ‘__builtin___snprintf_chk’ output 8 or more bytes (assuming 263) into a destination of size 256
+   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+          ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        __bos (__s), __fmt, __va_arg_pack ());
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CXX      irw.o
+  CXX      lirc-lsremotes.o
+  CXX      mode2.o
+  CXX      xmode2.o
+  CXX      irxevent.o
+lirc-lsremotes.cpp: In function ‘void listdir(const char*)’:
+lirc-lsremotes.cpp:215:40: warning: ‘%s’ directive output may be truncated writing up to 255 bytes into a region of size between 0 and 511 [-Wformat-truncation=]
+   snprintf(filepath, sizeof(filepath), "%s/%s",
+                                        ^~~~~~~
+In file included from /usr/include/stdio.h:873,
+                 from lirc-lsremotes.cpp:18:
+/usr/include/arm-linux-gnueabihf/bits/stdio2.h:67:35: note: ‘__builtin___snprintf_chk’ output between 2 and 768 bytes into a destination of size 512
+   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+          ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        __bos (__s), __fmt, __va_arg_pack ());
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CXX      irpipe-irpipe.o
+  CXX      irpty.o
+  CXX      lirc-lsplugins.o
+  CXXLD    ircat
+  CXXLD    irexec
+  CXXLD    irrecord
+  CXXLD    irsend
+  CXXLD    irsimreceive
+  CXXLD    irsimsend
+  CXXLD    irtestcase
+  CXXLD    irw
+  CXXLD    lirc-lsremotes
+  CXXLD    mode2
+  CXXLD    xmode2
+  CXXLD    irxevent
+  CXXLD    irpipe
+  CXXLD    irpty
+  CXXLD    lirc-lsplugins
+make[3]: 디렉터리 '/home/pi/build/lirc-0.10.1/tools' 나감
+Making all in plugins
+make[3]: 디렉터리 '/home/pi/build/lirc-0.10.1/plugins' 들어감
+  CC       atilibusb_la-atilibusb.lo
+  CC       awlibusb_la-awlibusb.lo
+  CC       dfclibusb_la-dfclibusb.lo
+  CC       srm7500libusb_la-srm7500libusb.lo
+  CC       commandir_la-commandir.lo
+  CC       ftdi_la-ftdi.lo
+  CC       audio_la-audio.lo
+ftdi.c: In function ‘list_devices’:
+ftdi.c:152:35: warning: ‘%s’ directive output may be truncated writing up to 127 bytes into a region of size between 104 and 231 [-Wformat-truncation=]
+     "/dev/bus/usb/%03d/%03d:   %s:%s\n",
+                                   ^~
+ftdi.c:155:13:
+     vendor, descr);
+             ~~~~~                  
+In file included from /usr/include/stdio.h:873,
+                 from ftdi.c:45:
+/usr/include/arm-linux-gnueabihf/bits/stdio2.h:67:10: note: ‘__builtin___snprintf_chk’ output between 27 and 281 bytes into a destination of size 256
+   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        __bos (__s), __fmt, __va_arg_pack ());
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CC       audio_alsa.lo
+  CC       alsa_usb.lo
+  CC       i2cuser.lo
+  CC       dsp.lo
+  CC       atwf83.lo
+  CC       livedrive_midi.lo
+  CC       livedrive_common.lo
+  CC       livedrive_seq.lo
+  CC       uirt2_common.lo
+  CC       uirt2_raw.lo
+  CC       uirt2.lo
+  CC       devinput.lo
+  CC       hiddev.lo
+  CC       creative_infracd.lo
+  CC       default.lo
+  CC       zotac.lo
+  CC       mplay.lo
+  CC       accent.lo
+  CC       bte.lo
+  CC       creative.lo
+  CC       ea65.lo
+  CC       file.lo
+  CC       girs.lo
+  CC       irlink.lo
+  CC       irtoy.lo
+  CC       logitech.lo
+In file included from /usr/include/string.h:494,
+                 from ../lib/lirc/ir_remote_types.h:30,
+                 from ../lib/lirc/driver.h:32,
+                 from ../lib/lirc/drv_enum.h:27,
+                 from ../lib/lirc_driver.h:16,
+                 from girs.c:49:
+In function ‘strncat’,
+    inlined from ‘initialize’ at girs.c:857:4:
+/usr/include/arm-linux-gnueabihf/bits/string_fortified.h:136:10: warning: ‘__builtin___strncat_chk’ accessing between 1001 and 947 bytes at offsets 1052 and 52 may overlap 1 byte at offset 1052 [-Wrestrict]
+   return __builtin___strncat_chk (__dest, __src, __len, __bos (__dest));
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CC       mouseremote.lo
+  CC       mp3anywhere.lo
+  CC       pcmak.lo
+  CC       pixelview.lo
+  CC       pinsys.lo
+  CC       silitek.lo
+  CC       tira.lo
+  CC       udp.lo
+  CC       usbx.lo
+  CCLD     atilibusb.la
+  CCLD     awlibusb.la
+  CCLD     dfclibusb.la
+  CCLD     srm7500libusb.la
+  CCLD     commandir.la
+  CCLD     ftdi.la
+  CCLD     audio.la
+  CCLD     audio_alsa.la
+  CCLD     alsa_usb.la
+  CCLD     i2cuser.la
+  CCLD     dsp.la
+  CCLD     atwf83.la
+  CCLD     livedrive_midi.la
+  CCLD     livedrive_seq.la
+  CCLD     uirt2.la
+  CCLD     uirt2_raw.la
+  CCLD     devinput.la
+  CCLD     default.la
+  CCLD     hiddev.la
+  CCLD     creative_infracd.la
+  CCLD     zotac.la
+  CCLD     mplay.la
+  CCLD     accent.la
+  CCLD     bte.la
+  CCLD     creative.la
+  CCLD     ea65.la
+  CCLD     file.la
+  CCLD     girs.la
+  CCLD     irlink.la
+  CCLD     irtoy.la
+  CCLD     logitech.la
+  CCLD     mouseremote.la
+  CCLD     mp3anywhere.la
+  CCLD     pcmak.la
+  CCLD     pinsys.la
+  CCLD     pixelview.la
+  CCLD     silitek.la
+  CCLD     tira.la
+  CCLD     udp.la
+  CCLD     usbx.la
+make[3]: 디렉터리 '/home/pi/build/lirc-0.10.1/plugins' 나감
+Making all in configs
+make[3]: 디렉터리 '/home/pi/build/lirc-0.10.1/configs' 들어감
+Warning: cannot open /etc/lirc/lirc_options.conf
+make[3]: 디렉터리 '/home/pi/build/lirc-0.10.1/configs' 나감
+Making all in doc
+make[3]: 디렉터리 '/home/pi/build/lirc-0.10.1/doc' 들어감
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/lib' 들어감
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/lib' 나감
+config.status: creating doc/docpage.xsl
+make[3]: 디렉터리 '/home/pi/build/lirc-0.10.1/doc' 나감
+Making all in systemd
+make[3]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+  CC       python-pkg/lirc/lib__client_la-_client.lo
+  CCLD     python-pkg/lib/_client.la
+make[3]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+   debian/rules override_dh_auto_test
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+tools/lirc-lsplugins -U plugins/.libs -s | tee summary
+Warning: cannot open /etc/lirc/lirc_options.conf
+Plugins: 40
+Drivers: 51
+Errors: 0
+grep -q "Errors: 0" summary && rm summary
+case $(dpkg-architecture -qDEB_HOST_GNU_SYSTEM) in \
+    kfreebsd* | gnu) \
+        :  ;; \
+    *)  \
+        cd python-pkg/tests; \
+        python3 -m unittest discover && rm backend.log \
+	;; \
+esac
+....../home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:222: DeprecationWarning: time.clock has been deprecated in Python 3.3 and will be removed from Python 3.8: use time.perf_counter or time.process_time instead
+  start = time.clock()
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:225: DeprecationWarning: time.clock has been deprecated in Python 3.3 and will be removed from Python 3.8: use time.perf_counter or time.process_time instead
+  start + timeout - time.clock() if timeout else timeout)
+.
+----------------------------------------------------------------------
+Ran 7 tests in 4.164s
+
+OK
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+   create-stamp debian/debhelper-build-stamp
+ fakeroot debian/rules binary
+dh binary --with python3
+   dh_testroot
+   dh_prep
+   debian/rules override_dh_auto_install
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+/usr/bin/make V=0 DESTDIR=/home/pi/build/lirc-0.10.1/debian/tmp install
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+make[3]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+Making install in lib
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/lib' 들어감
+make[5]: 디렉터리 '/home/pi/build/lirc-0.10.1/lib' 들어감
+make[6]: 디렉터리 '/home/pi/build/lirc-0.10.1/lib' 들어감
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   liblirc.la liblirc_client.la liblirc_driver.la libirrecord.la '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/liblirc.so.0.0.0 /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/liblirc.so.0.0.0
+libtool: install: (cd /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf && { ln -s -f liblirc.so.0.0.0 liblirc.so.0 || { rm -f liblirc.so.0 && ln -s liblirc.so.0.0.0 liblirc.so.0; }; })
+libtool: install: (cd /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf && { ln -s -f liblirc.so.0.0.0 liblirc.so || { rm -f liblirc.so && ln -s liblirc.so.0.0.0 liblirc.so; }; })
+libtool: install: /usr/bin/install -c .libs/liblirc.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/liblirc.la
+libtool: install: /usr/bin/install -c .libs/liblirc_client.so.0.6.0 /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/liblirc_client.so.0.6.0
+libtool: install: (cd /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf && { ln -s -f liblirc_client.so.0.6.0 liblirc_client.so.0 || { rm -f liblirc_client.so.0 && ln -s liblirc_client.so.0.6.0 liblirc_client.so.0; }; })
+libtool: install: (cd /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf && { ln -s -f liblirc_client.so.0.6.0 liblirc_client.so || { rm -f liblirc_client.so && ln -s liblirc_client.so.0.6.0 liblirc_client.so; }; })
+libtool: install: /usr/bin/install -c .libs/liblirc_client.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/liblirc_client.la
+libtool: warning: relinking 'liblirc_driver.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/lib; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -version-info 3:0:3 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o liblirc_driver.la -rpath /usr/lib/arm-linux-gnueabihf drv_enum.lo ir_remote.lo lirc_log.lo curl_poll.lo receive.lo release.lo serial.lo transmit.lo liblirc.la -lusb -lusb-1.0 -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/liblirc_driver.so.0.3.0T /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/liblirc_driver.so.0.3.0
+libtool: install: (cd /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf && { ln -s -f liblirc_driver.so.0.3.0 liblirc_driver.so.0 || { rm -f liblirc_driver.so.0 && ln -s liblirc_driver.so.0.3.0 liblirc_driver.so.0; }; })
+libtool: install: (cd /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf && { ln -s -f liblirc_driver.so.0.3.0 liblirc_driver.so || { rm -f liblirc_driver.so && ln -s liblirc_driver.so.0.3.0 liblirc_driver.so; }; })
+libtool: install: /usr/bin/install -c .libs/liblirc_driver.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/liblirc_driver.la
+libtool: warning: relinking 'libirrecord.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/lib; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o libirrecord.la -rpath /usr/lib/arm-linux-gnueabihf irrecord.lo liblirc.la -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/libirrecord.so.0.0.0T /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/libirrecord.so.0.0.0
+libtool: install: (cd /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf && { ln -s -f libirrecord.so.0.0.0 libirrecord.so.0 || { rm -f libirrecord.so.0 && ln -s libirrecord.so.0.0.0 libirrecord.so.0; }; })
+libtool: install: (cd /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf && { ln -s -f libirrecord.so.0.0.0 libirrecord.so || { rm -f libirrecord.so && ln -s libirrecord.so.0.0.0 libirrecord.so; }; })
+libtool: install: /usr/bin/install -c .libs/libirrecord.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/libirrecord.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/arm-linux-gnueabihf'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/include'
+ /usr/bin/install -c -m 644 lirc_client.h lirc_driver.h lirc_private.h '/home/pi/build/lirc-0.10.1/debian/tmp/usr/include'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/include/lirc'
+ /usr/bin/install -c -m 644 config_file.h config_flags.h ciniparser.h curl_poll.h dictionary.h drv_admin.h drv_enum.h dump_config.h driver.h input_map.h ir_remote.h ir_remote_types.h irrecord.h line_buffer.h lirc_client.h lirc_config.h lirc_log.h lirc_options.h lirc-utils.h release.h receive.h serial.h transmit.h input_map.inc '/home/pi/build/lirc-0.10.1/debian/tmp/usr/include/lirc'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/include/lirc'
+ /usr/bin/install -c -m 644 config.h paths.h '/home/pi/build/lirc-0.10.1/debian/tmp/usr/include/lirc'
+make[6]: 디렉터리 '/home/pi/build/lirc-0.10.1/lib' 나감
+make[5]: 디렉터리 '/home/pi/build/lirc-0.10.1/lib' 나감
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/lib' 나감
+Making install in daemons
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/daemons' 들어감
+make[5]: 디렉터리 '/home/pi/build/lirc-0.10.1/daemons' 들어감
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/bin'
+  /bin/bash ../libtool   --mode=install /usr/bin/install -c lircrcd '/home/pi/build/lirc-0.10.1/debian/tmp/usr/bin'
+libtool: warning: '../lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/lircrcd /home/pi/build/lirc-0.10.1/debian/tmp/usr/bin/lircrcd
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/sbin'
+  /bin/bash ../libtool   --mode=install /usr/bin/install -c lircd lircmd lircd-uinput '/home/pi/build/lirc-0.10.1/debian/tmp/usr/sbin'
+libtool: warning: '../lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/lircd /home/pi/build/lirc-0.10.1/debian/tmp/usr/sbin/lircd
+libtool: warning: '../lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/lircmd /home/pi/build/lirc-0.10.1/debian/tmp/usr/sbin/lircmd
+libtool: warning: '../lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/lircd-uinput /home/pi/build/lirc-0.10.1/debian/tmp/usr/sbin/lircd-uinput
+make[5]: 디렉터리 '/home/pi/build/lirc-0.10.1/daemons' 나감
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/daemons' 나감
+Making install in tools
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/tools' 들어감
+make[5]: 디렉터리 '/home/pi/build/lirc-0.10.1/tools' 들어감
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/bin'
+  /bin/bash ../libtool   --mode=install /usr/bin/install -c ircat irexec irrecord irsend irsimreceive irsimsend irtestcase irw lirc-lsremotes mode2 xmode2 irxevent irpipe irpty '/home/pi/build/lirc-0.10.1/debian/tmp/usr/bin'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/ircat /home/pi/build/lirc-0.10.1/debian/tmp/usr/bin/ircat
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/irexec /home/pi/build/lirc-0.10.1/debian/tmp/usr/bin/irexec
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/libirrecord.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/irrecord /home/pi/build/lirc-0.10.1/debian/tmp/usr/bin/irrecord
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/irsend /home/pi/build/lirc-0.10.1/debian/tmp/usr/bin/irsend
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/irsimreceive /home/pi/build/lirc-0.10.1/debian/tmp/usr/bin/irsimreceive
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/irsimsend /home/pi/build/lirc-0.10.1/debian/tmp/usr/bin/irsimsend
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/irtestcase /home/pi/build/lirc-0.10.1/debian/tmp/usr/bin/irtestcase
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/irw /home/pi/build/lirc-0.10.1/debian/tmp/usr/bin/irw
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/lirc-lsremotes /home/pi/build/lirc-0.10.1/debian/tmp/usr/bin/lirc-lsremotes
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/mode2 /home/pi/build/lirc-0.10.1/debian/tmp/usr/bin/mode2
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/xmode2 /home/pi/build/lirc-0.10.1/debian/tmp/usr/bin/xmode2
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/irxevent /home/pi/build/lirc-0.10.1/debian/tmp/usr/bin/irxevent
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/irpipe /home/pi/build/lirc-0.10.1/debian/tmp/usr/bin/irpipe
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/irpty /home/pi/build/lirc-0.10.1/debian/tmp/usr/bin/irpty
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/bin'
+ /usr/bin/install -c lirc-config-tool lirc-init-db lirc-make-devinput pronto2lirc irdb-get irtext2udp '/home/pi/build/lirc-0.10.1/debian/tmp/usr/bin'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/sbin'
+ /usr/bin/install -c lircd-setup '/home/pi/build/lirc-0.10.1/debian/tmp/usr/sbin'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/sbin'
+  /bin/bash ../libtool   --mode=install /usr/bin/install -c lirc-lsplugins '/home/pi/build/lirc-0.10.1/debian/tmp/usr/sbin'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '/home/pi/build/lirc-0.10.1/lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: warning: '../lib/liblirc_client.la' has not been installed in '/usr/lib/arm-linux-gnueabihf'
+libtool: install: /usr/bin/install -c .libs/lirc-lsplugins /home/pi/build/lirc-0.10.1/debian/tmp/usr/sbin/lirc-lsplugins
+make[6]: 디렉터리 '/home/pi/build/lirc-0.10.1/tools' 들어감
+make[6]: 디렉터리 '/home/pi/build/lirc-0.10.1/tools' 나감
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/python3.7/site-packages/lirc-setup'
+ /usr/bin/install -c -m 644 lirc-setup/lirc-setup.ui '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/python3.7/site-packages/lirc-setup'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/python3.7/site-packages/lirc-setup'
+ /usr/bin/install -c lirc-setup/lirc-setup '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/python3.7/site-packages/lirc-setup'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/python3.7/site-packages/lirc-setup'
+ /usr/bin/install -c -m 644 lirc-setup/mvc_control.py lirc-setup/mvc_view.py lirc-setup/mvc_model.py lirc-setup/choosers.py lirc-setup/baseview.py lirc-setup/util.py '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/python3.7/site-packages/lirc-setup'
+Byte-compiling python modules...
+mvc_control.pymvc_view.pymvc_model.pychoosers.pybaseview.pyutil.py
+-c:2: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+Byte-compiling python modules (optimized versions) ...
+mvc_control.pymvc_view.pymvc_model.pychoosers.pybaseview.pyutil.py
+make[6]: 디렉터리 '/home/pi/build/lirc-0.10.1/tools' 들어감
+make[6]: 디렉터리 '/home/pi/build/lirc-0.10.1/tools' 나감
+make[5]: 디렉터리 '/home/pi/build/lirc-0.10.1/tools' 나감
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/tools' 나감
+Making install in plugins
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/plugins' 들어감
+make[5]: 디렉터리 '/home/pi/build/lirc-0.10.1/plugins' 들어감
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   atilibusb.la awlibusb.la dfclibusb.la srm7500libusb.la commandir.la ftdi.la audio.la audio_alsa.la alsa_usb.la i2cuser.la dsp.la atwf83.la livedrive_midi.la livedrive_seq.la uirt2.la uirt2_raw.la devinput.la default.la hiddev.la creative_infracd.la zotac.la mplay.la accent.la bte.la creative.la ea65.la file.la girs.la irlink.la irtoy.la logitech.la mouseremote.la mp3anywhere.la pcmak.la pinsys.la pixelview.la silitek.la tira.la udp.la usbx.la '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins'
+libtool: warning: relinking 'atilibusb.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o atilibusb.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins atilibusb_la-atilibusb.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/atilibusb.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/atilibusb.so
+libtool: install: /usr/bin/install -c .libs/atilibusb.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/atilibusb.la
+libtool: warning: relinking 'awlibusb.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o awlibusb.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins awlibusb_la-awlibusb.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/awlibusb.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/awlibusb.so
+libtool: install: /usr/bin/install -c .libs/awlibusb.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/awlibusb.la
+libtool: warning: relinking 'dfclibusb.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o dfclibusb.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins dfclibusb_la-dfclibusb.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/dfclibusb.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/dfclibusb.so
+libtool: install: /usr/bin/install -c .libs/dfclibusb.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/dfclibusb.la
+libtool: warning: relinking 'srm7500libusb.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o srm7500libusb.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins srm7500libusb_la-srm7500libusb.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/srm7500libusb.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/srm7500libusb.so
+libtool: install: /usr/bin/install -c .libs/srm7500libusb.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/srm7500libusb.la
+libtool: warning: relinking 'commandir.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o commandir.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins commandir_la-commandir.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/commandir.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/commandir.so
+libtool: install: /usr/bin/install -c .libs/commandir.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/commandir.la
+libtool: warning: relinking 'ftdi.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -I/usr/include/libftdi1 -I/usr/include/libusb-1.0 -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -lftdi1 -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o ftdi.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins ftdi_la-ftdi.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/ftdi.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/ftdi.so
+libtool: install: /usr/bin/install -c .libs/ftdi.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/ftdi.la
+libtool: warning: relinking 'audio.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -pthread -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -lportaudio -lportaudio -lasound -lm -lpthread -lutil -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o audio.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins audio_la-audio.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/audio.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/audio.so
+libtool: install: /usr/bin/install -c .libs/audio.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/audio.la
+libtool: warning: relinking 'audio_alsa.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -lasound -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o audio_alsa.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins audio_alsa.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/audio_alsa.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/audio_alsa.so
+libtool: install: /usr/bin/install -c .libs/audio_alsa.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/audio_alsa.la
+libtool: warning: relinking 'alsa_usb.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -lasound -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o alsa_usb.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins alsa_usb.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/alsa_usb.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/alsa_usb.so
+libtool: install: /usr/bin/install -c .libs/alsa_usb.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/alsa_usb.la
+libtool: warning: relinking 'i2cuser.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o i2cuser.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins i2cuser.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/i2cuser.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/i2cuser.so
+libtool: install: /usr/bin/install -c .libs/i2cuser.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/i2cuser.la
+libtool: warning: relinking 'dsp.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o dsp.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins dsp.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/dsp.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/dsp.so
+libtool: install: /usr/bin/install -c .libs/dsp.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/dsp.la
+libtool: warning: relinking 'atwf83.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -lpthread -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o atwf83.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins atwf83.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/atwf83.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/atwf83.so
+libtool: install: /usr/bin/install -c .libs/atwf83.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/atwf83.la
+libtool: warning: relinking 'livedrive_midi.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o livedrive_midi.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins livedrive_midi.lo livedrive_common.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/livedrive_midi.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/livedrive_midi.so
+libtool: install: /usr/bin/install -c .libs/livedrive_midi.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/livedrive_midi.la
+libtool: warning: relinking 'livedrive_seq.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o livedrive_seq.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins livedrive_seq.lo livedrive_common.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/livedrive_seq.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/livedrive_seq.so
+libtool: install: /usr/bin/install -c .libs/livedrive_seq.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/livedrive_seq.la
+libtool: warning: relinking 'uirt2.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o uirt2.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins uirt2.lo uirt2_common.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/uirt2.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/uirt2.so
+libtool: install: /usr/bin/install -c .libs/uirt2.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/uirt2.la
+libtool: warning: relinking 'uirt2_raw.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o uirt2_raw.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins uirt2_raw.lo uirt2_common.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/uirt2_raw.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/uirt2_raw.so
+libtool: install: /usr/bin/install -c .libs/uirt2_raw.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/uirt2_raw.la
+libtool: warning: relinking 'devinput.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o devinput.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins devinput.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/devinput.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/devinput.so
+libtool: install: /usr/bin/install -c .libs/devinput.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/devinput.la
+libtool: warning: relinking 'default.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o default.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins default.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/default.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/default.so
+libtool: install: /usr/bin/install -c .libs/default.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/default.la
+libtool: warning: relinking 'hiddev.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o hiddev.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins hiddev.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/hiddev.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/hiddev.so
+libtool: install: /usr/bin/install -c .libs/hiddev.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/hiddev.la
+libtool: warning: relinking 'creative_infracd.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o creative_infracd.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins creative_infracd.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/creative_infracd.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/creative_infracd.so
+libtool: install: /usr/bin/install -c .libs/creative_infracd.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/creative_infracd.la
+libtool: warning: relinking 'zotac.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o zotac.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins zotac.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/zotac.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/zotac.so
+libtool: install: /usr/bin/install -c .libs/zotac.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/zotac.la
+libtool: warning: relinking 'mplay.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o mplay.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins mplay.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/mplay.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/mplay.so
+libtool: install: /usr/bin/install -c .libs/mplay.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/mplay.la
+libtool: warning: relinking 'accent.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o accent.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins accent.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/accent.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/accent.so
+libtool: install: /usr/bin/install -c .libs/accent.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/accent.la
+libtool: warning: relinking 'bte.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o bte.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins bte.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/bte.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/bte.so
+libtool: install: /usr/bin/install -c .libs/bte.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/bte.la
+libtool: warning: relinking 'creative.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o creative.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins creative.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/creative.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/creative.so
+libtool: install: /usr/bin/install -c .libs/creative.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/creative.la
+libtool: warning: relinking 'ea65.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o ea65.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins ea65.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/ea65.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/ea65.so
+libtool: install: /usr/bin/install -c .libs/ea65.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/ea65.la
+libtool: warning: relinking 'file.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o file.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins file.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/file.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/file.so
+libtool: install: /usr/bin/install -c .libs/file.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/file.la
+libtool: warning: relinking 'girs.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o girs.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins girs.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/girs.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/girs.so
+libtool: install: /usr/bin/install -c .libs/girs.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/girs.la
+libtool: warning: relinking 'irlink.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o irlink.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins irlink.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/irlink.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/irlink.so
+libtool: install: /usr/bin/install -c .libs/irlink.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/irlink.la
+libtool: warning: relinking 'irtoy.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o irtoy.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins irtoy.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/irtoy.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/irtoy.so
+libtool: install: /usr/bin/install -c .libs/irtoy.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/irtoy.la
+libtool: warning: relinking 'logitech.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o logitech.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins logitech.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/logitech.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/logitech.so
+libtool: install: /usr/bin/install -c .libs/logitech.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/logitech.la
+libtool: warning: relinking 'mouseremote.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o mouseremote.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins mouseremote.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/mouseremote.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/mouseremote.so
+libtool: install: /usr/bin/install -c .libs/mouseremote.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/mouseremote.la
+libtool: warning: relinking 'mp3anywhere.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o mp3anywhere.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins mp3anywhere.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/mp3anywhere.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/mp3anywhere.so
+libtool: install: /usr/bin/install -c .libs/mp3anywhere.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/mp3anywhere.la
+libtool: warning: relinking 'pcmak.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o pcmak.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins pcmak.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/pcmak.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/pcmak.so
+libtool: install: /usr/bin/install -c .libs/pcmak.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/pcmak.la
+libtool: warning: relinking 'pinsys.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o pinsys.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins pinsys.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/pinsys.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/pinsys.so
+libtool: install: /usr/bin/install -c .libs/pinsys.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/pinsys.la
+libtool: warning: relinking 'pixelview.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o pixelview.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins pixelview.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/pixelview.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/pixelview.so
+libtool: install: /usr/bin/install -c .libs/pixelview.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/pixelview.la
+libtool: warning: relinking 'silitek.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o silitek.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins silitek.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/silitek.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/silitek.so
+libtool: install: /usr/bin/install -c .libs/silitek.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/silitek.la
+libtool: warning: relinking 'tira.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o tira.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins tira.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/tira.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/tira.so
+libtool: install: /usr/bin/install -c .libs/tira.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/tira.la
+libtool: warning: relinking 'udp.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o udp.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins udp.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/udp.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/udp.so
+libtool: install: /usr/bin/install -c .libs/udp.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/udp.la
+libtool: warning: relinking 'usbx.la'
+libtool: install: (cd /home/pi/build/lirc-0.10.1/plugins; /bin/bash "/home/pi/build/lirc-0.10.1/libtool"  --silent --tag CC --mode=relink gcc -pthread -Wall -DHAVE_KERNEL_LIRC_H -DPLUGINDOCS=\"/usr/share/doc/lirc/plugindocs\" -g -O2 -fdebug-prefix-map=/home/pi/build/lirc-0.10.1=. -fstack-protector-strong -Wformat -Werror=format-security -I/usr/include/python3.7m -I/usr/include/arm-linux-gnueabihf/python3.7m -module -avoid-version -L../lib -llirc_driver -export-symbols-regex hardwares -lusb -lusb-1.0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed -o usbx.la -rpath /usr/lib/arm-linux-gnueabihf/lirc/plugins usbx.lo -ldl -ludev -inst-prefix-dir /home/pi/build/lirc-0.10.1/debian/tmp)
+libtool: install: /usr/bin/install -c .libs/usbx.soT /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/usbx.so
+libtool: install: /usr/bin/install -c .libs/usbx.lai /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/lirc/plugins/usbx.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/arm-linux-gnueabihf/lirc/plugins'
+make[5]: 디렉터리 '/home/pi/build/lirc-0.10.1/plugins' 나감
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/plugins' 나감
+Making install in configs
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/configs' 들어감
+make[5]: 디렉터리 '/home/pi/build/lirc-0.10.1/configs' 들어감
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/configs'
+ /usr/bin/install -c -m 644 ./accent.conf ./act200l.conf ./act220l.conf ./adaptec.conf ./alsa_usb.conf ./animax.conf ./arduino.conf ./asusdh.conf ./ati-remote-wonder.conf ./atilibusb.conf ./atiusb.conf ./atwf83.conf ./audio.conf ./audio_alsa.conf ./avermedia.conf ./avermedia98.conf ./avermedia_vdomate.conf ./awlibusb.conf ./breakoutbox.conf ./bte.conf ./chronos.conf ./commandir.conf ./cph03x_askey.conf ./cph03x_dynalink.conf ./cph03x_trifan.conf ./cph06x_askey.conf ./cph06x_phoebe.conf ./cph06x_tview.conf ./creative.conf ./creative_infracd.conf ./default.conf ./devinput.conf ./dfclibusb.conf ./dsp.conf ./dvico.conf ./ea65.conf ./flyvideo_2.conf ./flyvideo_98.conf ./flyvideo_98FM.conf ./flyvideo_FM_card36.conf '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/configs'
+ /usr/bin/install -c -m 644 ./ftdi.conf ./gvbctv5pci.conf ./hauppauge.conf ./hauppauge_dvb.conf ./hauppauge_hvr1300.conf ./hercules_smarttv_stereo.conf ./home_brew_parallel.conf ./home_brew_serial.conf ./igorplugusb.conf ./imon.conf ./imon_24g.conf ./imon_knob.conf ./imon_lcd.conf ./imon_pad.conf ./imon_rsc.conf ./irdeo.conf ./irdeo_remote.conf ./irlink.conf ./irtoy.conf ./knc_one.conf ./knc_one_typhoon.conf ./kworld.conf ./leadtek_0007.conf ./leadtek_0010.conf ./leadtek_pvr2000.conf ./livedrive_midi.conf ./livedrive_seq.conf ./logitech.conf ./macmini.conf ./mce.conf ./mediafocusI.conf ./medion.conf ./mouseremote.conf ./mp3-anywhere-usb.conf ./mp3anywhere-serial.conf ./mplay_blast.conf ./mplay_mini.conf ./none.conf ./nslu2.conf ./nvidia-x10.conf '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/configs'
+ /usr/bin/install -c -m 644 ./packard_bell.conf ./pcmak.conf ./pcmak_usb.conf ./pctv.conf ./pctv_miro.conf ./pctv_pro.conf ./pctv_sat.conf ./pixelview_bt878.conf ./pixelview_mpeg2.conf ./pixelview_pak.conf ./pixelview_pak_lenco.conf ./pixelview_pro_37.conf ./pixelview_pv.conf ./provideo.conf ./realmagic.conf ./remotemaster.conf ./sa1100_hp.conf ./sa1100_sharp.conf ./samsung.conf ./sasem.conf ./sasem_dign.conf ./silitek.conf ./sir.conf ./snapstream.conf ./sonyir-osx.conf ./sonyir.conf ./srm7500libusb.conf ./tekram.conf ./tekram_bt829.conf ./tira.conf ./tira_raw.conf ./ttusbir.conf ./tvbox.conf ./udp.conf ./uirt2.conf ./uirt2_raw.conf ./usb_uirt_raw.conf ./usbx.conf ./x10.conf ./zotac.conf '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/configs'
+ /usr/bin/install -c -m 644 kernel-drivers.yaml remotes.list '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/configs'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/configs'
+ /usr/bin/install -c -m 644 drivers.yaml confs_by_driver.yaml '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/configs'
+make[5]: 디렉터리 '/home/pi/build/lirc-0.10.1/configs' 나감
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/configs' 나감
+Making install in doc
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/doc' 들어감
+make[5]: 디렉터리 '/home/pi/build/lirc-0.10.1/doc' 들어감
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc'
+ /usr/bin/install -c -m 644 irxevent.keys api-docs.tar.gz '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc/html'
+ /usr/bin/install -c -m 644 html-source/lirc.css '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc/html'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc/images'
+ /usr/bin/install -c -m 644 lirc.org/images/atwf83.jpg lirc.org/images/marb18.jpg lirc.org/images/diode.gif lirc.org/images/lirc.gif '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc/images'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc/plugindocs'
+ /usr/bin/install -c -m 644 README ./plugpage.xsl ./driver-toc.xsl ./empty_index.tmpl ./index.tmpl ./make-ext-driver-toc.sh ./page.xsl ./html-source/lirc.css '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc/plugindocs'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc/lirc.org'
+ /usr/bin/install -c -m 644 lirc.org/audio-alsa.html lirc.org/cir.html lirc.org/cvs.html lirc.org/developers.html lirc.org/faq.html lirc.org/favicon.ico lirc.org/git.html lirc.org/improved_transmitter.html lirc.org/index.html lirc.org/ir-audio.html lirc.org/irda.html lirc.org/lirc.css lirc.org/mirrors.html lirc.org/parallel.html lirc.org/PCB.pdf lirc.org/pictures1.html lirc.org/pictures2.html lirc.org/pictures.html lirc.org/pinout_TRM1038.txt lirc.org/receivers.html lirc.org/robots.txt lirc.org/software.html lirc.org/transmitters.html lirc.org/tv_cards.html '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc/lirc.org'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc/lirc.org/images'
+ /usr/bin/install -c -m 644 lirc.org/favicon.ico lirc.org/images/atwf83.jpg lirc.org/images/audio_transmitter.png lirc.org/images/audio_wave.png lirc.org/images/banner_en_1.gif lirc.org/images/better_transmitter.gif lirc.org/images/d.jpg lirc.org/images/diode.gif lirc.org/images/front.jpg lirc.org/images/improved_transmitter.gif lirc.org/images/ir-audio.png lirc.org/images/irrcv_board.gif lirc.org/images/IR-mouse1.jpg lirc.org/images/IR-mouse2.jpg lirc.org/images/lirc.gif lirc.org/images/lirc1.jpg lirc.org/images/lirc2.jpg lirc.org/images/lirc3.jpg lirc.org/images/lirclogo.gif lirc.org/images/marb18.jpg lirc.org/images/schematics.gif lirc.org/images/screenshot.gif lirc.org/images/screenshot.jpg lirc.org/images/screenshot1.gif lirc.org/images/simple_transmitter.gif lirc.org/images/top3.jpg lirc.org/images/tsop173x.png '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc/lirc.org/images'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/man/man1'
+ /usr/bin/install -c -m 644 man/xmode2.1 man/irxevent.1 man/ircat.1 man/irdb-get.1 man/irexec.1 man/irpty.1 man/irrecord.1 man/irsimreceive.1 man/irsimsend.1 man/irsend.1 man/irtext2udp.1 man/irtestcase.1 man/irw.1 man/lirc-config-tool.1 man/lirc-lsplugins.1 man/lirc-lsremotes.1 man/lirc-setup.1 man/mode2.1 man/pronto2lirc.1 man/irpipe.1 man/lirc-make-devinput.1 '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/man/man1'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/man/man5'
+ /usr/bin/install -c -m 644 man/lircd.conf.5 man/lircrc.5 '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/man/man5'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/man/man8'
+ /usr/bin/install -c -m 644 man/lircd.8 man/lircd-setup.8 man/lircmd.8 man/lircrcd.8 man/lircd-uinput.8 '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/man/man8'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc/html'
+ /usr/bin/install -c -m 644 table.html '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc/html'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc'
+ /usr/bin/install -c -m 644 lirc.hwdb '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc/lirc.org/html'
+ /usr/bin/install -c -m 644 html/api-general.html html/configuration-guide.html html/configure.html html/driver-api.html html/empty_toc.html html/help.html html/index.html html/install.html html/lirc_client.html html/no-api-docs.html html/programs.html html/programs-overview.html html/pronto2lirc.html html/technical.html html/alsa-usb.html html/atilibusb.html html/atwf83.html html/audio-alsa.html html/audio.html html/default.html html/devinput.html html/file.html html/ftdi.html html/ftdix.html html/girs.html html/imon-24g.html html/imon.html html/irtoy.html html/srm7500atilibusb.html html/tira.html html/udp.html NEWS.txt html-source/lirc.css man-html/irxevent.html man-html/xmode2.html man-html/ircat.html man-html/irdb-get.html man-html/irexec.html man-html/irpty.html man-html/irrecord.html '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc/lirc.org/html'
+ /usr/bin/install -c -m 644 man-html/irsimreceive.html man-html/irsimsend.html man-html/irsend.html man-html/irtestcase.html man-html/irtext2udp.html man-html/irw.html man-html/lirc-config-tool.html man-html/lirc.html man-html/lirc-lsplugins.html man-html/lirc-lsremotes.html man-html/lirc-setup.html man-html/lircd-setup.html man-html/lircd.html man-html/lircd.conf.html man-html/lircmd.html man-html/lircrcd.html man-html/lircrc.html man-html/mode2.html man-html/pronto2lirc.html man-html/irpipe.html man-html/lirc-make-devinput.html man-html/lircd-uinput.html table.html '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc/lirc.org/html'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/var/lib/lirc/plugins'
+ /usr/bin/install -c -m 644 index.html html-source/lirc.css '/home/pi/build/lirc-0.10.1/debian/tmp/var/lib/lirc/plugins'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/var/lib/lirc/images'
+ /usr/bin/install -c -m 644 lirc.org/images/atwf83.jpg lirc.org/images/marb18.jpg lirc.org/images/diode.gif lirc.org/images/lirc.gif '/home/pi/build/lirc-0.10.1/debian/tmp/var/lib/lirc/images'
+make[6]: 디렉터리 '/home/pi/build/lirc-0.10.1/doc' 들어감
+make[6]: 디렉터리 '/home/pi/build/lirc-0.10.1/doc' 나감
+make[5]: 디렉터리 '/home/pi/build/lirc-0.10.1/doc' 나감
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/doc' 나감
+Making install in systemd
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/systemd' 들어감
+make[5]: 디렉터리 '/home/pi/build/lirc-0.10.1/systemd' 들어감
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/lib/systemd/system'
+ /usr/bin/install -c -m 644 lircd.socket lircd.service lircd-setup.service lircd-uinput.service lircmd.service irexec.service '/home/pi/build/lirc-0.10.1/debian/tmp/lib/systemd/system'
+make[5]: 디렉터리 '/home/pi/build/lirc-0.10.1/systemd' 나감
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1/systemd' 나감
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+make[5]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc'
+ /usr/bin/install -c -m 644 VERSION '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/doc/lirc'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/etc/lirc'
+ /usr/bin/install -c -m 644 lircd.conf lircmd.conf lirc_options.conf irexec.lircrc '/home/pi/build/lirc-0.10.1/debian/tmp/etc/lirc'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/etc/lirc/lircd.conf.d'
+ /usr/bin/install -c -m 644 README.conf.d '/home/pi/build/lirc-0.10.1/debian/tmp/etc/lirc/lircd.conf.d'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/pkgconfig'
+ /usr/bin/install -c -m 644 lirc.pc lirc-driver.pc '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/pkgconfig'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/python-pkg'
+ /usr/bin/install -c -m 644 python-pkg/setup.py python-pkg/README.rst '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/python-pkg'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/python-pkg/lirc/doc'
+ /usr/bin/install -c -m 644 python-pkg/doc/Doxyfile python-pkg/doc/mainpage.dox python-pkg/doc/diode-2.gif '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/python-pkg/lirc/doc'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/python-pkg/lirc'
+ /usr/bin/install -c -m 644 python-pkg/lirc/__init__.py python-pkg/lirc/database.py python-pkg/lirc/paths.py python-pkg/lirc/async_client.py python-pkg/lirc/client.py python-pkg/lirc/_client.c python-pkg/lirc/lirctool.py python-pkg/lirc/lirctool '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/python-pkg/lirc'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/python-pkg/tests'
+ /usr/bin/install -c -m 644 python-pkg/tests/test_client.py python-pkg/tests/dummy-server python-pkg/tests/lircrc.conf '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/python-pkg/tests'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/include/lirc'
+ /usr/bin/install -c -m 644 drivers/irpipe/irpipe.h '/home/pi/build/lirc-0.10.1/debian/tmp/usr/include/lirc'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/include/lirc'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/include/lirc/include/linux'
+ /usr/bin/install -c -m 644  include/linux/input-event-codes.h '/home/pi/build/lirc-0.10.1/debian/tmp/usr/include/lirc/include/linux'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/include/lirc/include/media'
+ /usr/bin/install -c -m 644  include/media/lirc.h '/home/pi/build/lirc-0.10.1/debian/tmp/usr/include/lirc/include/media'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/etc/lirc/lircd.conf.d'
+ /usr/bin/install -c -m 644 devinput.lircd.conf '/home/pi/build/lirc-0.10.1/debian/tmp/etc/lirc/lircd.conf.d'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc'
+ /usr/bin/install -c -m 644 python-pkg/dist/lirc-0.10.1.tar.gz '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/python3.7/site-packages/lirc'
+ /usr/bin/install -c -m 644 python-pkg/lirc/config.py '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/python3.7/site-packages/lirc'
+Byte-compiling python modules...
+config.py
+-c:2: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+Byte-compiling python modules (optimized versions) ...
+config.py
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/python-pkg'
+ /usr/bin/install -c -m 644 python-pkg/lirc/config.py '/home/pi/build/lirc-0.10.1/debian/tmp/usr/share/lirc/python-pkg'
+Byte-compiling python modules...
+config.py
+-c:2: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+Byte-compiling python modules (optimized versions) ...
+config.py
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/python3.7/site-packages/lirc'
+ /bin/bash ./libtool --silent  --mode=install /usr/bin/install -c   python-pkg/lib/_client.la '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/python3.7/site-packages/lirc'
+libtool: warning: relinking 'python-pkg/lib/_client.la'
+libtool: warning: remember to run 'libtool --finish /usr/lib/arm-linux-gnueabihf/python3.7/site-packages/lirc'
+ /bin/mkdir -p '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/python3.7/site-packages/lirc'
+ /usr/bin/install -c -m 644 python-pkg/lirc/__init__.py python-pkg/lirc/database.py python-pkg/lirc/paths.py python-pkg/lirc/async_client.py python-pkg/lirc/client.py '/home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/arm-linux-gnueabihf/python3.7/site-packages/lirc'
+Byte-compiling python modules...
+__init__.pydatabase.pypaths.pyasync_client.pyclient.py
+-c:2: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+Byte-compiling python modules (optimized versions) ...
+__init__.pydatabase.pypaths.pyasync_client.pyclient.py
+make[6]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+make[6]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+make[5]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+make[4]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+make[3]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+make[2]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+py3clean debian/tmp
+find debian/tmp -name *.la -delete
+rm -f debian/tmp/usr/share/doc/lirc/lirc.org/api-docs/api-docs
+chmod 755 debian/tmp/usr/share/lirc/python-pkg/lirc/lirctool
+mkdir -p debian/tmp/usr/lib/tmpfiles.d
+echo "d /run/lirc  0755  root  root  10d" \
+    > debian/tmp/usr/lib/tmpfiles.d/lirc.conf
+# Temporary postinstall 0.9.4 script.
+cp debian/lirc-old2new debian/tmp/usr/share/lirc
+# Don't overwrite existing config files.
+for f in lircd.conf lircmd.conf irexec.lircrc lirc_options.conf; do \
+    mv debian/tmp/etc/lirc/$f debian/tmp/etc/lirc/$f.dist; \
+done
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+   debian/rules override_dh_install
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+dh_install --fail-missing
+dh_install: Please use dh_missing --list-missing/--fail-missing instead
+dh_install: This feature will be removed in compat 12.
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+   dh_installdocs
+   dh_installchangelogs
+   dh_installman
+   debian/rules override_dh_python3
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+dh_python3
+I: dh_python3 tools:114: replacing shebang in debian/lirc/usr/sbin/lircd-setup
+I: dh_python3 tools:114: replacing shebang in debian/lirc/usr/bin/irtext2udp
+I: dh_python3 tools:114: replacing shebang in debian/lirc/usr/bin/lirc-init-db
+I: dh_python3 tools:114: replacing shebang in debian/lirc/usr/bin/irdb-get
+I: dh_python3 tools:114: replacing shebang in debian/lirc/usr/bin/lirc-setup
+I: dh_python3 tools:114: replacing shebang in debian/lirc/usr/bin/pronto2lirc
+I: dh_python3 tools:114: replacing shebang in debian/lirc/usr/share/lirc/lirc-old2new
+I: dh_python3 tools:114: replacing shebang in debian/lirc/usr/share/lirc/python-pkg/lirc/lirctool
+dh_python3 debian/tmp/usr/lib/*/python*/site-packages/lirc
+dh_python3 debian/tmp/usr/lib/*/python*/site-packages/lirc-setup
+dh_python3 debian/tmp/usr/share/lirc/python-pkg
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+   debian/rules override_dh_installinit
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+dh_installinit --package=lirc --name=lircd
+dh_installinit --package=lirc --name=lircmd
+dh_installinit
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+   debian/rules override_dh_installsystemd
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+dh_installsystemd -p lirc lircd.socket
+dh_installsystemd -p lirc --no-enable --no-start lircd.service
+dh_installsystemd -p lirc --no-enable --no-start irexec.service
+dh_installsystemd -p lirc --no-enable --no-start lircmd.service
+dh_installsystemd -p lirc --no-enable --no-start lircd-uinput.service
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   debian/rules override_dh_fixperms-arch
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+dh_fixperms
+chmod 755 debian/lirc/usr/share/lirc/contrib/irman2lirc
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+   dh_fixperms -Nlirc -Nliblirc0 -Nliblircclient0 -Nliblircclient-dev -Nliblirc-dev -Nliblirc-client0 -Nlirc-x
+   dh_missing
+   dh_strip
+   dh_makeshlibs
+   debian/rules override_dh_shlibdeps
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 들어감
+dh_shlibdeps -l /home/pi/build/lirc-0.10.1/debian/tmp/usr/lib/*/lirc/plugins
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/liblirc-client0/usr/lib/arm-linux-gnueabihf/liblirc_client.so.0.6.0 was not linked against libudev.so.1 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/liblirc-client0/usr/lib/arm-linux-gnueabihf/liblirc_client.so.0.6.0 was not linked against libdl.so.2 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/audio.so contains an unresolvable reference to symbol default_open: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/mplay.so contains an unresolvable reference to symbol default_close: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/accent.so contains an unresolvable reference to symbol default_close: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/udp.so contains an unresolvable reference to symbol default_open: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/livedrive_midi.so contains an unresolvable reference to symbol default_open: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/alsa_usb.so contains an unresolvable reference to symbol drv: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/lirc-x/usr/bin/irxevent debian/lirc-x/usr/bin/xmode2 were not linked against ld-linux-armhf.so.3 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/srm7500libusb.so contains an unresolvable reference to symbol default_close: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/liblirc0/usr/lib/arm-linux-gnueabihf/liblirc_driver.so.0.3.0 was not linked against libusb-1.0.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/logitech.so contains an unresolvable reference to symbol drv: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/pixelview.so contains an unresolvable reference to symbol drv: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/hiddev.so contains an unresolvable reference to symbol default_open: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/ea65.so contains an unresolvable reference to symbol drv: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/usbx.so contains an unresolvable reference to symbol default_open: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/i2cuser.so contains an unresolvable reference to symbol default_close: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/creative.so contains an unresolvable reference to symbol default_close: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/sbin/lircd-uinput contains an unresolvable reference to symbol __aeabi_atexit@CXXABI_ARM_1.3.3: it's probably a plugin
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/mp3anywhere.so contains an unresolvable reference to symbol drv: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/bin/lircrcd contains an unresolvable reference to symbol __aeabi_atexit@CXXABI_ARM_1.3.3: it's probably a plugin
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/tira.so contains an unresolvable reference to symbol default_close: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/ftdi.so contains an unresolvable reference to symbol drv: it's probably a plugin
+dpkg-shlibdeps: warning: 1 similar warning has been skipped (use -v to see it)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/mouseremote.so contains an unresolvable reference to symbol drv: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/dsp.so contains an unresolvable reference to symbol default_close: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/audio_alsa.so contains an unresolvable reference to symbol default_open: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/creative_infracd.so contains an unresolvable reference to symbol default_open: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/pcmak.so contains an unresolvable reference to symbol drv: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/bte.so contains an unresolvable reference to symbol default_open: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/pinsys.so contains an unresolvable reference to symbol default_close: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/uirt2_raw.so contains an unresolvable reference to symbol default_close: it's probably a plugin
+dpkg-shlibdeps: warning: 3 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/default.so contains an unresolvable reference to symbol default_open: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/zotac.so contains an unresolvable reference to symbol default_open: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/irtoy.so contains an unresolvable reference to symbol drv: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/awlibusb.so contains an unresolvable reference to symbol drv: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/atwf83.so contains an unresolvable reference to symbol default_close: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/commandir.so contains an unresolvable reference to symbol default_close: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/irlink.so contains an unresolvable reference to symbol default_open: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/livedrive_seq.so contains an unresolvable reference to symbol default_open: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/uirt2.so contains an unresolvable reference to symbol drv: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/devinput.so contains an unresolvable reference to symbol default_close: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/girs.so contains an unresolvable reference to symbol drv: it's probably a plugin
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/file.so contains an unresolvable reference to symbol drv: it's probably a plugin
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/silitek.so contains an unresolvable reference to symbol default_close: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/dfclibusb.so contains an unresolvable reference to symbol drv: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/atilibusb.so contains an unresolvable reference to symbol drv: it's probably a plugin
+dpkg-shlibdeps: warning: 2 other similar warnings have been skipped (use -v to see them all)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/audio.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/mplay.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/accent.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/udp.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/livedrive_midi.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/alsa_usb.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/srm7500libusb.so debian/lirc/usr/lib/arm-linux-gnueabihf/python3.7/site-packages/lirc/_client.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/logitech.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/pixelview.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/hiddev.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/ea65.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/usbx.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/i2cuser.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/creative.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/mp3anywhere.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/tira.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/ftdi.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/mouseremote.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/dsp.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/audio_alsa.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/creative_infracd.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/pcmak.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/bte.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/pinsys.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/uirt2_raw.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/default.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/zotac.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/irtoy.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/awlibusb.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/atwf83.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/commandir.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/irlink.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/livedrive_seq.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/uirt2.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/devinput.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/girs.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/file.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/silitek.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/dfclibusb.so debian/lirc/usr/lib/arm-linux-gnueabihf/lirc/plugins/atilibusb.so were not linked against libudev.so.1 (they use none of the library's symbols)
+make[1]: 디렉터리 '/home/pi/build/lirc-0.10.1' 나감
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'lirc' in '../lirc_0.10.1-5.2_armhf.deb'.
+dpkg-deb: building package 'liblirc0' in '../liblirc0_0.10.1-5.2_armhf.deb'.
+dpkg-deb: building package 'liblircclient-dev' in '../liblircclient-dev_0.10.1-5.2_armhf.deb'.
+dpkg-deb: building package 'liblirc-client0-dbgsym' in '../liblirc-client0-dbgsym_0.10.1-5.2_armhf.deb'.
+dpkg-deb: building package 'lirc-x' in '../lirc-x_0.10.1-5.2_armhf.deb'.
+dpkg-deb: building package 'liblirc-dev' in '../liblirc-dev_0.10.1-5.2_armhf.deb'.
+dpkg-deb: building package 'liblirc0-dbgsym' in '../liblirc0-dbgsym_0.10.1-5.2_armhf.deb'.
+dpkg-deb: building package 'lirc-x-dbgsym' in '../lirc-x-dbgsym_0.10.1-5.2_armhf.deb'.
+dpkg-deb: building package 'liblirc-client0' in '../liblirc-client0_0.10.1-5.2_armhf.deb'.
+dpkg-deb: building package 'liblircclient0' in '../liblircclient0_0.10.1-5.2_armhf.deb'.
+dpkg-deb: building package 'lirc-dbgsym' in '../lirc-dbgsym_0.10.1-5.2_armhf.deb'.
+dpkg-deb: building package 'lirc-doc' in '../lirc-doc_0.10.1-5.2_all.deb'.
+ dpkg-genbuildinfo --build=binary
+ dpkg-genchanges --build=binary >../lirc_0.10.1-5.2_armhf.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian lirc_0.10.1-5.2_armhf.changes ...
+W: lirc-x: hardening-no-pie usr/bin/irxevent
+W: lirc-x: hardening-no-pie usr/bin/xmode2
+W: lirc: hardening-no-pie usr/bin/ircat
+W: lirc: hardening-no-pie usr/bin/irexec
+W: lirc: hardening-no-pie usr/bin/irpipe
+W: lirc: hardening-no-pie usr/bin/irpty
+W: lirc: hardening-no-pie usr/bin/irrecord
+W: lirc: hardening-no-pie usr/bin/irsend
+W: lirc: hardening-no-pie usr/bin/irsimreceive
+W: lirc: hardening-no-pie usr/bin/irsimsend
+W: lirc: hardening-no-pie usr/bin/irtestcase
+W: lirc: hardening-no-pie usr/bin/irw
+W: lirc: hardening-no-pie usr/bin/lirc-lsremotes
+W: lirc: hardening-no-pie usr/bin/lircrcd
+W: lirc: hardening-no-pie usr/bin/mode2
+W: lirc: hardening-no-pie usr/sbin/lirc-lsplugins
+W: lirc: hardening-no-pie usr/sbin/lircd
+W: lirc: hardening-no-pie usr/sbin/lircd-uinput
+W: lirc: hardening-no-pie usr/sbin/lircmd
+W: lirc: binary-without-manpage usr/bin/lirc-init-db
+Finished running lintian.

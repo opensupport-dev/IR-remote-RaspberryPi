@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['python_20configuration_20database',['python configuration database',['../group__database.html',1,'']]],
+  ['packet',['packet',['../structlirc__cmd__ctx.html#ae0161739995de0b511883c3a0574a8ca',1,'lirc_cmd_ctx']]],
+  ['packet_5fsize',['PACKET_SIZE',['../lirc__config_8h.html#aebdc7d8ca8e25ed8efc90bb88ef7ef5b',1,'lirc_config.h']]],
+  ['packet_5fstate',['packet_state',['../lirc__client_8c.html#aacdc622aa02a946d7a3d67c361199733',1,'lirc_client.c']]],
+  ['parent_5fsubsys',['parent_subsys',['../structdrv__enum__udev__what.html#a48157cb79f408f1123644318db417377',1,'drv_enum_udev_what']]],
+  ['parity',['parity',['../structir__remote.html#ae278bec13a15b073b675e53a9805cfde',1,'ir_remote']]],
+  ['perrorf',['perrorf',['../lirc__log_8c.html#abf031435b06bf0e8a87af6b2ad58f499',1,'perrorf(const char *format,...):&#160;lirc_log.c'],['../lirc__log_8h.html#abf031435b06bf0e8a87af6b2ad58f499',1,'perrorf(const char *format,...):&#160;lirc_log.c']]],
+  ['pid_5flircd',['PID_LIRCD',['../lirc__config_8h.html#ae6cce9a1de2af2a20056fbf342ab73c6',1,'lirc_config.h']]],
+  ['pidfile',['PIDFILE',['../lirc__config_8h.html#af5fe208f8640c8c789a4d5d5b8ad47f5',1,'lirc_config.h']]],
+  ['plead',['plead',['../structir__remote.html#a7c794a8fec73d6a6aa8da207e07e3e35',1,'ir_remote']]],
+  ['plugin_5fguest_5ffunc',['plugin_guest_func',['../drv__admin_8h.html#a061d49469cbffaa34c2b73062a2607ab',1,'drv_admin.h']]],
+  ['plugindir',['PLUGINDIR',['../lirc__config_8h.html#aab5f12bd566916ffe7b907ab31a0d105',1,'lirc_config.h']]],
+  ['plugindir_5fvar',['PLUGINDIR_VAR',['../lirc__config_8h.html#acd7e7944bfb1c0b9676d9ffad6b0486c',1,'lirc_config.h']]],
+  ['post',['post',['../structdecode__ctx__t.html#a81e997b57167363c5cc8db496a841165',1,'decode_ctx_t']]],
+  ['post_5fdata',['post_data',['../structir__remote.html#a96f9c35cff5a927c8fb76c5a8a240238',1,'ir_remote']]],
+  ['post_5fdata_5fbits',['post_data_bits',['../structir__remote.html#a67432d0e91b257de5044ee47985cbb5b',1,'ir_remote']]],
+  ['post_5fs',['post_s',['../structir__remote.html#aa7c0f859104f6b22e28a36ede935166b',1,'ir_remote']]],
+  ['pre',['pre',['../structdecode__ctx__t.html#ae52561bab1b135eda87baf242a1092a6',1,'decode_ctx_t']]],
+  ['pre_5fdata',['pre_data',['../structir__remote.html#a54cf93d6a6ea5fa37c4b17ecad8b7b4b',1,'ir_remote']]],
+  ['pre_5fdata_5fbits',['pre_data_bits',['../structir__remote.html#ae5bfde45bb74a00d7ec53023f2fa6252',1,'ir_remote']]],
+  ['pre_5fs',['pre_s',['../structir__remote.html#abb03ea8ad94fd47ffcf9705659cc79cd',1,'ir_remote']]],
+  ['ptrail',['ptrail',['../structir__remote.html#a31000dfff5250ffa70a12e50d936ccaa',1,'ir_remote']]],
+  ['python_20client_20bindings',['Python client bindings',['../group__python__bindings.html',1,'']]]
+];

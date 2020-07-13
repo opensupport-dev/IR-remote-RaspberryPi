@@ -1,0 +1,3 @@
+[console_scripts]
+lirctool = lirc.lirctool:main
+

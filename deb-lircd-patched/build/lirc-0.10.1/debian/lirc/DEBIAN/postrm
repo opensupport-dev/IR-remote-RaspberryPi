@@ -1,0 +1,106 @@
+#!/bin/sh
+
+set -e
+
+if test "$1" = 'purge'; then
+    for f in lircd.conf lircmd.conf irexec.lircrc lirc_options.conf; do
+	rm -f /etc/lirc/$f;
+    done || :
+    find /etc/lirc -type d -empty -delete || :
+    rm -f /usr/lib/python3/dist-packages/lirc
+    rm -f /usr/lib/python3/dist-packages/lirc-setup
+fi
+
+
+# Automatically added by dh_installinit/12.1.1
+if [ "$1" = "purge" ] ; then
+	update-rc.d lircmd remove >/dev/null
+fi
+# End automatically added section
+# Automatically added by dh_installinit/12.1.1
+if [ "$1" = "purge" ] ; then
+	update-rc.d lircd remove >/dev/null
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/12.1.1
+if [ -d /run/systemd/system ]; then
+	systemctl --system daemon-reload >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/12.1.1
+if [ "$1" = "remove" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper mask 'lircd-uinput.service' >/dev/null || true
+	fi
+fi
+
+if [ "$1" = "purge" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper purge 'lircd-uinput.service' >/dev/null || true
+		deb-systemd-helper unmask 'lircd-uinput.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/12.1.1
+if [ "$1" = "remove" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper mask 'lircmd.service' >/dev/null || true
+	fi
+fi
+
+if [ "$1" = "purge" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper purge 'lircmd.service' >/dev/null || true
+		deb-systemd-helper unmask 'lircmd.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/12.1.1
+if [ -d /run/systemd/system ]; then
+	systemctl --system daemon-reload >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/12.1.1
+if [ "$1" = "remove" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper mask 'irexec.service' >/dev/null || true
+	fi
+fi
+
+if [ "$1" = "purge" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper purge 'irexec.service' >/dev/null || true
+		deb-systemd-helper unmask 'irexec.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/12.1.1
+if [ "$1" = "remove" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper mask 'lircd.service' >/dev/null || true
+	fi
+fi
+
+if [ "$1" = "purge" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper purge 'lircd.service' >/dev/null || true
+		deb-systemd-helper unmask 'lircd.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/12.1.1
+if [ "$1" = "remove" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper mask 'lircd.service' 'lircd.socket' >/dev/null || true
+	fi
+fi
+
+if [ "$1" = "purge" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper purge 'lircd.service' 'lircd.socket' >/dev/null || true
+		deb-systemd-helper unmask 'lircd.service' 'lircd.socket' >/dev/null || true
+	fi
+fi
+# End automatically added section
+
+

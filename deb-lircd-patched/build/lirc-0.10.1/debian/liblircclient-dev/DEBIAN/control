@@ -1,0 +1,13 @@
+Package: liblircclient-dev
+Source: lirc
+Version: 0.10.1-5.2
+Architecture: armhf
+Maintainer: Debian Lirc Team <team+debian-lirc@tracker.debian.org>
+Installed-Size: 41
+Depends: liblirc-dev
+Section: libdevel
+Priority: optional
+Homepage: https://sf.net/p/lirc
+Description: Transitional placeholder for obsoleted liblircclient-dev
+ Virtual, empty package used in the process of incorporating
+ liblircclient-dev in new package liblirc-dev.

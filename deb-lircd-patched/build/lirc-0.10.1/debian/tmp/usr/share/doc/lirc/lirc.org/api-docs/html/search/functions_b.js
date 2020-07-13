@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['map_5fcode',['map_code',['../group__driver__api.html#gabac8048f405d0a78fcc01fa9ef1132df',1,'map_code(const struct ir_remote *remote, struct decode_ctx_t *ctx, int pre_bits, ir_code pre, int bits, ir_code code, int post_bits, ir_code post):&#160;ir_remote.c'],['../group__driver__api.html#gabac8048f405d0a78fcc01fa9ef1132df',1,'map_code(const struct ir_remote *remote, struct decode_ctx_t *ctx, int pre_bits, ir_code pre, int bits, ir_code code, int post_bits, ir_code post):&#160;ir_remote.c']]],
+  ['map_5fgap',['map_gap',['../group__driver__api.html#gac691a06cc99d8c914e2c7451407f245a',1,'map_gap(const struct ir_remote *remote, struct decode_ctx_t *ctx, const struct timeval *start, const struct timeval *last, lirc_t signal_length):&#160;ir_remote.c'],['../group__driver__api.html#gac691a06cc99d8c914e2c7451407f245a',1,'map_gap(const struct ir_remote *remote, struct decode_ctx_t *ctx, const struct timeval *start, const struct timeval *last, lirc_t signal_length):&#160;ir_remote.c']]]
+];

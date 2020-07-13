@@ -1,0 +1,20 @@
+Package: liblirc-dev
+Source: lirc
+Version: 0.10.1-5.2
+Architecture: armhf
+Maintainer: Debian Lirc Team <team+debian-lirc@tracker.debian.org>
+Installed-Size: 234
+Depends: liblirc0 (= 0.10.1-5.2), liblirc-client0 (= 0.10.1-5.2), lsb-base
+Breaks: liblircclient-dev (<< 0.9.1)
+Replaces: liblircclient-dev (<< 0.9.1)
+Provides: liblircclient-dev
+Section: libdevel
+Priority: optional
+Homepage: https://sf.net/p/lirc
+Description: Infra-red remote control support - development files
+ LIRC stands for 'Linux Infra-red Remote Control'.
+ .
+ Package contains headers and other support used when developing external
+ applications, drivers (liblirc_driver.so) and also internal LIRC
+ software. See the User Space Driver API and  Lirc Client API sections
+ in the lirc manual available in lirc-doc.

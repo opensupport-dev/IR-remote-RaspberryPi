@@ -1,0 +1,7 @@
+bbe8975b49d45246d984570e2fa0214f  usr/bin/irxevent
+9f4f4ba5e958d5cc41bf55b04ed9f1ea  usr/bin/xmode2
+05a39bbb364b24c73f9facd96fed66ea  usr/share/doc/lirc-x/NEWS.Debian.gz
+f823899b25622ad09a379bc2da979eef  usr/share/doc/lirc-x/changelog.Debian.gz
+7f2e7b58f15f544e1d882ff580c70d10  usr/share/doc/lirc-x/copyright
+eaa3b6640eb49e29ecde6929c93b2a8d  usr/share/man/man1/irxevent.1.gz
+ed6fab5f900e23bc8e3c9e76f48c55ed  usr/share/man/man1/xmode2.1.gz

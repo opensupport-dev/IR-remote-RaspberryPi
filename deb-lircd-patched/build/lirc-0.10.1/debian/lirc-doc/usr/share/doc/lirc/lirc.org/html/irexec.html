@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>LIRC - Linux Infrared Remote Control</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="lirc.css">
+<LINK REL="shortcut icon" HREF="../images/favicon.ico">
+<META NAME="description" CONTENT="LIRC - Linux Infrared Remote Control">
+<META NAME="keywords" CONTENT="linux remote control, multimedia">
+<META charset="UTF-8">
+</HEAD>
+<body>
+<TABLE CLASS="menu"><TR>
+<TD CLASS="menu"><IMG class="menuimg" SRC="../images/diode.gif" ALT="LIRC icon" ALIGN="LEFT"></TD>
+<TD><IMG class="menuimg" SRC="../images/lirc.gif" ALT="LIRC logo" ALIGN="RIGHT"></TD>
+</TR></TABLE>
+<h1>IREXEC</h1>
+Section: User Commands (1)<br>Updated: Last change: Oct 2015<br><a href="#index">Index</a>
+<a href="index.html">Return to Main Contents</a><hr>
+
+<a name="lbAB"> </a>
+<h2>NAME</h2>
+
+<p>
+
+<b>irexe</b>c - run programs with one button press
+<a name="lbAC"> </a>
+</p>
+<h2>SYNOPSIS</h2>
+
+<b>irexec</b>
+
+[<i>options</i>] [<i>config_file</i>]
+<a name="lbAD"> </a>
+<h2>DESCRIPTION</h2>
+
+<p>
+
+<b>irexec</b> executes commands on an IR signal decoded
+by lircd, the LIRC daemon. It uses an lircrc config file where
+the <i> config = </i> entries are executed. E. g., given the
+following config file snippet
+</p>
+<pre>
+    begin
+        prog   = irexec
+        button = KEY_RED
+        config = echo "KEY_RED"
+    end
+</pre>
+
+<p>
+
+<b>irexec</b> will echo <i>KEY_RED</i> on the terminal when the corresponding
+button is pushed on a remote. The command is an arbitrary shell command
+executed asynchronously - <b>irexec</b> does not wait for it to complete.
+<a name="lbAE"> </a>
+</p>
+<h2>ARGUMENTS</h2>
+
+<dl>
+<div><dt>
+<b>config_file</b>
+
+</dt></div>
+<dd>
+lircrc configuration file. <b>irexec</b> only uses entries with
+<i>prog = irexec</i>. The path defaults to <i>~/.config/lircrc</i>.
+</dd>
+</dl>
+<a name="lbAF"> </a>
+<h2>OPTIONS</h2>
+
+<dl>
+<div><dt>
+<b>-h, --help</b>
+
+</dt></div>
+<dd>
+Display usage summary
+</dd>
+<div><dt>
+<b>-v, --version</b>
+
+</dt></div>
+<dd>
+Display version
+</dd>
+<div><dt>
+<b>-d, --daemon</b>
+
+</dt></div>
+<dd>
+Make irexec fork to background. In this case a config file should be given
+on the command line as irexec won't be able to find any home directory.
+</dd>
+<div><dt>
+<b>-D, --loglevel</b> [<i>level</i>]</dt></div>
+<dd>
+Determine the amount of logging information. [<i>level</i>] can be a symbolic
+syslog level: <i>error</i>, <i>warning</i>, <i>info</i>, <i>notice</i> or
+<i>debug</i>. lirc also defines three additional levels <i>trace</i>,
+<i>trace</i> and <i>trace2</i> which gives even more messages (<i>trace2</i>
+bringing the most). However, in the log these messages are marked as
+<i>debug</i>. By default, no logging is done.
+</dd>
+<div><dt>
+<b>-n, --name</b> &lt;<i>name</i>&gt;</dt></div>
+<dd>
+Use this program name instead of the default <i>irexec</i> as identifier in
+the lircd.conf file.
+</dd>
+</dl>
+<a name="lbAG"> </a>
+<h2>ENVIRONMENT</h2>
+
+<dl>
+<div><dt>
+<b>LIRC_SOCKET_PATH</b>
+
+</dt></div>
+<dd>
+Path to the lircd socket irexec reads from, defaults to /var/run/lirc/lircd.
+</dd>
+</dl>
+<a name="lbAH"> </a>
+<h2>FILES</h2>
+
+<dl>
+<div><dt>
+<b>~/.config/lircrc</b>
+
+</dt></div>
+<dd>
+Default config file
+</dd>
+<div><dt>
+<b>/etc/lirc/lircrc</b>
+
+</dt></div>
+<dd>
+Config file used by the systemd irexec service.
+</dd>
+<div><dt>
+<b>~/.cache/irexec.log</b>
+
+</dt></div>
+<dd>
+Debug log. Setting the XDG_CACHE_HOME environment variable relocates this
+file to $XDG_CACHE_HOME/irexec.log
+</dd>
+</dl>
+<a name="lbAI"> </a>
+<h2>NOTES</h2>
+
+<p>
+
+For versions up to 0.9.1 <b>irexec</b> used to  wait until the executed program
+terminated. Old configuration files thus often includes a  '&amp;' appended
+to the command string to avoid being stuck in the command. This is not
+required in 0.9.2+ which cannot wait for command completion.
+</p>
+<p>
+
+irexec should run as a service. The contrib directory contains a .desktop
+file which could be dropped in ~/.local/autostart. Doing so creates a
+service which can be handled by regular desktop tools such
+as <i>gnome-tweak-tool</i> on all major desktops. If running restricted
+commands such as powering off the machine is required, <a href="sudo.html">sudo</a>(8) can be used
+to allow regular users to run such commands.
+</p>
+<p>
+
+An alternative is to use the irexec.service systemd service
+which runs as root (and can run in parallel with the desktop service).
+Running as root has severe security implications.
+See the Configuration Guide in the html documentation.
+<a name="lbAJ"> </a>
+</p>
+<h2>SEE ALSO</h2>
+
+<dl>
+<div><dt>
+<b><a href="lircrc.html">lircrc</a>(5)</b>
+
+</dt></div>
+<dd>
+The lircrc configuration file.
+<p>
+</p>
+</dd>
+</dl>
+
+<hr>
+<a name="index"> </a><h2>Index</h2>
+<dl>
+<div><dt><a href="#lbAB">NAME</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAC">SYNOPSIS</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAD">DESCRIPTION</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAE">ARGUMENTS</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAF">OPTIONS</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAG">ENVIRONMENT</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAH">FILES</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAI">NOTES</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAJ">SEE ALSO</a></dt></div>
+<dd>
+</dd>
+</dl>
+<hr>
+                        <p>
+This document was created by
+<a href="index.html">man2html</a>,
+using the manual pages.<br>
+Time: 13:12:52 GMT, April 06, 2019
+                        </p>
+<p class="footer">
+        [<A HREF="http://www.lirc.org/">LIRC homepage</A>]
+      </p>
+</body>
+</html>

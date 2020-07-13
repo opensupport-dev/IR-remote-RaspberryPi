@@ -1,0 +1,13 @@
+liblirc-client0-dbgsym_0.10.1-5.2_armhf.deb debug optional automatic=yes
+liblirc-client0_0.10.1-5.2_armhf.deb libs optional
+liblirc-dev_0.10.1-5.2_armhf.deb libdevel optional
+liblirc0-dbgsym_0.10.1-5.2_armhf.deb debug optional automatic=yes
+liblirc0_0.10.1-5.2_armhf.deb libs optional
+liblircclient-dev_0.10.1-5.2_armhf.deb libdevel optional
+liblircclient0_0.10.1-5.2_armhf.deb libs optional
+lirc-dbgsym_0.10.1-5.2_armhf.deb debug optional automatic=yes
+lirc-doc_0.10.1-5.2_all.deb doc optional
+lirc-x-dbgsym_0.10.1-5.2_armhf.deb debug optional automatic=yes
+lirc-x_0.10.1-5.2_armhf.deb utils optional
+lirc_0.10.1-5.2_armhf.buildinfo utils optional
+lirc_0.10.1-5.2_armhf.deb utils optional

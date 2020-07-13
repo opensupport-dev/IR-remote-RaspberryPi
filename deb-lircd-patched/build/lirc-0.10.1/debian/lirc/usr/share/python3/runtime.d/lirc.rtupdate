@@ -1,0 +1,7 @@
+#! /bin/sh
+set -e
+
+if [ "$1" = rtupdate ]; then
+	py3clean -p lirc /usr/share/lirc
+	py3compile -p lirc  /usr/share/lirc
+fi

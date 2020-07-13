@@ -1,0 +1,38 @@
+#!/bin/sh
+set -e
+
+# Remove Python bytecode as needed
+py3clean -p lirc
+
+
+# Automatically added by dh_installsystemd/12.1.1
+if [ -d /run/systemd/system ] && [ "$1" = remove ]; then
+	deb-systemd-invoke stop 'lircd-uinput.service' >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/12.1.1
+if [ -d /run/systemd/system ] && [ "$1" = remove ]; then
+	deb-systemd-invoke stop 'irexec.service' >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installinit/12.1.1
+if [ -x "/etc/init.d/lircmd" ] && [ "$1" = remove ]; then
+	invoke-rc.d lircmd stop || exit 1
+fi
+# End automatically added section
+# Automatically added by dh_installinit/12.1.1
+if [ -x "/etc/init.d/lircd" ] && [ "$1" = remove ]; then
+	invoke-rc.d lircd stop || exit 1
+fi
+# End automatically added section
+
+# Automatically added by dh_python3:
+if which py3clean >/dev/null 2>&1; then
+	py3clean -p lirc 
+else
+	dpkg -L lirc | perl -ne 's,/([^/]*)\.py$,/__pycache__/\1.*, or next; unlink $_ or die $! foreach glob($_)'
+	find /usr/lib/python3/dist-packages/ -type d -name __pycache__ -empty -print0 | xargs --null --no-run-if-empty rmdir
+fi
+
+# End automatically added section
+

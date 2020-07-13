@@ -1,0 +1,155 @@
+
+# LIRC - Hardware DataBase
+#
+# THIS FILE IS DEPRECATED AND WILL BE REMOVED IN NEXT RELEASE.
+#
+# This is a generated file. Do not edit.
+#
+# The file lists all the remote controls supported by LIRC
+# in a parseable form. It's legacy file kept for compatiblity.
+# The current yaml files configs/*.conf should be a better
+# source in most cases.
+#
+# The format is:
+#
+# [remote controls type]
+# description;driver;lirc driver;HW_DEFAULT;lircd_conf;
+#
+# The HW_DEFAULT field is always empty.
+#
+#
+
+
+[Home-brew serial and parallel devices]
+home-brew (parallel port);;lirc_parallel;;any;
+Home brew (16x50 compatible UART serial port);;lirc_serial;;;
+
+[IRDA/Cir hardware]
+SIR  IrDA (built-in IR ports);;lirc_sir;;;
+Actisys Act220L(+) SIR driver support;;lirc_sir;;;
+Actisys  Act200L SIR driver support;;lirc_sir;;;
+
+[Other (MIDI, Bluetooth, udp, etc.)]
+AOpen XC Cube EA65, EA65-II;;ea65;;ea65/ea65.lircd.conf;
+Ericsson mobile phone via Bluetooth;;bte;;ericsson/bte.lircd.conf;
+Creative  LiveDrive sequencer;;livedrive_seq;;creative/livedrive.lircd.conf creative/livedrive.lircd.conf;
+Generic device getting keypresses from network UDP port;;udp;;;
+Creative  LiveDrive midi;;livedrive_midi;;creative/livedrive.lircd.conf;
+Creative  iNFRA CDROM;;creative_infracd;;creative/infracd.lircd.conf;
+
+[Other serial port devices]
+Anir Multimedia Magic;;lirc_serial;;animax/animax.lircd.conf;
+Girs driver for Arduino devices;;girs;;;
+Kanam  Accent;;accent;;kanam_accent/IR-100.lircd.conf kanam_accent/kanam_accent.lircd.conf;
+X10  MouseRemote RF Receiver (Serial);;mouseremote;;x10/mouseremote.lircd.conf x10/mouseremote.lircd.conf;
+Pinnacle Systems TV-card receiver;;pinsys;;pinnacle_systems/mini.lircd.conf pinnacle_systems/pctv.lircd.conf;
+Linksys NSLU2 (CTS2+GreenLED);;nslu2;;;
+Miro PCTV serial receiver;;pinsys;;pinnacle_systems/mini.lircd.conf pinnacle_systems/pctv.lircd.conf;
+REALmagic (bundled with Hollywood Plus DVD card);;pixelview;;sigma_designs/realmagic.lircd.conf pixelview/playtv.lircd.conf pixelview/playtv_bt878.lircd.conf;
+IRdeo Remote;;lirc_serial;;;
+Packard  Bell receiver;;lirc_serial;;;
+Creative  Infra Receiver/CIMR100;;creative;;creative/creative.lircd.conf;
+X10  MP3 Anywhere Serial RF Receiver;;mp3anywhere;;x10/mp3anywhere.lircd.conf;
+Logitech/AST;;logitech;;logitech/logitech.lircd.conf logitech/logitech.lircd.conf;
+Tekram  Irmate 210 (16x50 UART compatible serial port);;lirc_sir;;;
+IRdeo;;lirc_serial;;;
+PixelView RemoteMaster RC2000/RC3000;;pixelview;;pixelview/remotemaster.lircd.conf pixelview/playtv.lircd.conf pixelview/playtv_bt878.lircd.conf;
+UIRT2  (receive and transmit);;uirt2_raw;;;
+Silitek  SM-1000;;silitek;;silitek/silitek.lircd.conf silitek/silitek.lircd.conf;
+PCMAK serial receiver;;pcmak;;pcmak/pcmak.lircd.conf;
+UIRT2  (receive only, UIR mode);;uirt2;;;
+
+[PDAs]
+HP  iPAQ;;lirc_sir;;;
+Sharp Zaurus;;lirc_sir;;;
+
+[Home-brew (soundcard input)]
+Receiver/transmitter using PortAudio (EXPERIMENTAL);;audio;;;
+IR receiver IC connected to audio input using ALSA (EXPERIMENTAL);;audio_alsa;;;
+Simple IR diode (EXPERIMENTAL);;dsp;;;
+
+[TV cards]
+Dynalink  Magic TView (card=48);;default;;cph03x/cph03x.lircd.conf;
+Sony PCVA-IR5U IR Receiver (OSX version);;sonyir;;sonyir.lircd.conf sonyir/sonyir.lircd.conf;
+AverMedia TV card (TVCapture, TVPhone) (card=6);;default;;avermedia/avermedia.lircd.conf;
+Tekram   M230 Mach64 (and others bt829 based);;lirc_bt829;;tekram/m230.lircd.conf;
+Pixelview  PV-BT878P+4E (card=50);;default;;pixelview/playtv_pro.lircd.conf;
+FlyVideo  98 (card=3;;default;;life-view/flyvideo.lircd.conf;
+Chronos  Video Shuttle II (card=35);;default;;chronos/chronos.lircd.conf;
+FlyVideo 98/FM /2000S (card=56);;default;;life-view/flyvideo.lircd.conf;
+Adaptec AVC-2410;;devinput;;adaptec/AVC-2410.lircd.conf devinput/devinput.lircd.conf pipi/PiPiPC.lircd.conf;
+Soundgraph  iMON Knob;;default;;imon/imon-knob.lircd.conf;
+I-O;;default;;iodata/gvbctv5pci.lircd.conf;
+Typhoon  TView RDS / FM Stereo (card=53);;devinput;;knc_one/knc_one.lircd.conf devinput/devinput.lircd.conf pipi/PiPiPC.lircd.conf;
+Creative BreakOut-Box;;default;;creative/breakoutbox.lircd.conf;
+ProVideo  PV951 (card=42);;devinput;;provideo/pv951.lircd.conf devinput/devinput.lircd.conf pipi/PiPiPC.lircd.conf;
+Dign HV5 HTPC IR/VFD Module;;lirc_sasem;;sasem/sasem.lircd.conf;
+Hauppauge  TV card;;devinput;;hauppauge/hauppauge.lircd.conf devinput/devinput.lircd.conf pipi/PiPiPC.lircd.conf;
+WinView  601 (card=17);;default;;leadtek/RM-0007.lircd.conf;
+Askey/Typhoon/Anubis Magic TView CPH051/061 (bt878) (card=24);;default;;cph03x/cph03x.lircd.conf;
+TView99  CPH063 (card=38);;default;;cph03x/cph03x.lircd.conf;
+Asus  TV-Box;;devinput;;asus/asus.lircd.conf devinput/devinput.lircd.conf pipi/PiPiPC.lircd.conf;
+Technisat MediaFocus I;;default;;technisat/mediafocus.lircd.conf;
+AverMedia-98 TV card (TVCapture, TVPhone) (card=6);;default;;avermedia/avermedia.lircd.conf;
+Lenco  MXTV-9578 CP (card=50);;default;;pixelview/playtv_pro.lircd.conf;
+Hauppauge  HVR-1300;;default;;hauppauge/hauppauge.lircd.conf;
+Pixelview PlayTV MPEG2;;default;;pixelview/playtv_pro.lircd.conf;
+Flyvideo 98FM (LR50Q)/Typhoon TView TV/FM Tuner (card=36);;default;;life-view/flyvideo.lircd.conf;
+Prolink  PV-BT878P+4E (card=50);;default;;pixelview/playtv_pro.lircd.conf;
+FlyVideo  II (card=8);;default;;life-view/flyvideo.lircd.conf;
+Pinnacle Systems PCTV (pro) receiver;;pinsys;;pinnacle_systems/pctv.lircd.conf pinnacle_systems/mini.lircd.conf pinnacle_systems/pctv.lircd.conf;
+TV card (VDOMATE) (use card=13);;default;;avermedia/vdomate.lircd.conf;
+Sony PCVA-IR5U IR Receiver;;sonyir;;sonyir/sonyir.lircd.conf;
+Hauppauge DVB-s card (ver. 2.1);;default;;hauppauge/hauppauge.lircd.conf;
+Phoebe  Tv Master + FM (card=22);;default;;cph03x/cph93x.lircd.conf;
+Askey  Magic TView CPH03x (card=1);;default;;cph03x/cph03x.lircd.conf;
+Winfast  TV2000/XP (card=34);;default;;leadtek/RM-0010.lircd.conf;
+TriTan Technology TView95 CPH03x (card=1);;default;;cph03x/cph93x.lircd.conf;
+Pinnacle  Systems PCTV Sat receiver;;pinsys;;pinnacle_systems/pctv.lircd.conf pinnacle_systems/mini.lircd.conf pinnacle_systems/pctv.lircd.conf;
+Prolink AProlink Pixelview PV-BT878P+ (Rev.4C,8E, card=70);;default;;pixelview/playtv_pro.lircd.conf;
+Jetway TV/Capture JW-TV878-FBK, Kworld KW-TV878RF (card=78);;default;;kworld/kworld.lircd.conf;
+Pixelview PlayTV pro (card=37);;default;;pixelview/playtv_pro.lircd.conf;
+Winfast PVR2000;;devinput;;leadtek/PVR2000.lircd.conf devinput/devinput.lircd.conf pipi/PiPiPC.lircd.conf;
+Hercules Smart TV Stereo (card=100);;default;;hercules/smarttv_stereo.lircd.conf;
+KNC ONE TV Station (-/SE/PRO/RDS);;devinput;;knc_one/knc_one.lircd.conf devinput/devinput.lircd.conf pipi/PiPiPC.lircd.conf;
+
+[USB devices]
+IRLink VS USB IR Receiver.;;irlink;;irlink/irlink.vs.lircd.conf;
+X10 RF Remote (userspace);;atilibusb;;atiusb/atilibusb.lircd.conf atiusb/atilibusb.lircd.conf q-sonic/Master_Remote_6in1.lircd.conf x10/atilibusb.lircd.conf;
+TechnoTrend Trend USB IR receiver;;default;;;
+Awox RF/IR Remote (userspace);;awlibusb;;awlibusb/awlibusb.lircd.conf;
+DFC  USB InfraRed Remote Control (userspace);;dfclibusb;;any;
+CommandIR Multi-IR Transceiver (userspace);;commandir;;hauppauge/hauppauge.lircd.conf;
+Soundgraph  iMON IR/LCD;;default;;imon/imon.lircd.conf;
+ATI/NVidia/X10 RF Remote (userspace);;atilibusb;;atiusb/atilibusb.lircd.conf q-sonic/Master_Remote_6in1.lircd.conf x10/atilibusb.lircd.conf;
+Home  Electronics Tira USB device;;tira;;sony/RM-YD017.tira.lircd.conf tivo/TIVO_Series_2.tira.lircd.conf;
+VLSystem  MPlay Blast;;mplay;;vlsystem/mplay.lircd.conf vlsystem/mplay.lircd.conf;
+Sound Blaster Extigy/Audigy 2 NX (ALSA snd-usb-audio);;alsa_usb;;creative/alsa_usb.lircd.conf;
+Philips  7500 RF remote;;srm7500libusb;;philips/srm7500libusb.lircd.conf;
+ATI/NVidia/X10  I & II RF Remote;modprobe ati_remote;ati_remote;;atiusb/atiusb.lircd.conf;
+Asus DH USB Remote;;asusdh;;asus/asusdh.lircd.conf;
+FTDI  FT232-based IR Receiver;;ftdi;;any;
+Soundgraph iMON PAD IR/VFD;;default;;imon/imon-pad.lircd.conf;
+Aureal ATWF@83-W001 ESKY.CC remote;;atwf83;;aureal/atwf83.lircd.conf;
+Medion X10 devices;;atilibusb;;atiusb/atilibusb.lircd.conf atiusb/atilibusb.lircd.conf q-sonic/Master_Remote_6in1.lircd.conf x10/atilibusb.lircd.conf;
+NVidia X10 RF Remote (userspace);;atilibusb;;atiusb/atilibusb.lircd.conf atiusb/atilibusb.lircd.conf q-sonic/Master_Remote_6in1.lircd.conf x10/atilibusb.lircd.conf;
+ATI Remote Wonder II;;atilibusb;;atiusb/atilibusb.lircd.conf q-sonic/Master_Remote_6in1.lircd.conf x10/atilibusb.lircd.conf;
+DViCO  USB Remote;;dvico;;dvico/fusionHDTV.lircd.conf;
+Home  Electronics Tira USB device (timing mode);;tira_raw;;;
+Microsoft MCE remotes gear;;default;;mceusb/mceusb.lircd.conf;
+PCMAK  USB receiver;;pcmak;;pcmak/pcmak.lircd.conf;
+Snapstream  Firefly;;ati-remote;;atiusb/atiusb.lircd.conf;
+Dangerous Prototypes irtoy device;;irtoy;;;
+Apple  Mac mini USB IR Receiver;;macmini;;apple/macmini.lircd.conf;
+Soundgraph  iMON RSC;;default;;imon/imon-rsc.lircd.conf;
+VLSystem  MPlay Mini;;mplay;;vlsystem/mplay.lircd.conf;
+Samsung  USB IR Receiver;;samsung;;samsung/samsung.lircd.conf samsung/samsung.lircd.conf;
+Soundgraph  iMON 2.4G DT & LT;;default;;imon/imon-2.4g.lircd.conf;
+Igor Cesko's USB IR Receiver;;igorplugusb;;;
+Soundgraph  iMON MultiMedian IR/VFD;;default;;imon/imon.lircd.conf;
+Sasem  OnAir Remocon-V;;lirc_sasem;;sasem/sasem.lircd.conf;
+USB-UIRT;;usb_uirt_raw;;;
+Zotac USB IR Receiver;;zotac;;zotac/zotac.lircd.conf zotac/zotac.lircd.conf;
+X10  MP3 Anywhere USB RF Receiver;;atilibusb;;x10/mp3anywhere.lircd.conf atiusb/atilibusb.lircd.conf q-sonic/Master_Remote_6in1.lircd.conf x10/atilibusb.lircd.conf;
+ADSTech  USBX-707 USB IR Blaster;;usbx;;adstech/usbx-707.lircd.conf adstech/usbx-707.lircd.conf;
+

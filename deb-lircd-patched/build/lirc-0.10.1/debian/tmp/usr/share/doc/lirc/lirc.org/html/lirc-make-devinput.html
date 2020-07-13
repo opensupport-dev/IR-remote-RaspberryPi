@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>LIRC - Linux Infrared Remote Control</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="lirc.css">
+<LINK REL="shortcut icon" HREF="../images/favicon.ico">
+<META NAME="description" CONTENT="LIRC - Linux Infrared Remote Control">
+<META NAME="keywords" CONTENT="linux remote control, multimedia">
+<META charset="UTF-8">
+</HEAD>
+<body>
+<TABLE CLASS="menu"><TR>
+<TD CLASS="menu"><IMG class="menuimg" SRC="../images/diode.gif" ALT="LIRC icon" ALIGN="LEFT"></TD>
+<TD><IMG class="menuimg" SRC="../images/lirc.gif" ALT="LIRC logo" ALIGN="RIGHT"></TD>
+</TR></TABLE>
+<h1>LIRC_MAKE_DEVINPUT</h1>
+Section: User Commands (1)<br>Updated: Last change: May 2017<br><a href="#index">Index</a>
+<a href="index.html">Return to Main Contents</a><hr>
+
+<a name="lbAB"> </a>
+<h2>NAME</h2>
+
+lirc-make-devinput - create a devinput.lircd.conf for the local site.
+<a name="lbAC"> </a>
+<h2>SYNOPSIS</h2>
+
+<b>lirc-make-devinput [</b><i>input.h</i>]
+
+<a name="lbAD"> </a>
+<h2>ARGUMENTS</h2>
+
+<dl>
+<div><dt>
+<b>input.h</b>
+
+</dt></div>
+<dd>
+Header file parsed to create the configuration file.
+<p>
+</p>
+</dd>
+</dl>
+<a name="lbAE"> </a>
+<h2>DESCRIPTION</h2>
+
+Reads the system header files and creates a devinput.lircd.conf which
+matches the local system (i. e., the local kernel). It normally requires
+that the kernel-headers package is installed.
+<a name="lbAF"> </a>
+<h2>ENVIRONMENT</h2>
+
+<dl>
+<div><dt>PYTHON</dt></div>
+<dd>
+Python interpreter, defaults to <i>python</i>
+</dd>
+</dl>
+<a name="lbAG"> </a>
+<h2>FILES</h2>
+
+<dl>
+<div><dt>/usr/include/linux/input-event-codes.h</dt></div>
+<dd>
+Default system header file
+</dd>
+<div><dt>/usr/include/linux/input.h</dt></div>
+<dd>
+Alternative file used on older kernels.
+<p>
+</p>
+</dd>
+</dl>
+<a name="lbAH"> </a>
+<h2>SEE ALSO</h2>
+
+<p>
+
+The documentation for
+<b>lirc</b>
+
+is maintained as html pages. They are located under html/ in the
+documentation directory.
+</p>
+<p>
+
+</p>
+<hr>
+<a name="index"> </a><h2>Index</h2>
+<dl>
+<div><dt><a href="#lbAB">NAME</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAC">SYNOPSIS</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAD">ARGUMENTS</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAE">DESCRIPTION</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAF">ENVIRONMENT</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAG">FILES</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAH">SEE ALSO</a></dt></div>
+<dd>
+</dd>
+</dl>
+<hr>
+                        <p>
+This document was created by
+<a href="index.html">man2html</a>,
+using the manual pages.<br>
+Time: 13:12:52 GMT, April 06, 2019
+                        </p>
+<p class="footer">
+        [<A HREF="http://www.lirc.org/">LIRC homepage</A>]
+      </p>
+</body>
+</html>

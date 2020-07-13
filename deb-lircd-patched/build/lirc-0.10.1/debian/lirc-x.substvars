@@ -1,0 +1,3 @@
+shlibs:Depends=libc6 (>= 2.15), libgcc1 (>= 1:3.5), liblirc-client0, liblirc0, libx11-6
+misc:Depends=
+misc:Pre-Depends=

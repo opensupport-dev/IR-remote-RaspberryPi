@@ -1,0 +1,4 @@
+debian/tmp/usr/bin/xmode2
+debian/tmp/usr/bin/irxevent
+debian/tmp/usr/share/man/man1/xmode2.1
+debian/tmp/usr/share/man/man1/irxevent.1

@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['send_5ffunc',['send_func',['../structdriver.html#a90d38db70255ee7d38bcd81c9edd9412',1,'driver']]],
+  ['send_5fmode',['send_mode',['../structdriver.html#a3242a5145451f5693492e88286b5bab3',1,'driver']]],
+  ['sfoot',['sfoot',['../structir__remote.html#a2985b422762a3c7b5b295187d6a00664',1,'ir_remote']]],
+  ['shead',['shead',['../structir__remote.html#a8833025334a52ee2683eb6c0fc5c2dba',1,'ir_remote']]],
+  ['sighup',['sighup',['../classlirc_1_1client_1_1Reply.html#ae1599c6bc2b7f1b456536b0cc3f11eba',1,'lirc::client::Reply']]],
+  ['signals',['signals',['../structir__ncode.html#a6ff318262c9447b1e1fc4e944e29bf4a',1,'ir_ncode']]],
+  ['sone',['sone',['../structir__remote.html#acca5860d287ecc9bb10b1b637fe1798a',1,'ir_remote']]],
+  ['srepeat',['srepeat',['../structir__remote.html#a4e9ba62e5adc73c7fa1e3fdaea2743a4',1,'ir_remote']]],
+  ['sthree',['sthree',['../structir__remote.html#a7f340b28266813867571a55f82fd97e3',1,'ir_remote']]],
+  ['stop_5fbits',['stop_bits',['../structir__remote.html#a13fcf354b4173cde1d0bd622da6efbc2',1,'ir_remote']]],
+  ['stwo',['stwo',['../structir__remote.html#a04c5288df6f5bace9617ebdeaf462a5c',1,'ir_remote']]],
+  ['subsystem',['subsystem',['../structdrv__enum__udev__what.html#a470b56a7ecb6f710b0fae1b927c440ff',1,'drv_enum_udev_what']]],
+  ['success',['success',['../classlirc_1_1client_1_1Reply.html#aa89f2ba7be0902bfefffc941f3e2bacd',1,'lirc::client::Reply']]],
+  ['sum',['sum',['../structlengths__state.html#a8e0fd528701e5e308274102d6b8cbb43',1,'lengths_state']]],
+  ['suppress_5frepeat',['suppress_repeat',['../structir__remote.html#a075a47ed472f9e8a42b64d3837333bbd',1,'ir_remote']]],
+  ['szero',['szero',['../structir__remote.html#a8de4273ee35fa7b5d56f82a793f1aa1a',1,'ir_remote']]]
+];

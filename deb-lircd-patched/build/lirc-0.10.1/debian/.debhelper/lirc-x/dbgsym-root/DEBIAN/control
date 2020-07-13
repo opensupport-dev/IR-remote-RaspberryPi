@@ -1,0 +1,12 @@
+Package: lirc-x-dbgsym
+Source: lirc
+Version: 0.10.1-5.2
+Auto-Built-Package: debug-symbols
+Architecture: armhf
+Maintainer: Debian Lirc Team <team+debian-lirc@tracker.debian.org>
+Installed-Size: 68
+Depends: lirc-x (= 0.10.1-5.2)
+Section: debug
+Priority: optional
+Description: debug symbols for lirc-x
+Build-Ids: 4d102f4df5e5044b0f96a73e37f010cf5ea6ae20 dcbda1abcd0580f57576288c48aab45a8ff1fe4e

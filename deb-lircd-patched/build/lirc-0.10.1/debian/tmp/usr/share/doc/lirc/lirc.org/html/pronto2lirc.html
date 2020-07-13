@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>LIRC - Linux Infrared Remote Control</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="lirc.css">
+<LINK REL="shortcut icon" HREF="../images/favicon.ico">
+<META NAME="description" CONTENT="LIRC - Linux Infrared Remote Control">
+<META NAME="keywords" CONTENT="linux remote control, multimedia">
+<META charset="UTF-8">
+</HEAD>
+<body>
+<TABLE CLASS="menu"><TR>
+<TD CLASS="menu"><IMG class="menuimg" SRC="../images/diode.gif" ALT="LIRC icon" ALIGN="LEFT"></TD>
+<TD><IMG class="menuimg" SRC="../images/lirc.gif" ALT="LIRC logo" ALIGN="RIGHT"></TD>
+</TR></TABLE>
+<h1>PRONTO2LIRC</h1>
+Section: User Commands (1)<br>Updated: Last change: Oct 2016<br><a href="#index">Index</a>
+<a href="index.html">Return to Main Contents</a><hr>
+
+<a name="lbAB"> </a>
+<h2>NAME</h2>
+
+pronto2lirc - convert pronto-encoded data to lircd.conf format
+<a name="lbAC"> </a>
+<h2>SYNOPSIS</h2>
+
+<b>pronto2lirc &lt;</b><i>inputfile</i>&gt;
+
+<a name="lbAD"> </a>
+<h2>DESCRIPTION</h2>
+
+<p>
+
+Converts an input file to a lircd.conf formatted file. Inputfile can be:
+</p>
+<dl>
+<div><dt>-</dt></div>
+<dd>
+An xml file output by CCFTools/CCFDecompiler.
+</dd>
+<div><dt>-</dt></div>
+<dd>
+Text file where each line contains the name of the button and
+all codes associated with it:
+<pre>
+
+         Button1:0000 00ac 000b 00de ...
+
+
+</pre>
+<a name="lbAE"> </a>
+<h2>OPTIONS</h2>
+
+<dl>
+<div><dt>
+<b>-h</b> <b>--help</b>
+</dt></div>
+<dd>
+Display usage summary.
+</dd>
+</dl>
+<a name="lbAF"> </a>
+<h2>SEE ALSO</h2>
+
+<p>
+
+<a href="lircd.conf.html">lircd.conf</a>(5)
+</p>
+<p>
+
+</p>
+<hr>
+<a name="index"> </a><h2>Index</h2>
+<dl>
+<div><dt><a href="#lbAB">NAME</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAC">SYNOPSIS</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAD">DESCRIPTION</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAE">OPTIONS</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAF">SEE ALSO</a></dt></div>
+<dd>
+</dd>
+</dl>
+<hr>
+                        <p>
+This document was created by
+<a href="index.html">man2html</a>,
+using the manual pages.<br>
+Time: 13:12:52 GMT, April 06, 2019
+                        </p>
+</dd>
+</dl>
+<p class="footer">
+        [<A HREF="http://www.lirc.org/">LIRC homepage</A>]
+      </p>
+</body>
+</html>

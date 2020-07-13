@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>LIRC - Linux Infrared Remote Control</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="lirc.css">
+<LINK REL="shortcut icon" HREF="../images/favicon.ico">
+<META NAME="description" CONTENT="LIRC - Linux Infrared Remote Control">
+<META NAME="keywords" CONTENT="linux remote control, multimedia">
+<META charset="UTF-8">
+</HEAD>
+<body>
+<TABLE CLASS="menu"><TR>
+<TD CLASS="menu"><IMG class="menuimg" SRC="../images/diode.gif" ALT="LIRC icon" ALIGN="LEFT"></TD>
+<TD><IMG class="menuimg" SRC="../images/lirc.gif" ALT="LIRC logo" ALIGN="RIGHT"></TD>
+</TR></TABLE>
+<h1>LIRCD-UINPUT</h1>
+Section: System Managers Manual (8)<br>Updated: Last change: Jun 2017<br><a href="#index">Index</a>
+<a href="index.html">Return to Main Contents</a><hr>
+
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+<p>
+<a name="lbAB"> </a>
+</p>
+<h2>NAME</h2>
+
+<p>
+
+lircd-uinput - Forward lirc button presses as uinput events
+</p>
+<p>
+<a name="lbAC"> </a>
+</p>
+<h2>SYNOPSIS</h2>
+
+<p>
+
+lircd-uinput [<i>options</i>]... [<i>lircd output socket</i>]
+<br>
+
+lircd-uinput [<i>options</i>]... [<i>file</i>]
+</p>
+<p>
+<a name="lbAD"> </a>
+</p>
+<h2>DESCRIPTION</h2>
+
+<p>
+<b>lircd-uinput</b>
+
+reads decoded button press events from a
+<b><a href="lircd.html">lircd</a>(8)</b>
+
+output socket and
+injects these as key events to the kernel uinput device.
+The kernel makes these events available to other applications on a
+<i>/dev/input/event</i>
+
+device, just as for regular input hardware.
+</p>
+<p>
+
+<b>lircd-uinput</b>
+
+is designed to run as a systemd service.
+</p>
+<p>
+
+The
+<i>lircd output socket</i>
+
+argument is an optional path to the lircd output socket.
+It defaults to the <i>output</i> value in the [lircd] section of the
+lirc_options config file, falling back to
+<i>/var/run/lirc/lircd.</i>
+
+</p>
+<p>
+
+If a plain file is given instead of a socket it is supposed to contain
+button press events formatted as documented in
+<b><a href="lircd.html">lircd</a>(8)</b>
+
+.
+<b>lircd-uinput</b>
+
+will in this case send the codes in this file and exit.
+</p>
+<p>
+
+In order to work, release events must be sent to the uinput device.
+See REPEAT HANDLING.
+</p>
+<p>
+
+<b>lircd-uinput</b>
+
+can only handle button events named using the official namespace i. e.,
+buttons known to the kernel. See NOTES.
+</p>
+<p>
+
+Unless the
+<i>/dev/uinput</i>
+
+default permissions are changed
+<b>lirc-uinput</b>
+
+needs to run as root. See NOTES.
+</p>
+<p>
+
+The
+<i>/dev/input/event</i>
+
+device created by the kernel can be tricky to locate, and is not stable.
+See NOTES.
+</p>
+<p>
+<a name="lbAE"> </a>
+</p>
+<h2>OPTIONS</h2>
+
+<dl>
+<div><dt>
+<b>-u</b> <b>--uinput</b> &lt;<i>device</i>&gt;</dt></div>
+<dd>
+uinput kernel device, defaults to /dev/uinput.
+</dd>
+<div><dt>
+<b>-r</b> <b>--release-suffix</b> &lt;<i>suffix</i>&gt;</dt></div>
+<dd>
+<b>lircd-uinput</b>
+
+generates different events depending on if the button name
+ends with the <i>release-suffix</i> or not.
+Defaults to
+<i>_EVUP</i>
+
+. See REPEAT HANDLING
+</dd>
+<div><dt>
+<b>-R</b> <b>--repeat</b> &lt;<i>delay</i>[,<i>period</i>] | <i>,period</i>&gt;</dt></div>
+<dd>
+Set kernel autorepeat parameters of the created
+<i>/dev/input/event</i>
+
+device.
+<i>delay</i>
+
+is the time before repeating a key event,
+<i>period</i>
+
+is the time between repeated key events.
+Both values are in milliseconds, separated by a comma.
+Any  value can be omitted or set to 0 in which case
+the kernel/system defaults are used.
+See REPEAT HANDLING.
+</dd>
+<div><dt>
+<b>-a</b> <b>--add-release-events</b>
+</dt></div>
+<dd>
+Generate synthetic release events.
+This option is mandatory unless
+<b>lircd</b>
+
+is using the deprecated
+<i>--release</i>
+
+option.
+The timeout used can be modified using the
+<i>release-timeout</i>
+
+key in the
+<i>lircd-uinput</i>
+
+section of the
+<b>lirc_options.conf</b>
+
+file.
+Useless if used with a text file as input.
+. See REPEAT HANDLING
+</dd>
+<div><dt>
+<b>-d</b> <b>--disabled</b> &lt;<i>disabled buttons file path</i>&gt;</dt></div>
+<dd>
+The path of a file which contains name of buttons to be disabled,
+one per line.
+By default,
+<b>lircd-uinput</b>
+
+sends all buttons found in input.
+See NOTES.
+</dd>
+<div><dt>
+<b>-O</b> <b>--options-file</b> &lt;<i>path</i>&gt;</dt></div>
+<dd>
+Options file holding default values. Defaults to
+<i>/etc/lircd/lirc_options.conf</i>
+
+</dd>
+<div><dt>
+<b>-L, --logfile</b> &lt;<i>logfile path</i>&gt;</dt></div>
+<dd>
+Select the log file, either the string 'syslog' indicating that <a href="syslog.html">syslog</a>(1)
+should be used or a log file path.
+The default is to use syslog.
+</dd>
+<div><dt>
+<b>-D, --loglevel</b> [<i>level</i>]</dt></div>
+<dd>
+Determine the amount of logging information.
+<i>level</i>
+
+can be a symbolic syslog level: 'error','warning, 'info', 'notice' or
+'debug'.
+<b>lircd-uinput</b>
+
+also defines three additional levels 'trace', 'trace1' and 'trace2' which
+gives even more messages ('trace2' bringing the most).
+However, in the log these messages are marked as 'debug'.
+</dd>
+<div><dt>
+<b>-h</b> <b>--help</b>
+</dt></div>
+<dd>
+Display usage summary.
+</dd>
+<div><dt>
+<b>-v</b> <b>--version</b>
+</dt></div>
+<dd>
+Display version info.
+<p>
+</p>
+</dd>
+</dl>
+<a name="lbAF"> </a>
+<h2>REPEAT HANDLING</h2>
+
+<p>
+After receiving a keypress event the kernel will start emitting repeat
+events to applications until
+<b>lircd-uinput</b>
+
+emits a corresponding release event.
+The release events could be created by
+<b><a href="lircd.html">lircd</a>(8)</b>
+
+using the deprecated
+<i>--release</i>
+
+option.
+Such events typically has an
+<i>_EVUP</i>
+
+suffix appended to the original keypress event.
+</p>
+<p>
+
+The preferred way is that
+<b>lircd-uinput</b>
+
+creates release events using the
+<i>--add-release-events</i>
+
+option.
+Combining both of these options might give unexpected results.
+</p>
+<p>
+
+Note that the linux kernel uses the suffix _UP (which was used py
+lircd prior to 0.10.0) for other purposes since 4.7.
+</p>
+<p>
+
+In any case, the repeat events generated by the kernel can be tweaked using
+the
+<i>--repeat</i>
+
+option. This can set the time between the keypress event and the
+first repeat event and the time between each repeat event.
+The
+<i>--repeat</i>
+
+option should only be used if no other program or udev rule is
+automatically setting up key repeat parameters.
+By design the repeat parameters can't be set in an atomic way
+during input device registration so this option is prone to
+race conditions.
+</p>
+<p>
+
+Note that the
+<b>lircd-uinput</b>
+
+repeat-event handling differs from
+<b><a href="lircd.html">lircd</a>(8)</b>
+
+which  implements (emulates) hardware autorepeat in the events
+sent to uinput (event.value == 2).
+<b>lircd-uinput</b>
+
+only sends keypress and release events, trusting the kernel autorepeat
+support.
+</p>
+<p>
+<a name="lbAG"> </a>
+</p>
+<h2>NOTES</h2>
+
+<p>
+By default, the
+<i>dev/uinput</i>
+
+device is not writable for regular users.
+Thus
+<b>lircd-uinput</b>
+
+needs to run as root unless these permissions are changed.
+</p>
+<p>
+
+One way to achieve this is an udev rule.
+The lirc distribution contains an example rule which makes the
+<b>lircd-uinput</b>
+
+device writable for users in the group lirc.
+Another way is to use
+<b><a href="lircd-setup.html">lircd-setup</a>(8)</b>
+
+to change the permissions. As distributed, the
+<i>lirc_options.conf</i>
+
+file contains an commented example using
+<b><a href="setfacl.html">setfacl</a>(1)</b>
+
+.
+</p>
+<p>
+<b>lircd-uinput</b>
+
+can only forward lircd button events with names from
+the legal namespace defined by the kernel.
+A complete list of possible button names  is available in
+<i>/usr/include/linux/input-event-codes.h</i>
+
+and also using
+<i>irrecord -l</i>
+
+.
+Other button names are silently dropped.
+</p>
+<p>
+
+The event keycode depends on the name that was given a button in the
+lircd config file e.g., if the button is named <i>KEY_1</i> the keycode
+<i>1</i> will be generated.
+</p>
+<p>
+
+The kernel makes the events generated by
+<b>lircd-uinput</b>
+
+available on a
+<i>/dev/input</i>
+
+device like
+<i>/dev/input/event12.</i>
+
+This device name is not stable and typically varies after a reboot.
+The lirc distribution contains a udev rule which if installed creates
+a device link named
+<i>/dev/lircd-uinput</i>
+
+which always can be used.
+</p>
+<p>
+
+<b>lircd-uinput</b>
+
+is designed to replace the currently deprecated
+<i>--uinput</i>
+
+option to
+<b><a href="lircd.html">lircd</a>(8).</b>
+
+However,
+<b>lircd-uinput</b>
+
+forwards all events unless blocked by the
+<i>--disabled</i>
+
+option.
+On the other hand,
+<b>lircd</b>
+
+<i>--uinput</i>
+
+does not forward all events - the heuristics used has been changed
+over versions.
+</p>
+<p>
+<a name="lbAH"> </a>
+</p>
+<h2>BUGS</h2>
+
+<p>
+Since the device name is fixed, only one instance of
+<b>lircd-uinput</b>
+
+can run on a system.
+</p>
+<p>
+<a name="lbAI"> </a>
+</p>
+<h2>SEE ALSO</h2>
+
+<p>
+<br>
+
+<b><a href="lircd.html">lircd</a></b>(8)
+
+<br>
+
+<b><a href="irrecord.html">irrecord</a>(1)</b>
+
+<br>
+
+<b><a href="http://www.kernel.org/doc/Documentation/input/event-codes.txt">http://www.kernel.org/doc/Documentation/input/event-codes.txt</a></b>
+
+</p>
+<p>
+
+</p>
+<hr>
+<a name="index"> </a><h2>Index</h2>
+<dl>
+<div><dt><a href="#lbAB">NAME</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAC">SYNOPSIS</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAD">DESCRIPTION</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAE">OPTIONS</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAF">REPEAT HANDLING</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAG">NOTES</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAH">BUGS</a></dt></div>
+<dd>
+</dd>
+<div><dt><a href="#lbAI">SEE ALSO</a></dt></div>
+<dd>
+</dd>
+</dl>
+<hr>
+                        <p>
+This document was created by
+<a href="index.html">man2html</a>,
+using the manual pages.<br>
+Time: 13:12:52 GMT, April 06, 2019
+                        </p>
+<p class="footer">
+        [<A HREF="http://www.lirc.org/">LIRC homepage</A>]
+      </p>
+</body>
+</html>

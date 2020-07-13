@@ -1,0 +1,439 @@
+warning: source examples is not a readable file or directory... skipping.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:142: warning: Compound lengths is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:156: warning: Compound lirc_config is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:165: warning: Compound lirc_config_entry is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:145: warning: Compound lirc_list is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:150: warning: Compound lirc_code is not documented.
+/home/pi/build/lirc-0.10.1/lib/driver_api.dox:526: warning: included file drivers/default/Makefile is not found. Check your EXAMPLE_PATH
+<ircat.py>:3: warning: included file ircat.py is not found. Check your EXAMPLE_PATH
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:108: warning: included file irexec.cpp is not found. Check your EXAMPLE_PATH
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:106: warning: included file irsend.cpp is not found. Check your EXAMPLE_PATH
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:199: warning: included file irw.py is not found. Check your EXAMPLE_PATH
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:409: warning: included file list-keys.py is not found. Check your EXAMPLE_PATH
+<list-remotes.py>:3: warning: included file list-remotes.py is not found. Check your EXAMPLE_PATH
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:408: warning: included file simulate.py is not found. Check your EXAMPLE_PATH
+/home/pi/build/lirc-0.10.1/lib/ciniparser.c:38: warning: Member ASCIILINESZ (macro definition) of group Ciniparser is not documented.
+/home/pi/build/lirc-0.10.1/lib/ciniparser.c:39: warning: Member INI_INVALID_KEY (macro definition) of group Ciniparser is not documented.
+/home/pi/build/lirc-0.10.1/lib/ciniparser.h:52: warning: Member ciniparser_getstr(d, k) (macro definition) of group Ciniparser is not documented.
+/home/pi/build/lirc-0.10.1/lib/ciniparser.h:53: warning: Member ciniparser_setstr (macro definition) of group Ciniparser is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:74: warning: Member LINE_LEN (macro definition) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:75: warning: Member MAX_INCLUDES (macro definition) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:54: warning: Member directive (enumeration) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:85: warning: Member init_void_array(struct void_array *ar, size_t chunk_size, size_t item_size) (function) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:227: warning: Member s_malloc(size_t size) (function) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:241: warning: Member s_strdup(char *string) (function) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:254: warning: Member s_strtocode(const char *val) (function) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:270: warning: Member s_strtou32(char *val) (function) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:285: warning: Member s_strtoi(char *val) (function) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:302: warning: Member s_strtoui(char *val) (function) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:319: warning: Member s_strtolirc_t(char *val) (function) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:340: warning: Member checkMode(int is_mode, int c_mode, char *error) (function) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:351: warning: Member addSignal(struct void_array *signals, char *val) (function) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:364: warning: Member defineCode(char *key, char *val, struct ir_ncode *code) (function) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:373: warning: Member defineNode(struct ir_ncode *code, const char *val) (function) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:396: warning: Member parseFlags(char *val) (function) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:442: warning: Member defineRemote(char *key, char *val, char *val2, struct ir_remote *rem) (function) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/config_file.c:77: warning: Member whitespace (variable) of file config_file.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/curl_poll.c:28: warning: Member _XOPEN_SOURCE (macro definition) of file curl_poll.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/curl_poll.c:53: warning: Member TRUE (macro definition) of file curl_poll.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/curl_poll.c:54: warning: Member FALSE (macro definition) of file curl_poll.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/curl_poll.c:73: warning: Member curl_poll(struct pollfd ufds[], unsigned int nfds, int timeout_ms) (function) of file curl_poll.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/curl_poll.h:44: warning: Member curl_poll(struct pollfd ufds[], unsigned int nfds, int timeout_ms) (function) of file curl_poll.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/driver.h:36: warning: Member MAXPATHLEN (macro definition) of group driver_api is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.c:45: warning: Member fprint_comment(FILE *f, const struct ir_remote *rem, const char *commandline) (function) of file dump_config.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.c:89: warning: Member fprint_flags(FILE *f, int flags) (function) of file dump_config.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.c:109: warning: Member fprint_remotes(FILE *f, const struct ir_remote *all, const char *commandline) (function) of file dump_config.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.c:118: warning: Member fprint_remote_gap(FILE *f, const struct ir_remote *rem) (function) of file dump_config.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.c:126: warning: Member fprint_remote_head(FILE *f, const struct ir_remote *rem) (function) of file dump_config.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.c:210: warning: Member fprint_remote_foot(FILE *f, const struct ir_remote *rem) (function) of file dump_config.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.c:215: warning: Member fprint_remote_signal_head(FILE *f, const struct ir_remote *rem) (function) of file dump_config.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.c:223: warning: Member fprint_remote_signal_foot(FILE *f, const struct ir_remote *rem) (function) of file dump_config.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.c:231: warning: Member fprint_remote_signal(FILE *f, const struct ir_remote *rem, const struct ir_ncode *codes) (function) of file dump_config.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.c:272: warning: Member fprint_remote_signals(FILE *f, const struct ir_remote *rem) (function) of file dump_config.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.c:285: warning: Member fprint_remote(FILE *f, const struct ir_remote *rem, const char *commandline) (function) of file dump_config.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.h:34: warning: Member fprint_comment(FILE *f, const struct ir_remote *rem, const char *commandline) (function) of file dump_config.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.h:38: warning: Member fprint_flags(FILE *f, int flags) (function) of file dump_config.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.h:40: warning: Member fprint_remotes(FILE *f, const struct ir_remote *all, const char *commandline) (function) of file dump_config.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.h:44: warning: Member fprint_remote_gap(FILE *f, const struct ir_remote *rem) (function) of file dump_config.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.h:46: warning: Member fprint_remote_head(FILE *f, const struct ir_remote *rem) (function) of file dump_config.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.h:48: warning: Member fprint_remote_foot(FILE *f, const struct ir_remote *rem) (function) of file dump_config.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.h:50: warning: Member fprint_remote_signal_head(FILE *f, const struct ir_remote *rem) (function) of file dump_config.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.h:52: warning: Member fprint_remote_signal_foot(FILE *f, const struct ir_remote *rem) (function) of file dump_config.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.h:54: warning: Member fprint_remote_signal(FILE *f, const struct ir_remote *rem, const struct ir_ncode *codes) (function) of file dump_config.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.h:58: warning: Member fprint_remote_signals(FILE *f, const struct ir_remote *rem) (function) of file dump_config.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/dump_config.h:60: warning: Member fprint_remote(FILE *f, const struct ir_remote *rem, const char *commandline) (function) of file dump_config.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/input_map.c:24: warning: Member linux_input_code (typedef) of file input_map.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/input_map.c:37: warning: Member get_input_code(const char *name, linux_input_code *code) (function) of file input_map.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/input_map.c:50: warning: Member fprint_namespace(FILE *f) (function) of file input_map.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/input_map.c:58: warning: Member is_in_namespace(const char *name) (function) of file input_map.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/input_map.c:35: warning: Member input_map[] (variable) of file input_map.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/input_map.h:37: warning: Member linux_input_code (typedef) of file input_map.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/input_map.h:40: warning: Member get_input_code(const char *name, linux_input_code *code) (function) of file input_map.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/input_map.h:41: warning: Member fprint_namespace(FILE *f) (function) of file input_map.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/input_map.h:42: warning: Member is_in_namespace(const char *name) (function) of file input_map.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote.c:417: warning: Member find_longest_match(struct ir_remote *remote, struct ir_ncode *codes, ir_code all, ir_code *next_all, int have_code, struct ir_ncode **found, int *found_code) (function) of file ir_remote.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote.c:57: warning: Member decoding (variable) of file ir_remote.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:99: warning: Member IR_PROTOCOL_MASK (macro definition) of file ir_remote_types.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:122: warning: Member REVERSE (macro definition) of file ir_remote_types.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:135: warning: Member DEFAULT_FREQ (macro definition) of file ir_remote_types.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:137: warning: Member IR_PARITY_NONE (macro definition) of file ir_remote_types.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:138: warning: Member IR_PARITY_EVEN (macro definition) of file ir_remote_types.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:139: warning: Member IR_PARITY_ODD (macro definition) of file ir_remote_types.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.c:592: warning: Member unlink_length(struct lengths **first, struct lengths *remove) (function) of file irrecord.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.c:617: warning: Member add_length(struct lengths **first, lirc_t length) (function) of file irrecord.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.c:647: warning: Member free_lengths(struct lengths **firstp) (function) of file irrecord.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.c:771: warning: Member get_trail_length(struct ir_remote *remote, int interactive) (function) of file irrecord.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.c:795: warning: Member get_lead_length(struct ir_remote *remote, int interactive) (function) of file irrecord.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.c:845: warning: Member get_header_length(struct ir_remote *remote, int interactive) (function) of file irrecord.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.c:892: warning: Member get_repeat_length(struct ir_remote *remote, int interactive) (function) of file irrecord.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.c:958: warning: Member get_scheme(struct ir_remote *remote, int interactive) (function) of file irrecord.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.c:1028: warning: Member get_data_length(struct ir_remote *remote, int interactive) (function) of file irrecord.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.c:57: warning: Member remote (variable) of file irrecord.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:54: warning: Member min(a, b) (macro definition) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:55: warning: Member max(a, b) (macro definition) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:57: warning: Member BUTTON (macro definition) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:58: warning: Member RETRIES (macro definition) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:61: warning: Member MAX_SIGNALS (macro definition) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:64: warning: Member TH_SPACE_ENC (macro definition) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:65: warning: Member TH_HEADER (macro definition) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:66: warning: Member TH_REPEAT (macro definition) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:67: warning: Member TH_TRAIL (macro definition) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:68: warning: Member TH_LEAD (macro definition) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:69: warning: Member TH_IS_BIT (macro definition) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:70: warning: Member TH_RC6_SIGNAL (macro definition) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:72: warning: Member MIN_GAP (macro definition) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:73: warning: Member MAX_GAP (macro definition) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:75: warning: Member SAMPLES (macro definition) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:85: warning: Member remote_func)(struct ir_remote *remotes) (typedef) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:87: warning: Member analyse_mode (enumeration) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:85: warning: Member remote (variable) of file irrecord.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.c:45: warning: Member MAXPATHLEN (macro definition) of file lirc_client.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.c:53: warning: Member logprintf(level, fmt, args ...) (macro definition) of file lirc_client.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.c:54: warning: Member LIRC_WARNING (macro definition) of file lirc_client.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.c:55: warning: Member LIRC_DEBUG (macro definition) of file lirc_client.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.c:56: warning: Member LIRC_NOTICE (macro definition) of file lirc_client.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.c:57: warning: Member LIRC_ERROR (macro definition) of file lirc_client.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.c:60: warning: Member MAX_INCLUDES (macro definition) of file lirc_client.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.c:61: warning: Member LIRC_READ (macro definition) of file lirc_client.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.c:62: warning: Member LIRC_PACKET_SIZE (macro definition) of file lirc_client.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.c:64: warning: Member LIRC_TIMEOUT (macro definition) of file lirc_client.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.c:92: warning: Member lirc_flags(char *string) (function) of file lirc_client.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.c:587: warning: Member lirc_mode(char *token, char *token2, char **mode, struct lirc_config_entry **new_config, struct lirc_config_entry **first_config, struct lirc_config_entry **last_config, int(check)(char *s), const char *name, int line) (function) of file lirc_client.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.c:1429: warning: Member lirc_identify(int sockfd) (function) of file lirc_client.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.c:1841: warning: Member lirc_code2charprog(struct lirc_config *config, char *code, char **string, char **prog) (function) of group lirc_client is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.c:99: warning: Member prog (variable) of file lirc_client.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:131: warning: Member LIRC_RET_SUCCESS (macro definition) of file lirc_client.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:132: warning: Member LIRC_RET_ERROR (macro definition) of file lirc_client.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:134: warning: Member LIRC_ALL (macro definition) of file lirc_client.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:137: warning: Member lirc_flags (enumeration) of file lirc_client.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:281: warning: Member lirc_code2charprog(struct lirc_config *config, char *code, char **string, char **prog) (function) of group lirc_client is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_config.h:31: warning: Member LIRC_DRIVER_DEVICE (macro definition) of file lirc_config.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_driver.h:24: warning: Member hardwares[] (variable) of file lirc_driver.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_log.c:37: warning: Member min(a, b) (macro definition) of file lirc_log.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_log.c:40: warning: Member HOSTNAME_LEN (macro definition) of file lirc_log.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_log.c:150: warning: Member lirc_log_reopen(void) (function) of file lirc_log.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_log.c:44: warning: Member hostname[HOSTNAME_LEN+1] (variable) of file lirc_log.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_log.c:45: warning: Member lf (variable) of file lirc_log.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_log.c:53: warning: Member syslogident (variable) of file lirc_log.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_log.c:54: warning: Member logfile (variable) of file lirc_log.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_log.c:56: warning: Member progname[128] (variable) of file lirc_log.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_log.h:197: warning: argument 'buff' of command @param is not found in the argument list of lirc_log_get_clientlog(const char *basename, char *buffer, ssize_t size)
+/home/pi/build/lirc-0.10.1/lib/lirc_log.c:332: warning: The following parameters of lirc_log_get_clientlog(const char *basename, char *buffer, ssize_t size) are not documented:
+  parameter 'buffer'
+/home/pi/build/lirc-0.10.1/lib/lirc_log.h:175: warning: argument 'nodaemon' of command @param is not found in the argument list of lirc_log_open(const char *progname, int _nodaemon, loglevel_t level)
+/home/pi/build/lirc-0.10.1/lib/lirc_log.c:95: warning: The following parameters of lirc_log_open(const char *progname, int _nodaemon, loglevel_t level) are not documented:
+  parameter '_nodaemon'
+/home/pi/build/lirc-0.10.1/lib/lirc_log.h:173: warning: Member lirc_log_reopen(void) (function) of file lirc_log.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_log.h:76: warning: Member progname[128] (variable) of file lirc_log.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_log.h:197: warning: argument 'buff' of command @param is not found in the argument list of lirc_log_get_clientlog(const char *basename, char *buffer, ssize_t size)
+/home/pi/build/lirc-0.10.1/lib/lirc_log.h:203: warning: The following parameters of lirc_log_get_clientlog(const char *basename, char *buffer, ssize_t size) are not documented:
+  parameter 'buffer'
+/home/pi/build/lirc-0.10.1/lib/lirc_log.h:175: warning: argument 'nodaemon' of command @param is not found in the argument list of lirc_log_open(const char *progname, int _nodaemon, loglevel_t level)
+/home/pi/build/lirc-0.10.1/lib/lirc_log.h:184: warning: The following parameters of lirc_log_open(const char *progname, int _nodaemon, loglevel_t level) are not documented:
+  parameter '_nodaemon'
+/home/pi/build/lirc-0.10.1/lib/lirc_options.c:54: warning: Member options_set_opt(const char *key, const char *value) (function) of file lirc_options.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_options.c:61: warning: Member options_getstring(const char *const key) (function) of file lirc_options.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_options.c:67: warning: Member options_getint(const char *const key) (function) of file lirc_options.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_options.c:73: warning: Member options_getboolean(const char *const key) (function) of file lirc_options.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_options.c:111: warning: Member options_load(int argc, char **const argv, const char *path_arg, void(*parse_options)(int, char **const)) (function) of file lirc_options.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_options.c:187: warning: Member options_add_defaults(const char *const defaults[]) (function) of file lirc_options.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_options.c:201: warning: Member options_unload(void) (function) of file lirc_options.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_options.c:31: warning: Member lirc_options (variable) of file lirc_options.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_options.h:26: warning: Member options_set_opt(const char *key, const char *value) (function) of file lirc_options.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_options.h:41: warning: Member options_getstring(const char *const key) (function) of file lirc_options.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_options.h:42: warning: Member options_getint(const char *const key) (function) of file lirc_options.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_options.h:43: warning: Member options_getboolean(const char *const key) (function) of file lirc_options.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_options.h:51: warning: Member options_add_defaults(const char *const defaults[]) (function) of file lirc_options.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_options.h:67: warning: Member options_load(int argc, char **const argv, const char *options_file, void(*options_load)(int, char **const)) (function) of file lirc_options.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_options.h:74: warning: Member options_unload(void) (function) of file lirc_options.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_options.h:23: warning: Member lirc_options (variable) of file lirc_options.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/receive.c:37: warning: Member RBUF_SIZE (macro definition) of file receive.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/receive.c:39: warning: Member REC_SYNC (macro definition) of file receive.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/receive.c:74: warning: Member lircd_waitfordata)(uint32_t timeout) (variable) of file receive.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/release.c:90: warning: Member get_release_data(const char **remote_name, const char **button_name, int *reps) (function) of file release.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/release.c:104: warning: Member set_release_suffix(const char *s) (function) of file release.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/release.c:114: warning: Member check_release_event(const char **remote_name, const char **button_name) (function) of file release.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/release.c:175: warning: Member release_map_remotes(struct ir_remote *old, struct ir_remote *new, const char **remote_name, const char **button_name) (function) of file release.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/release.h:52: warning: argument 'remote' of command @param is not found in the argument list of trigger_release_event(const char **remote_name, const char **button_name)
+/home/pi/build/lirc-0.10.1/lib/release.h:52: warning: argument 'button' of command @param is not found in the argument list of trigger_release_event(const char **remote_name, const char **button_name)
+/home/pi/build/lirc-0.10.1/lib/release.c:144: warning: The following parameters of trigger_release_event(const char **remote_name, const char **button_name) are not documented:
+  parameter 'remote_name'
+  parameter 'button_name'
+/home/pi/build/lirc-0.10.1/lib/release.h:38: warning: Member get_release_data(const char **remote_name, const char **button_name, int *reps) (function) of file release.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/release.h:42: warning: Member set_release_suffix(const char *s) (function) of file release.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/release.h:47: warning: Member check_release_event(const char **remote_name, const char **button_name) (function) of file release.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/release.h:64: warning: Member release_map_remotes(struct ir_remote *old, struct ir_remote *new_remote, const char **remote_name, const char **button_name) (function) of file release.h is not documented.
+/home/pi/build/lirc-0.10.1/lib/release.h:52: warning: argument 'remote' of command @param is not found in the argument list of trigger_release_event(const char **remote_name, const char **button_name)
+/home/pi/build/lirc-0.10.1/lib/release.h:52: warning: argument 'button' of command @param is not found in the argument list of trigger_release_event(const char **remote_name, const char **button_name)
+/home/pi/build/lirc-0.10.1/lib/release.h:61: warning: The following parameters of trigger_release_event(const char **remote_name, const char **button_name) are not documented:
+  parameter 'remote_name'
+  parameter 'button_name'
+/home/pi/build/lirc-0.10.1/lib/serial.c:22: warning: Member LIRC_LOCKDIR (macro definition) of file serial.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/transmit.c:23: warning: Member LIRCD_EXACT_GAP_THRESHOLD (macro definition) of file transmit.c is not documented.
+/home/pi/build/lirc-0.10.1/lib/transmit.h:35: warning: Member WBUF_SIZE (macro definition) of group driver_api is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/_client.c:158: warning: Member PyInit__client(void) (function) of file _client.c is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/_client.c:134: warning: Member ClientMethods[] (variable) of file _client.c is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:497: warning: Member result (variable) of namespace lirc::client is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:510: warning: Member sighup (variable) of namespace lirc::client is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:516: warning: Member success (variable) of namespace lirc::client is not documented.
+/home/pi/build/lirc-0.10.1/lib/driver_api.dox:118: warning: explicit link request to 'define' could not be resolved
+/home/pi/build/lirc-0.10.1/lib/driver_api.dox:395: warning: unable to resolve reference to `Makefile' for \ref command
+/home/pi/build/lirc-0.10.1/lib/driver_api.dox:506: warning: Found unknown command `\echo'
+/home/pi/build/lirc-0.10.1/lib/driver_api.dox:507: warning: Found unknown command `\echo'
+/home/pi/build/lirc-0.10.1/lib/lirc_client.dox:34: warning: explicit link request to 'ifdef' could not be resolved
+/home/pi/build/lirc-0.10.1/lib/lirc_client.dox:36: warning: explicit link request to 'endif' could not be resolved
+/home/pi/build/lirc-0.10.1/lib/lirc_client.dox:38: warning: explicit link request to 'include' could not be resolved
+/home/pi/build/lirc-0.10.1/lib/lirc_client.dox:39: warning: explicit link request to 'include' could not be resolved
+/home/pi/build/lirc-0.10.1/lib/lirc_client.dox:40: warning: explicit link request to 'include' could not be resolved
+/home/pi/build/lirc-0.10.1/lib/lirc_client.dox:41: warning: explicit link request to 'include' could not be resolved
+/home/pi/build/lirc-0.10.1/lib/lirc_client.dox:42: warning: explicit link request to 'include' could not be resolved
+/home/pi/build/lirc-0.10.1/lib/lirc_client.dox:43: warning: explicit link request to 'include' could not be resolved
+/home/pi/build/lirc-0.10.1/lib/lirc_client.dox:44: warning: explicit link request to 'include' could not be resolved
+/home/pi/build/lirc-0.10.1/lib/lirc_client.dox:90: warning: explicit link request to 'include' could not be resolved
+/home/pi/build/lirc-0.10.1/lib/lirc_client.dox:236: warning: explicit link request to 'include' could not be resolved
+/home/pi/build/lirc-0.10.1/lib/lirc_client.dox:254: warning: HTML tags may not use the 'empty tag' XHTML syntax.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.dox:381: warning: end of comment block while expecting command </code>
+/home/pi/build/lirc-0.10.1/lib/lirc_client.dox:381: warning: end of comment block while expecting command </code>
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:281: warning: Member lirc_code2charprog(struct lirc_config *config, char *code, char **string, char **prog) (function) of group lirc_client is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:212: warning: argument 'check' of command @param is not found in the argument list of lirc_readconfig(const char *path, struct lirc_config **config, int(check)(char *s))
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:267: warning: argument 'path' of command @param is not found in the argument list of lirc_readconfig_only(const char *file, struct lirc_config **config, int(check)(char *s))
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:267: warning: argument 'check' of command @param is not found in the argument list of lirc_readconfig_only(const char *file, struct lirc_config **config, int(check)(char *s))
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:277: warning: The following parameters of lirc_readconfig_only(const char *file, struct lirc_config **config, int(check)(char *s)) are not documented:
+  parameter 'file'
+/home/pi/build/lirc-0.10.1/lib/driver.h:36: warning: Member MAXPATHLEN (macro definition) of group driver_api is not documented.
+/home/pi/build/lirc-0.10.1/lib/transmit.h:35: warning: Member WBUF_SIZE (macro definition) of group driver_api is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote.c:269: warning: argument 'prep' of command @param is not found in the argument list of map_code(const struct ir_remote *remote, struct decode_ctx_t *ctx, int pre_bits, ir_code pre, int bits, ir_code code, int post_bits, ir_code post)
+/home/pi/build/lirc-0.10.1/lib/ir_remote.c:269: warning: argument 'codep' of command @param is not found in the argument list of map_code(const struct ir_remote *remote, struct decode_ctx_t *ctx, int pre_bits, ir_code pre, int bits, ir_code code, int post_bits, ir_code post)
+/home/pi/build/lirc-0.10.1/lib/ir_remote.c:269: warning: argument 'postp' of command @param is not found in the argument list of map_code(const struct ir_remote *remote, struct decode_ctx_t *ctx, int pre_bits, ir_code pre, int bits, ir_code code, int post_bits, ir_code post)
+/home/pi/build/lirc-0.10.1/lib/ir_remote.h:477: warning: The following parameters of map_code(const struct ir_remote *remote, struct decode_ctx_t *ctx, int pre_bits, ir_code pre, int bits, ir_code code, int post_bits, ir_code post) are not documented:
+  parameter 'ctx'
+/home/pi/build/lirc-0.10.1/lib/ir_remote.c:319: warning: argument 'repeat_flagp' of command @param is not found in the argument list of map_gap(const struct ir_remote *remote, struct decode_ctx_t *ctx, const struct timeval *start, const struct timeval *last, lirc_t signal_length)
+/home/pi/build/lirc-0.10.1/lib/ir_remote.c:319: warning: argument 'min_remaining_gapp' of command @param is not found in the argument list of map_gap(const struct ir_remote *remote, struct decode_ctx_t *ctx, const struct timeval *start, const struct timeval *last, lirc_t signal_length)
+/home/pi/build/lirc-0.10.1/lib/ir_remote.c:319: warning: argument 'max_remaining_gapp' of command @param is not found in the argument list of map_gap(const struct ir_remote *remote, struct decode_ctx_t *ctx, const struct timeval *start, const struct timeval *last, lirc_t signal_length)
+/home/pi/build/lirc-0.10.1/lib/ir_remote.h:486: warning: The following parameters of map_gap(const struct ir_remote *remote, struct decode_ctx_t *ctx, const struct timeval *start, const struct timeval *last, lirc_t signal_length) are not documented:
+  parameter 'ctx'
+/home/pi/build/lirc-0.10.1/lib/receive.h:87: warning: The following parameters of receive_decode(struct ir_remote *remote, struct decode_ctx_t *ctx) are not documented:
+  parameter 'remote'
+/home/pi/build/lirc-0.10.1/lib/serial.h:105: warning: argument 'cts' of command @param is not found in the argument list of tty_clear(int fd, int rts, int dtr)
+/home/pi/build/lirc-0.10.1/lib/serial.h:111: warning: The following parameters of tty_clear(int fd, int rts, int dtr) are not documented:
+  parameter 'dtr'
+/home/pi/build/lirc-0.10.1/lib/serial.h:95: warning: argument 'cts' of command @param is not found in the argument list of tty_set(int fd, int rts, int dtr)
+/home/pi/build/lirc-0.10.1/lib/serial.h:101: warning: The following parameters of tty_set(int fd, int rts, int dtr) are not documented:
+  parameter 'dtr'
+/home/pi/build/lirc-0.10.1/lib/serial.h:69: warning: argument 'Number' of command @param is not found in the argument list of tty_setcsize(int fd, int csize)
+/home/pi/build/lirc-0.10.1/lib/serial.h:76: warning: The following parameters of tty_setcsize(int fd, int csize) are not documented:
+  parameter 'csize'
+/home/pi/build/lirc-0.10.1/lib/serial.h:48: warning: The following parameters of tty_setrtscts(int fd, int enable) are not documented:
+  parameter 'fd'
+/home/pi/build/lirc-0.10.1/lib/ciniparser.c:38: warning: Member ASCIILINESZ (macro definition) of group Ciniparser is not documented.
+/home/pi/build/lirc-0.10.1/lib/ciniparser.c:39: warning: Member INI_INVALID_KEY (macro definition) of group Ciniparser is not documented.
+/home/pi/build/lirc-0.10.1/lib/ciniparser.h:52: warning: Member ciniparser_getstr(d, k) (macro definition) of group Ciniparser is not documented.
+/home/pi/build/lirc-0.10.1/lib/ciniparser.h:53: warning: Member ciniparser_setstr (macro definition) of group Ciniparser is not documented.
+/home/pi/build/lirc-0.10.1/lib/dictionary.h:98: warning: argument 'd' of command @param is not found in the argument list of dictionary_del(dictionary *vd)
+/home/pi/build/lirc-0.10.1/lib/dictionary.c:109: warning: The following parameters of dictionary_del(dictionary *vd) are not documented:
+  parameter 'vd'
+/home/pi/build/lirc-0.10.1/lib/dictionary.h:122: warning: argument 'd' of command @param is not found in the argument list of dictionary_set(dictionary *vd, const char *key, const char *val)
+/home/pi/build/lirc-0.10.1/lib/dictionary.c:147: warning: The following parameters of dictionary_set(dictionary *vd, const char *key, const char *val) are not documented:
+  parameter 'vd'
+/home/pi/build/lirc-0.10.1/lib/dictionary.h:68: warning: Member n (variable) of class _dictionary_ is not documented.
+/home/pi/build/lirc-0.10.1/lib/dictionary.h:69: warning: Member size (variable) of class _dictionary_ is not documented.
+/home/pi/build/lirc-0.10.1/lib/dictionary.h:70: warning: Member val (variable) of class _dictionary_ is not documented.
+/home/pi/build/lirc-0.10.1/lib/dictionary.h:71: warning: Member key (variable) of class _dictionary_ is not documented.
+/home/pi/build/lirc-0.10.1/lib/dictionary.h:72: warning: Member hash (variable) of class _dictionary_ is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:241: warning: Member retval (variable) of class button_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:242: warning: Member buffer[BUTTON] (variable) of class button_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:243: warning: Member string (variable) of class button_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:244: warning: Member data (variable) of class button_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:245: warning: Member sum (variable) of class button_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:246: warning: Member count (variable) of class button_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:247: warning: Member flag (variable) of class button_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:248: warning: Member no_data (variable) of class button_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:249: warning: Member started_as_root (variable) of class button_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/drv_enum.h:35: warning: Member idVendor (variable) of class drv_enum_udev_what is not documented.
+/home/pi/build/lirc-0.10.1/lib/drv_enum.h:36: warning: Member idProduct (variable) of class drv_enum_udev_what is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:186: warning: Member scan (variable) of class gap_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:187: warning: Member gaps (variable) of class gap_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:187: warning: Member start (variable) of class gap_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:187: warning: Member end (variable) of class gap_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:187: warning: Member last (variable) of class gap_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:191: warning: Member flag (variable) of class gap_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:192: warning: Member maxcount (variable) of class gap_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:193: warning: Member lastmaxcount (variable) of class gap_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:194: warning: Member gap (variable) of class gap_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:54: warning: Member code (variable) of class ir_code_node is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:55: warning: Member next (variable) of class ir_code_node is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:158: warning: Member codes (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:174: warning: Member phead (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:175: warning: Member pthree (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:176: warning: Member ptwo (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:177: warning: Member pone (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:178: warning: Member pzero (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:181: warning: Member pfoot (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:182: warning: Member prepeat (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:188: warning: Member pre_p (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:189: warning: Member post_p (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:225: warning: Member toggle_bit_mask_state (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:226: warning: Member toggle_mask_state (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:227: warning: Member repeat_countdown (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:230: warning: Member reps (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:239: warning: Member min_pulse_length (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:239: warning: Member max_pulse_length (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:240: warning: Member min_space_length (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:240: warning: Member max_space_length (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/ir_remote_types.h:243: warning: Member next (variable) of class ir_remote is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:143: warning: Member count (variable) of class lengths is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:144: warning: Member sum (variable) of class lengths is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:144: warning: Member upper_bound (variable) of class lengths is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:144: warning: Member lower_bound (variable) of class lengths is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:144: warning: Member min (variable) of class lengths is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:144: warning: Member max (variable) of class lengths is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:145: warning: Member next (variable) of class lengths is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:204: warning: Member retval (variable) of class lengths_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:207: warning: Member data (variable) of class lengths_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:208: warning: Member average (variable) of class lengths_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:209: warning: Member maxspace (variable) of class lengths_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:212: warning: Member remaining_gap (variable) of class lengths_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:213: warning: Member header (variable) of class lengths_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:214: warning: Member first_signal (variable) of class lengths_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:214: warning: Member mode (variable) of class lengths_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:151: warning: Member remote (variable) of class lirc_code is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:152: warning: Member button (variable) of class lirc_code is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:153: warning: Member next (variable) of class lirc_code is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:158: warning: Member current_mode (variable) of class lirc_config is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:159: warning: Member next (variable) of class lirc_config is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:160: warning: Member first (variable) of class lirc_config is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:162: warning: Member sockfd (variable) of class lirc_config is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:166: warning: Member prog (variable) of class lirc_config_entry is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:167: warning: Member code (variable) of class lirc_config_entry is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:168: warning: Member rep_delay (variable) of class lirc_config_entry is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:169: warning: Member ign_first_events (variable) of class lirc_config_entry is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:170: warning: Member rep (variable) of class lirc_config_entry is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:171: warning: Member config (variable) of class lirc_config_entry is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:172: warning: Member change_mode (variable) of class lirc_config_entry is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:173: warning: Member flags (variable) of class lirc_config_entry is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:175: warning: Member mode (variable) of class lirc_config_entry is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:176: warning: Member next_config (variable) of class lirc_config_entry is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:177: warning: Member next_code (variable) of class lirc_config_entry is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:179: warning: Member next (variable) of class lirc_config_entry is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:146: warning: Member string (variable) of class lirc_list is not documented.
+/home/pi/build/lirc-0.10.1/lib/lirc_client.h:147: warning: Member next (variable) of class lirc_list is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:178: warning: Member fout (variable) of class main_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:178: warning: Member decode_ctx (variable) of class main_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:180: warning: Member started_as_root (variable) of class main_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/driver.h:64: warning: Member key[32] (variable) of class option_t is not documented.
+/home/pi/build/lirc-0.10.1/lib/driver.h:65: warning: Member value[64] (variable) of class option_t is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:154: warning: Member dynamic_codes (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:155: warning: Member analyse (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:156: warning: Member force (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:157: warning: Member disable_namespace (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:158: warning: Member device (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:159: warning: Member get_pre (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:160: warning: Member get_post (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:161: warning: Member test (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:162: warning: Member invert (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:163: warning: Member trail (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:164: warning: Member list_namespace (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:165: warning: Member update (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:166: warning: Member filename (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:167: warning: Member tmpfile (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:168: warning: Member backupfile (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:169: warning: Member driver (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:170: warning: Member loglevel (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:171: warning: Member using_template (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:172: warning: Member commandline[128] (variable) of class opts is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:214: warning: Member decode_ctx (variable) of class toggle_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:222: warning: Member retval (variable) of class toggle_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:223: warning: Member retries (variable) of class toggle_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:224: warning: Member flag (variable) of class toggle_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:225: warning: Member success (variable) of class toggle_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:226: warning: Member first (variable) of class toggle_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:227: warning: Member last (variable) of class toggle_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:228: warning: Member seq (variable) of class toggle_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:229: warning: Member repeats (variable) of class toggle_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:230: warning: Member found (variable) of class toggle_state is not documented.
+/home/pi/build/lirc-0.10.1/lib/irrecord.h:231: warning: Member inited (variable) of class toggle_state is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/async_client.py:55: warning: Member __init__ (function) of class lirc::async_client::AsyncConnection is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:485: warning: Member BEGIN (variable) of class lirc::client::_State is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:486: warning: Member COMMAND (variable) of class lirc::client::_State is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:487: warning: Member RESULT (variable) of class lirc::client::_State is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:488: warning: Member DATA (variable) of class lirc::client::_State is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:489: warning: Member LINE_COUNT (variable) of class lirc::client::_State is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:490: warning: Member LINES (variable) of class lirc::client::_State is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:491: warning: Member END (variable) of class lirc::client::_State is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:492: warning: Member DONE (variable) of class lirc::client::_State is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:493: warning: Member NO_DATA (variable) of class lirc::client::_State is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:494: warning: Member SIGHUP_END (variable) of class lirc::client::_State is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:160: warning: Member __enter__(self) (function) of class lirc::client::AbstractConnection is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:163: warning: Member __exit__(self, exc_type, exc, traceback) (function) of class lirc::client::AbstractConnection is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:696: warning: Member __init__ (function) of class lirc::client::CodeCommand is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:391: warning: Member __init__ (function) of class lirc::client::Command is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:391: warning: Member __init__ (function) of class lirc::client::Command is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:369: warning: Member __init__ (function) of class lirc::client::CommandConnection is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:210: warning: Member __init__ (function) of class lirc::client::RawConnection is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:160: warning: Member __enter__(self) (function) of class lirc::client::AbstractConnection is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:163: warning: Member __exit__(self, exc_type, exc, traceback) (function) of class lirc::client::AbstractConnection is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:655: warning: Member __init__ (function) of class lirc::client::DrvOptionCommand is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:391: warning: Member __init__ (function) of class lirc::client::Command is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:706: warning: Member __init__ (function) of class lirc::client::GetModeCommand is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:391: warning: Member __init__ (function) of class lirc::client::Command is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:685: warning: Member __init__ (function) of class lirc::client::IdentCommand is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:391: warning: Member __init__ (function) of class lirc::client::Command is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:269: warning: Member __init__ (function) of class lirc::client::LircdConnection is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:160: warning: Member __enter__(self) (function) of class lirc::client::AbstractConnection is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:163: warning: Member __exit__(self, exc_type, exc, traceback) (function) of class lirc::client::AbstractConnection is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:592: warning: Member __init__ (function) of class lirc::client::ListKeysCommand is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:391: warning: Member __init__ (function) of class lirc::client::Command is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:585: warning: Member __init__ (function) of class lirc::client::ListRemotesCommand is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:391: warning: Member __init__ (function) of class lirc::client::Command is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:210: warning: Member __init__ (function) of class lirc::client::RawConnection is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:160: warning: Member __enter__(self) (function) of class lirc::client::AbstractConnection is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:163: warning: Member __exit__(self, exc_type, exc, traceback) (function) of class lirc::client::AbstractConnection is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:433: warning: Member __init__(self) (function) of class lirc::client::Reply is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:444: warning: Member __init__(self) (function) of class lirc::client::ReplyParser is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:433: warning: Member __init__(self) (function) of class lirc::client::Reply is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:470: warning: Member last_line (variable) of class lirc::client::ReplyParser is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:473: warning: Member result (variable) of class lirc::client::ReplyParser is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:383: warning: Member OK (variable) of class lirc::client::Result is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:384: warning: Member FAIL (variable) of class lirc::client::Result is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:385: warning: Member INCOMPLETE (variable) of class lirc::client::Result is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:617: warning: Member __init__ (function) of class lirc::client::SendCommand is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:391: warning: Member __init__ (function) of class lirc::client::Command is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:666: warning: Member __init__ (function) of class lirc::client::SetLogCommand is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:391: warning: Member __init__ (function) of class lirc::client::Command is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:713: warning: Member __init__ (function) of class lirc::client::SetModeCommand is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:391: warning: Member __init__ (function) of class lirc::client::Command is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:633: warning: Member __init__ (function) of class lirc::client::SetTransmittersCommand is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:391: warning: Member __init__ (function) of class lirc::client::Command is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:575: warning: Member __init__ (function) of class lirc::client::SimulateCommand is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:391: warning: Member __init__ (function) of class lirc::client::Command is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:599: warning: Member __init__ (function) of class lirc::client::StartRepeatCommand is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:391: warning: Member __init__ (function) of class lirc::client::Command is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:608: warning: Member __init__ (function) of class lirc::client::StopRepeatCommand is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:391: warning: Member __init__ (function) of class lirc::client::Command is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:648: warning: Member __init__ (function) of class lirc::client::VersionCommand is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/client.py:391: warning: Member __init__ (function) of class lirc::client::Command is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/database.py:99: warning: Member __init__(self, cf=None) (function) of class lirc::database::Config is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/database.py:100: warning: Member device (variable) of class lirc::database::Config is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/database.py:124: warning: Member __init__(self, path=None, yamlpath=None) (function) of class lirc::database::Database is not documented.
+/home/pi/build/lirc-0.10.1/python-pkg/lirc/database.py:171: warning: Member db (variable) of class lirc::database::Database is not documented.
+error: Project logo 'diode-2.gif' specified by PROJECT_LOGO does not exist!

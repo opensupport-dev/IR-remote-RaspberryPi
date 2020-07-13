@@ -1,0 +1,15 @@
+README.rst
+setup.py
+lirc/__init__.py
+lirc/_client.c
+lirc/async_client.py
+lirc/client.py
+lirc/config.py
+lirc/database.py
+lirc/lirctool.py
+lirc/paths.py
+lirc.egg-info/PKG-INFO
+lirc.egg-info/SOURCES.txt
+lirc.egg-info/dependency_links.txt
+lirc.egg-info/entry_points.txt
+lirc.egg-info/top_level.txt
