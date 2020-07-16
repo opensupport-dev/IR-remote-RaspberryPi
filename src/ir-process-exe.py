@@ -1,15 +1,18 @@
+#!/usr/bin/env python3
+
+import os
+os.environ['DISPLAY'] = ':0'
+#os.environ['XAUTHORITY']='/run/user/1000/gdm/Xauthority'
 #import sys
 #sys.path.append("/home/pi/.local/lib/python3.7/site-packages")
-#sys.path.append("/usr/local/lib/python3.7/dist-packages")
 #sys.path
 
 from lirc import RawConnection
-#import RawConnection
 #from gpiozero import LED
 import RPi.GPIO as GPIO
 import time
 import pyautogui
-import os
+print(pyautogui.position())
 
 
 #redLED = LED(18
@@ -54,8 +57,8 @@ def processCommand(strcommand):
 
     if strcommand == "KEY_POWER":
         print(strcommand," powering down...")
-        pyautogui.hotkey('ctrl','q')
-        os.system("shutdown -h now")
+        #pyautogui.hotkey('ctrl','q')
+        os.system("sudo systemctl poweroff -i")
 
     elif strcommand == "KEY_C":
         if led_onoff == False:
@@ -76,65 +79,102 @@ def processCommand(strcommand):
             setLED(led_pin1, 0, p1)
             print(strcommand, ', led: ', led_onoff)
     elif strcommand == "KEY_0":
+        if led_onoff == False:
+            led_onoff = True
         if led_onoff == True:
             led1_light_step = 1
-
-        setLED(led_pin1, led1_light_step, p1)
-        print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+            setLED(led_pin1, led1_light_step, p1)
+            print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+        elif led_onoff == False:
+            print(strcommand, ', led: ', led_onoff)
     elif strcommand == "KEY_1":
+        if led_onoff == False:
+            led_onoff = True
         if led_onoff == True:
             led1_light_step = 2
-
-        setLED(led_pin1, led1_light_step, p1)
-        print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+            setLED(led_pin1, led1_light_step, p1)
+            print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+        elif led_onoff == False:
+            print(strcommand, ', led: ', led_onoff)
     elif strcommand == "KEY_2":
+        if led_onoff == False:
+            led_onoff = True
         if led_onoff == True:
             led1_light_step = 3
-        setLED(led_pin1, led1_light_step, p1)
-        print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+            setLED(led_pin1, led1_light_step, p1)
+            print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+        elif led_onoff == False:
+            print(strcommand, ', led: ', led_onoff)
     elif strcommand == "KEY_3":
+        if led_onoff == False:
+            led_onoff = True
         if led_onoff == True:
             led1_light_step = 4
-        setLED(led_pin1, led1_light_step, p1)
-        print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+            setLED(led_pin1, led1_light_step, p1)
+            print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+        elif led_onoff == False:
+            print(strcommand, ', led: ', led_onoff)
     elif strcommand == "KEY_4":
+        if led_onoff == False:
+            led_onoff = True
         if led_onoff == True:
             led1_light_step = 5
-        setLED(led_pin1, led1_light_step, p1)
-        print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+            setLED(led_pin1, led1_light_step, p1)
+            print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+        elif led_onoff == False:
+            print(strcommand, ', led: ', led_onoff)
     elif strcommand == "KEY_5":
+        if led_onoff == False:
+            led_onoff = True
         if led_onoff == True:
             led1_light_step = 6
-        setLED(led_pin1, led1_light_step, p1)
-        print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+            setLED(led_pin1, led1_light_step, p1)
+            print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+        elif led_onoff == False:
+            print(strcommand, ', led: ', led_onoff)
     elif strcommand == "KEY_6":
+        if led_onoff == False:
+            led_onoff = True
         if led_onoff == True:
             led1_light_step = 7
-        setLED(led_pin1, led1_light_step, p1)
-        print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+            setLED(led_pin1, led1_light_step, p1)
+            print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+        elif led_onoff == False:
+            print(strcommand, ', led: ', led_onoff)
     elif strcommand == "KEY_7":
+        if led_onoff == False:
+            led_onoff = True
         if led_onoff == True:
             led1_light_step = 8
-        setLED(led_pin1, led1_light_step, p1)
-        print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+            setLED(led_pin1, led1_light_step, p1)
+            print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+        elif led_onoff == False:
+            print(strcommand, ', led: ', led_onoff)
     elif strcommand == "KEY_8":
+        if led_onoff == False:
+            led_onoff = True
         if led_onoff == True:
             led1_light_step = 9
-        setLED(led_pin1, led1_light_step, p1)
-        print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+            setLED(led_pin1, led1_light_step, p1)
+            print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+        elif led_onoff == False:
+            print(strcommand, ', led: ', led_onoff)
     elif strcommand == "KEY_9":
+        if led_onoff == False:
+            led_onoff = True
         if led_onoff == True:
             led1_light_step = 10
-        setLED(led_pin1, led1_light_step, p1)
-        print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
-
+            setLED(led_pin1, led1_light_step, p1)
+            print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
+        elif led_onoff == False:
+            print(strcommand, ', led: ', led_onoff)
     elif strcommand == "KEY_MENU":
         pyautogui.hotkey('i') #전체화면에서 조작바 보이기
         #pyautogui.hotkey('ctrl', 'f') #Full screen mode on and off
         print(strcommand, ' control-bar on/off')
 
     elif strcommand == "KEY_T":
-        pyautogui.hotkey('R') #Random on and off
+        pyautogui.hotkey('r') #Random on and off
         print(strcommand, ' Random-play on/off')
 
     elif strcommand == "KEY_UP":
@@ -142,7 +182,7 @@ def processCommand(strcommand):
         print(strcommand, ' volume up')
 
     elif strcommand == "KEY_BACK":
-        pyautogui.hotkey('L')
+        pyautogui.hotkey('l') #'L'
         print(strcommand, ' Loop off, one or all')
 
     elif strcommand == "KEY_LEFT":

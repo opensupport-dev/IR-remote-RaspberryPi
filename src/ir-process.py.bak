@@ -1,10 +1,5 @@
-#import sys
-#sys.path.append("/home/pi/.local/lib/python3.7/site-packages")
-#sys.path.append("/usr/local/lib/python3.7/dist-packages")
-#sys.path
 
 from lirc import RawConnection
-#import RawConnection
 #from gpiozero import LED
 import RPi.GPIO as GPIO
 import time
@@ -53,7 +48,7 @@ def processCommand(strcommand):
     #global  p2
 
     if strcommand == "KEY_POWER":
-        print(strcommand," powering down...")
+        print(strcommand," power down")
         pyautogui.hotkey('ctrl','q')
         os.system("shutdown -h now")
 
@@ -129,37 +124,36 @@ def processCommand(strcommand):
         print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
 
     elif strcommand == "KEY_MENU":
-        pyautogui.hotkey('i') #전체화면에서 조작바 보이기
-        #pyautogui.hotkey('ctrl', 'f') #Full screen mode on and off
-        print(strcommand, ' control-bar on/off')
+        pyautogui.hotkey('ctrl', 'shift', 'esc')
+        print(strcommand)
 
     elif strcommand == "KEY_T":
-        pyautogui.hotkey('R') #Random on and off
-        print(strcommand, ' Random-play on/off')
+        pyautogui.hotkey('ctrl', 'shift', 'esc')
+        print(strcommand)
 
     elif strcommand == "KEY_UP":
-        pyautogui.hotkey('ctrl', 'up')
-        print(strcommand, ' volume up')
+        pyautogui.hotkey('ctrl', 'shift', 'esc')
+        print(strcommand)
 
     elif strcommand == "KEY_BACK":
-        pyautogui.hotkey('L')
-        print(strcommand, ' Loop off, one or all')
+        pyautogui.hotkey('ctrl', 'shift', 'esc')
+        print(strcommand)
 
     elif strcommand == "KEY_LEFT":
-        pyautogui.hotkey('p')
-        print(strcommand, ' previous track')
+        pyautogui.hotkey('ctrl', 'shift', 'esc')
+        print(strcommand)
 
     elif strcommand == "KEY_PLAY":
-        pyautogui.hotkey('space')
-        print(strcommand, ' play / pause')
+        pyautogui.hotkey('ctrl', 'shift', 'esc')
+        print(strcommand)
 
     elif strcommand == "KEY_RIGHT":
-        pyautogui.hotkey('n')
-        print(strcommand, ' next track')
+        pyautogui.hotkey('ctrl', 'shift', 'esc')
+        print(strcommand)
 
     elif strcommand == "KEY_DOWN":
-        pyautogui.hotkey('ctrl', 'down')
-        print(strcommand, ' volume down')
+        pyautogui.hotkey('ctrl', 'shift', 'esc')
+        print(strcommand)
 
     else:
         print(strcommand)

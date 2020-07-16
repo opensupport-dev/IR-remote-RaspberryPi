@@ -1,0 +1,13 @@
+
+
+<라즈베리파이에서 root 자동 로그인하기>
+http://webcache.googleusercontent.com/search?q=cache:tUSSGH0Un3YJ:www.glonix.com/raspbian-root-autologin/+&cd=5&hl=ko&ct=clnk&gl=kr&client=firefox-b-d
+
+/etc/lightdm/lightdm.conf 편집
+==> autologin-user=pi 를 autologin-user=root 로 변경
+
+/etc/pam.d/lightdm-autologin 편집
+==> auth required pam_succeed_if.so user != root quiet_success 줄을 아래와 같이 맨앞에 #을 붙여서 주석처리
+#auth required pam_succeed_if.so user != root quiet_success 
+
+

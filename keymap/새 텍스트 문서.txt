@@ -1,0 +1,25 @@
+
+ Remocon						vlc shortcut 
+ KEY_POWER		슬립/웨이크업		shutdown -h now	/ Ctrl+q(종료) 
+ 
+ KEY_MENU	vlc컨트롤창 보이기/끄기		f(전체화면 온오프) / Esc(전체화면 나가기)
+									i(전체화면에서 조작바 보이기)
+ KEY_T			랜덤/순차재생			R(Random on and off)	
+ 
+ KEY_UP			볼륨 업				Ctrl+up
+ 
+ KEY_BACK		반복: 전체,하나,해제		l(일반/순환/반복)
+									L : Loop off, one or all
+ KEY_LEFT		이전영상				p
+ 
+ KEY_PLAY		재생/일시정지			Space or s
+ 
+ KEY_RIGHT		다음영상				n
+ 
+ KEY_DOWN		볼륨 다운				Ctrl+down
+ 
+ ///////////////
+ 
+ CTRL + H : Switch minimal interface on and off
+ 
+ 

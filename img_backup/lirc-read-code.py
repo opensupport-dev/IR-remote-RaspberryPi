@@ -1,9 +1,4 @@
 from lirc import RawConnection
-from gpiozero import LED
-
-#redLED = LED(18) 
-#redLED.off()
-#conn = RawConnection()
 
 def ProcessIRRemote():
        
@@ -27,9 +22,7 @@ def ProcessIRRemote():
            return
         
         # print "KEY_PLAY"
-        print(command)
-        #if command == "KEY_POWER":
-           #redLED.toggle()
+        print(command)        
             
 
 #define Global
@@ -40,4 +33,4 @@ print("Starting Up...")
 while True:         
 
       ProcessIRRemote()
-
+      
