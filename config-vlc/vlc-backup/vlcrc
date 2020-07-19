@@ -661,7 +661,7 @@
 #avi-interleaved=0
 
 # Force index creation (integer)
-avi-index=1
+#avi-index=0
 
 [ts] # MPEG Transport Stream demuxer
 
@@ -1176,7 +1176,7 @@ avi-index=1
 #alsa-audio-channels=6
 
 # Software gain (float)
-#alsa-gain=1.000000
+alsa-gain=1.157625
 
 [afile] # File audio output
 
@@ -1195,7 +1195,7 @@ avi-index=1
 [freetype] # Freetype2 font renderer
 
 # Font (string)
-freetype-font=은 돋움
+#freetype-font=Serif Bold
 
 # Monospace Font (string)
 #freetype-monofont=Monospace
@@ -2708,10 +2708,10 @@ freetype-font=은 돋움
 #sout-x264-stats=x264_2pass.log
 
 # Default preset setting used (string)
-sout-x264-preset=ultrafast
+#sout-x264-preset=
 
 # Default tune setting used (string)
-sout-x264-tune=film
+#sout-x264-tune=
 
 # x264 advanced options (string)
 #sout-x264-options=
@@ -3350,7 +3350,7 @@ sout-x264-tune=film
 #qt-recentplay-filter=
 
 # Continue playback? (integer)
-qt-continue=2
+#qt-continue=1
 
 # Embed the file browser in open dialog (boolean)
 #qt-embedded-open=0
@@ -3368,7 +3368,7 @@ qt-continue=2
 qt-privacy-ask=0
 
 # Define which screen fullscreen goes (integer)
-qt-fullscreen-screennumber=0
+#qt-fullscreen-screennumber=-1
 
 # Load extensions on startup (boolean)
 #qt-autoload-extensions=1
@@ -3389,7 +3389,7 @@ qt-fullscreen-screennumber=0
 #qt-fs-sensitivity=3
 
 # When to raise the interface (integer)
-qt-auto-raise=3
+#qt-auto-raise=1
 
 [skins2] # Skinnable Interface
 
@@ -3828,7 +3828,7 @@ qt-auto-raise=3
 #audio-time-stretch=1
 
 # Audio output module (string)
-aout=any
+#aout=
 
 # Media role (string)
 #role=video
@@ -3849,7 +3849,7 @@ aout=any
 #grayscale=0
 
 # Fullscreen video output (boolean)
-fullscreen=1
+#fullscreen=0
 
 # Embedded video (boolean)
 #embedded-video=1
@@ -3966,7 +3966,7 @@ fullscreen=1
 #deinterlace-mode=auto
 
 # Video output module (string)
-vout=mmal_xsplitter
+#vout=
 
 # Video filter module (string)
 #video-filter=
@@ -4284,13 +4284,13 @@ vout=mmal_xsplitter
 #playlist-cork=1
 
 # Allow only one running instance (boolean)
-one-instance=1
+#one-instance=0
 
 # Use only one instance when started from file manager (boolean)
 #one-instance-when-started-from-file=1
 
 # Enqueue items into playlist in one instance mode (boolean)
-playlist-enqueue=1
+#playlist-enqueue=0
 
 # Expose media player via D-Bus (boolean)
 #dbus=0
@@ -4722,7 +4722,7 @@ global-key-vol-down=Ctrl+Down
 #key-deinterlace-mode=Shift+d
 
 # Show controller in fullscreen (string)
-global-key-intf-show=i
+#global-key-intf-show=
 
 # Show controller in fullscreen (string)
 #key-intf-show=i

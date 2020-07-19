@@ -542,9 +542,55 @@ sudo systemctl disable lircd-uinput.service
 
 
 
+////////////////
+////////////////
+////////////////
+
+VLC - -error
+
+///////////////
+///////////////
+///////////////
+./vlc-start.sh
+pi@raspberrypi:~ $ VLC media player 3.0.11 Vetinari (revision 3.0.11-0-gdc0c5ced72)
+[0071e660] vlcpulse audio output error: PulseAudio server connection failure: Connection refused
+[00730ac0] main interface error: no suitable interface module
+[0069ab48] main libvlc error: interface "globalhotkeys,none" initialization failed
+[00730ac0] dummy interface: using the dummy interface module...
+[71909a90] mmal_codec decoder: VCSM init succeeded: CMA
+[71909a90] main decoder error: buffer deadlock prevented
+[72904460] gles2 generic error: parent window not available
+[72904710] mmal_xsplitter vout disp lay error: Failed to open Xsplitter:opengles2 module
+[72904460] xcb generic error: window not available
+[72904710] mmal_xsplitter vout display error: Failed to open Xsplitter:xcb_x11 module
+[71905b60] mmal_codec decoder: VCSM init succeeded: CMA
+
+
+/////////////////
+
+pulseaudio
+
+//////
+<fix>
+# clean and reinstall pulseaudio
+sudo apt-get remove --purge alsa-base pulseaudio
+sudo apt-get install alsa-base pulseaudio
+sudo apt-get -f install && sudo apt-get -y autoremove && sudo apt-get autoclean && sudo apt-get clean && sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
+# fixes user folder permissions
+sudo chown -R $USER:$USER $HOME/
+# then reboot
+sudo shutdown -r -t 0
+
+
+pulseaudio --start
+
+tail -100f /var/log/syslog
 
 
 
+
+
+////////
      
 
 

@@ -37,6 +37,41 @@ led1_light_step = 5   # 1~10 step
 
 led_onoff = False
 
+def ProcessReadLedInfo():
+    global  led_onoff
+    global  led1_light_step
+    #format =  led_onoff False led1_light_step 5
+    with open('led-info.txt', 'r') as ledOpenFile:
+        ledString = ledOpenFile.read()
+        #print(ledString)
+        #print(ledString.split(' ')[0], ': ', ledString.split(' ')[1], ' / ', ledString.split(' ')[2], ': ', ledString.split(' ')[3])
+        split_ledinfo = ledString.split(' ')
+        if split_ledinfo[1] == '0':
+            led_onoff =  False
+        elif split_ledinfo[1] == '1':
+            led_onoff = True
+        led1_light_step = int(split_ledinfo[3])
+        # no need for MyFile.close()
+    print('led_onoff: ',led_onoff,', led1_light_step: ', led1_light_step -1)
+
+
+def ProcessWriteLedInfo():
+    #format =  led_onoff False led1_light_step 5
+    global  led_onoff
+    global  led1_light_step
+    lines = ['led_onoff ', '0' , ' led1_light_step ', '5' ]
+    if led_onoff == False:
+        lines[1] = '0' 
+    elif led_onoff == True:
+        lines[1] = '1'
+        
+    lines[3] = str(led1_light_step)
+    with open('led-info.txt', 'w') as ledWriteFile:
+        ledStr = ledWriteFile.writelines(lines)
+    
+    print('led_onoff: ',led_onoff,', led1_light_step: ', led1_light_step -1)
+
+
 #LED Step(1~10)
 def setLight(light, p):
       p.ChangeDutyCycle(light*10)
@@ -78,6 +113,8 @@ def processCommand(strcommand):
         elif led_onoff == False:
             setLED(led_pin1, 0, p1)
             print(strcommand, ', led: ', led_onoff)
+        ProcessWriteLedInfo()
+        
     elif strcommand == "KEY_0":
         if led_onoff == False:
             led_onoff = True
@@ -87,6 +124,8 @@ def processCommand(strcommand):
             print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
         elif led_onoff == False:
             print(strcommand, ', led: ', led_onoff)
+        ProcessWriteLedInfo()
+        
     elif strcommand == "KEY_1":
         if led_onoff == False:
             led_onoff = True
@@ -96,6 +135,8 @@ def processCommand(strcommand):
             print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
         elif led_onoff == False:
             print(strcommand, ', led: ', led_onoff)
+        ProcessWriteLedInfo()
+        
     elif strcommand == "KEY_2":
         if led_onoff == False:
             led_onoff = True
@@ -105,6 +146,8 @@ def processCommand(strcommand):
             print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
         elif led_onoff == False:
             print(strcommand, ', led: ', led_onoff)
+        ProcessWriteLedInfo()
+        
     elif strcommand == "KEY_3":
         if led_onoff == False:
             led_onoff = True
@@ -114,6 +157,8 @@ def processCommand(strcommand):
             print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
         elif led_onoff == False:
             print(strcommand, ', led: ', led_onoff)
+        ProcessWriteLedInfo()
+        
     elif strcommand == "KEY_4":
         if led_onoff == False:
             led_onoff = True
@@ -123,6 +168,8 @@ def processCommand(strcommand):
             print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
         elif led_onoff == False:
             print(strcommand, ', led: ', led_onoff)
+        ProcessWriteLedInfo()
+        
     elif strcommand == "KEY_5":
         if led_onoff == False:
             led_onoff = True
@@ -132,6 +179,8 @@ def processCommand(strcommand):
             print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
         elif led_onoff == False:
             print(strcommand, ', led: ', led_onoff)
+        ProcessWriteLedInfo()
+        
     elif strcommand == "KEY_6":
         if led_onoff == False:
             led_onoff = True
@@ -141,6 +190,8 @@ def processCommand(strcommand):
             print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
         elif led_onoff == False:
             print(strcommand, ', led: ', led_onoff)
+        ProcessWriteLedInfo()
+        
     elif strcommand == "KEY_7":
         if led_onoff == False:
             led_onoff = True
@@ -150,6 +201,8 @@ def processCommand(strcommand):
             print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
         elif led_onoff == False:
             print(strcommand, ', led: ', led_onoff)
+        ProcessWriteLedInfo()
+        
     elif strcommand == "KEY_8":
         if led_onoff == False:
             led_onoff = True
@@ -159,6 +212,8 @@ def processCommand(strcommand):
             print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
         elif led_onoff == False:
             print(strcommand, ', led: ', led_onoff)
+        ProcessWriteLedInfo()
+        
     elif strcommand == "KEY_9":
         if led_onoff == False:
             led_onoff = True
@@ -168,9 +223,11 @@ def processCommand(strcommand):
             print(strcommand, ', led: ', led_onoff, ', step: ', (led1_light_step - 1))
         elif led_onoff == False:
             print(strcommand, ', led: ', led_onoff)
+        ProcessWriteLedInfo()
+        
     elif strcommand == "KEY_MENU":
-        pyautogui.hotkey('i') #전체화면에서 조작바 보이기
-        #pyautogui.hotkey('ctrl', 'f') #Full screen mode on and off
+        #pyautogui.hotkey('i') #전체화면에서 조작바 보이기
+        pyautogui.hotkey('f') #Full screen mode on and off
         print(strcommand, ' control-bar on/off')
 
     elif strcommand == "KEY_T":
@@ -237,6 +294,8 @@ def ProcessIRRemote():
 conn = RawConnection()
 
 print("Starting Up...")
+ProcessReadLedInfo()
+
 try:
       while True:
         ProcessIRRemote()

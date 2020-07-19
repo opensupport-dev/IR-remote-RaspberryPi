@@ -1,0 +1,68 @@
+x-terminal-emulator -e /usr/bin/vlc --started-from-file
+/usr/bin/vlc --started-from-file
+ 
+ 
+ 
+<autostart>
+ Exec=lxterminal --geometry=80x55
+ 
+ You shuld try to make the autostart directory in your config directory and link the lxterminal like this
+
+mkdir ~/.config/autostart
+ln -s /usr/share/applications/lxterminal.desktop ~/.config/autostart/lxterminal.desktop
+
+
+
+<<< root의 autostart 폴더안의 desktop파일.
+<<<9vlc.desktop 파일 내용>>>>
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/vlc -L -f "/media/root/MAXBOX/video"
+Terminal=false
+NoDisplay=false
+
+
+
+
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@sudo ir-keytable -w /etc/lirc/maxbox.toml
+#@lxterminal -e -l /usr/bin/vlc -L -f "/media/root/MAXBOX/video"
+@xscreensaver -no-splash
+
+
+<<<< etc/xdg/autostart >>>>
+im-launch.desktop 파일 내용
+[Desktop Entry]
+Name=im-launch
+Exec=sh -c 'if ! [ -e "/usr/bin/ibus-daemon" ] && [ "x$XDG_SESSION_TYPE" = "xwayland" ] ; then exec$
+TryExec=im-launch
+Type=Application
+
+
+
+
+이것도 작동하지 않는 것 같습니다.
+
+sudo nano /etc/xdg/lxsession/LXDE/autostart
+
+이건 :
+
+sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+
+자동 시작 파일의 내용은 다음과 같습니다.
+
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+#@xscreensaver -no-splash
+# Auto run the browser
+@xset s off
+@xset -dpms
+@xset s noblank
+@/usr/bin/epiphany-browser -a --profile ~/.config http://google.de
+@sleep 5s # give it time to start
+@echo key F11 | xte # simulate pressing the full screen key
+
+
+
+

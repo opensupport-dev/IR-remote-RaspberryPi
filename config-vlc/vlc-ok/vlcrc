@@ -661,7 +661,7 @@
 #avi-interleaved=0
 
 # Force index creation (integer)
-avi-index=1
+#avi-index=0
 
 [ts] # MPEG Transport Stream demuxer
 
